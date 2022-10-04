@@ -15,6 +15,16 @@ class FunctionUser extends BaseController
         return view('user\login');
     }
 
+    public function view_login()
+    {
+        return view('user\login');
+    }
+
+    public function ViewRegister(){
+        return view('user\register');
+    }
+
+
     public function login_user($data){
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
@@ -46,6 +56,40 @@ class FunctionUser extends BaseController
         //     }
         
         // }
+    }
+    public function Register_User(){
+        // protected $allowedFields = ['username', 'password', 'id_pelanggan', 'email','nama_pelanggan','nomor_hp_pelanggan'];
+        if(!$this->validate([
+            'username'=>'required',
+            'password'=>'required',
+            'confpassword'=>'required',
+            'email'=>'required',
+            'nama_pelanggan'=>'required',
+            'nomor_hp_pelanggan'=>'required',
+        ])){ echo "<script>
+           alert('Isi data anda');
+           </script>";
+           return view('user\register');
+        }
+
+        $passwordconf = $this -> request -> getPost('confpassword');
+        $userModel = new UserModels();
+        $data = [
+            'username' => $this -> request -> getPost('username'),
+            'password' => $this -> request -> getPost('password'),
+            'email' => $this -> request -> getPost('email'),
+            'nama_pelanggan' => $this -> request -> getPost('nama_pelanggan'),
+            'nomor_hp_pelanggan' => $this -> request -> getPost('nomor_hp_pelanggan')
+        ];
+        if($data['password'] !== $passwordconf){
+            echo "<script>
+                       alert('Password Tidak Sesuai');
+                       </script>";
+            return view('user\register');
+        }
+
+        $userModel->save($data);
+        return redirect()->to('/Home');
     }
 
 }
