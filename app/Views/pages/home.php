@@ -1,4 +1,6 @@
+
 <?= $this -> extend('navbar/home')?>
+
 <?= $this-> section('content')?>
 <section class="min-vh-100 d-flex align-items-center py-lg-0 py-5"id="tentang">
 			<div class="container">

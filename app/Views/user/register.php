@@ -1,4 +1,6 @@
+
 <?= $this -> extend('navbar/register')?>
+
 <?= $this-> section('content')?>
 
 <section class="vh-100">

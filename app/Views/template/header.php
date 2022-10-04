@@ -45,8 +45,6 @@
         </div>
       </nav>
 
-
-      
       <?= $this->renderSection('content') ?>
   </body>
 </html>
