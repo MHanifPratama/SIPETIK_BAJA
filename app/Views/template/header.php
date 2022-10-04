@@ -32,7 +32,9 @@
                   <a class="nav-link active" aria-current="page" href="Home">Home</a>
                 </li>
                 <li class="nav-item">
+
                     <a class="nav-link" href="ViewRegister">Register</a>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="About">About Us</a>

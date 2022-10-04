@@ -39,10 +39,11 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('/User', 'user\FunctionUser::index');
-<<<<<<< Updated upstream
+
+
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 
-=======
+
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');
 $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
@@ -52,7 +53,7 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
 $routes->get('/pages', 'Pages::index');
 // $routes->get('(:any)', 'Pages::view/$1');
->>>>>>> Stashed changes
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -13,7 +13,10 @@
                         <h1 class=""><b>PELANGGAN</b></h1>
 						<p class="my-4 text-content">
 						</p>
+
 						<a href="ViewRegister" class="btn btn-dark btn-lg">Buat Akun</a>
+
+
                         <a href="User" class="btn btn-dark btn-lg">Login</a>
 					</div>
 				</div>

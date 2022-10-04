@@ -10,6 +10,7 @@ class UserModels extends Model
     protected $primaryKey = 'id_akun';
 
     protected $useAutoIncrement = true;
+
     protected $allowedFields = ['username', 'password','email','nama_pelanggan','nomor_hp_pelanggan'];
 
 
@@ -29,5 +30,6 @@ class UserModels extends Model
     //        return false;
     //     }
     // }
+
 }
 ?>
