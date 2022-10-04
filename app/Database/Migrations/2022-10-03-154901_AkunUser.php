@@ -17,20 +17,24 @@ class AkunUser extends Migration
 			],
 			'username'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '10000'
+				'constraint'     => '1000'
 			],
 			'password'      => [
 				'type'           => 'VARCHAR',
-				'constraint'     => 100000,
+				'constraint'     => '1000',
 				'default'        => 'Unila Jaya',
-			],
-			'id_pelanggan' => [
-				'type'           => 'INT',
-				'null'           => true,
 			],
 			'email'      => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '10000',
+				'constraint'     => '1000',
+			],
+			'nama_pelanggan'      => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '1000',
+			],
+			'nomor_hp_pelanggan'      => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '15',
 			],
 		]);
 		$this->forge->addKey('id_akun', TRUE);

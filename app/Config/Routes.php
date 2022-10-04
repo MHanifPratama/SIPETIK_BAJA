@@ -39,8 +39,12 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('/User', 'user\FunctionUser::index');
+$routes->get('/Home', 'Home::index');
+$routes->get('/About', 'Home::about');
+$routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
-
+$routes->get('/pages', 'Pages::index');
+$routes->get('(:any)', 'Pages::view/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
