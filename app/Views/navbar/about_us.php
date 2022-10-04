@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <nav class="navbar navbar-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="Home">HOME</a>
+          <a class="navbar-brand" href="Home">ABOUT US</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,7 +29,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Home">Home</a>
+                  <a class="nav-link " aria-current="page" href="Home">Home</a>
                 </li>
                 <li class="nav-item">
 
@@ -37,7 +37,7 @@
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="About">About Us</a>
+                    <a class="nav-link active" href="About">About Us</a>
                   </li>
               </ul>
             </div>
@@ -45,7 +45,15 @@
         </div>
       </nav>
 
+
+      
       <?= $this->renderSection('content') ?>
-  </body>
+  
+    <body>
+      
+     
+    </body>
+    
+    </body>
 </html>
 
