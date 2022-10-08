@@ -9,8 +9,8 @@
           <h1>Selamat Datang Petikers</h1>
           <h2>Sistem Informasi Penjualan Tiket Bus Antar Daerah Provinsi Lampung</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="view_login" class="btn-get-started scrollto"> Login </a>
-            <a href="ViewRegister" class="btn-get-started scrollto"> Register </a>
+            <!-- Pesan Ticket -->
+            <a href="view_login" class="btn-get-started scrollto"> Pesan Tiket </a>
           </div>
         </div>
         <!-- Picture (mau diganti siger) -->
@@ -81,7 +81,7 @@
                 <label for="name">Tipe Bus</label>
                 <input type="text" class="form-control" name="tipeBus" id="tipeBus" required>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Search Schedule</button></div>
             </form>
           </div>
 
@@ -106,7 +106,7 @@
               <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Irfan Saputra</h4>
-                <span>Leader and Backend</span>
+                <span>Leader and Fullstack Developer</span>
                 <div class="social">
                   <a href=""><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
