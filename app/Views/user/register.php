@@ -1,5 +1,4 @@
-
-<?= $this -> extend('navbar/register')?>
+<?= $this -> extend('template/header')?>
 
 <?= $this-> section('content')?>
 
