@@ -8,7 +8,9 @@
   <title>SISTEM INFORMASI PEMESANAN TIKET</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+
   <link rel="stylesheet" href="assets/Arsha/assets/css/style_login.css">
+
 
   <!-- Favicons -->
   <link href="assets/Arsha/assets/img/favicon.png" rel="icon">

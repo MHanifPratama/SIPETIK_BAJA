@@ -1,4 +1,3 @@
-
 <?php
 // session_start();
 // if(isset($_SESSION['login'])){
@@ -8,6 +7,7 @@
 ?>
 <?= $this -> extend('template/header')?>
 <?= $this-> section('content')?>
+
     <section>
        <div class="imgBx">
            <img src="assets/Arsha/assets/img/bus.jpg" alt="image login">
@@ -36,5 +36,6 @@
        </div>
     </section>
   </body>
+
 </html>
 <?= $this -> endSection() ?>
