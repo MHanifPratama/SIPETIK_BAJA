@@ -10,6 +10,8 @@ class Home extends BaseController
     }
     public function about()
     {
+
         return view('user/template');
+
     }
 }

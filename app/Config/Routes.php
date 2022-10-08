@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('/User', 'user\FunctionUser::index');
+
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');
 $routes->get('/view_login', 'user\FunctionUser::view_login');
@@ -47,6 +48,8 @@ $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
+
+
 $routes->get('/pages', 'Pages::index');
 // $routes->get('(:any)', 'Pages::view/$1');
 
