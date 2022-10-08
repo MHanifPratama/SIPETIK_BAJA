@@ -10,7 +10,7 @@ $routes = Services::routes();
 if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
     require SYSTEMPATH . 'Config/Routes.php';
 }
-
+// awd
 /*
  * --------------------------------------------------------------------
  * Router Setup
@@ -42,8 +42,12 @@ $routes->get('/User', 'user\FunctionUser::index');
 
 
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
+<<<<<<< Updated upstream
 
 
+=======
+$routes->get('/login_user', 'user\FunctionUser::login_user/$1');
+>>>>>>> Stashed changes
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');
 $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
@@ -52,7 +56,7 @@ $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
 $routes->get('/pages', 'Pages::index');
-// $routes->get('(:any)', 'Pages::view/$1');
+$routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------

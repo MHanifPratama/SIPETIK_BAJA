@@ -3,6 +3,7 @@ namespace App\Controllers\user;
 
 use App\Controllers\BaseController;
 use App\Models\UserModels;
+use App\Models\AdminModel;
 
 class FunctionUser extends BaseController
 {
@@ -12,7 +13,7 @@ class FunctionUser extends BaseController
         // echo $data;
         // var_dump($data[0]);
         // print_r($data);
-        return view('user\login');
+        return view('pages/home');
     }
 
     public function view_login()
@@ -25,7 +26,33 @@ class FunctionUser extends BaseController
     }
 
 
-    public function login_user($data){
+    public function login_user(){
+        $session = session();
+        $model = new AdminModel();
+        $username = $this -> request -> getPost('username');
+        $password = $this -> request -> getPost('password');
+        $cek = $model -> cek_login_user($username);
+        if ($cek) {
+            $pass = $cek['password']; //password dari database (sudah dienkripsi)
+            $verify = password_verify($password,$pass);
+            if($verify) {
+                session() -> set('username',$cek['username']);
+                
+                return redirect() -> to ('/index');
+            }
+            else{
+                $session ->setFlashdata('msg','Password Salah');
+                return redirect() -> to('/view_login');
+            }
+        }
+        else{
+            $session ->setFlashdata('error','User Tidak Ditemukan');
+            return redirect() -> to('/view_login');
+        }
+
+
+
+
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
         // $conn = db_connect();
