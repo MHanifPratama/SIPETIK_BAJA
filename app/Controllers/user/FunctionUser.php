@@ -27,6 +27,27 @@ class FunctionUser extends BaseController
 
 
     public function login_user(){
+        // $model = new AdminModel;
+        // $this -> db = $model;
+        // $post = $this->request-> getPost();
+        // $query = $this ->db->table('admin')->getWhere(['username' => $post['username']]);
+        // $admin = $query -> getRow();
+        // if($admin){
+        //     if(password_verify($post['password'],$admin -> password)){
+        //         $param = ['id_admin' => $admin -> id_admin];
+        //         session() ->set($param);
+                
+        //         return redirect() -> to ('/index');
+
+        //     }
+        //     else{
+        //         return redirect() -> back() -> with ('error', 'Password Salah');
+        //     }
+        // }
+        // else{
+        //     return redirect() -> back() -> with ('error', 'Username tidak ada');
+        // }
+
         $session = session();
         $model = new AdminModel();
         $username = $this -> request -> getPost('username');
