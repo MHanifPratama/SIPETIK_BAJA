@@ -11,6 +11,7 @@
   <meta content="" name="keywords">
 
   <link rel="stylesheet" href="assets/Arsha/assets/css/style_login.css">
+  <link href="assets/Arsha/assets/css/style.css" rel="stylesheet">
 
 
   <!-- Favicons -->
@@ -29,7 +30,6 @@
   <link href="assets/Arsha/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/Arsha/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="assets/Arsha/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.9.0

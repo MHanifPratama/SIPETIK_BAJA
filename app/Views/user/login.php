@@ -8,9 +8,7 @@
 <?= $this -> extend('template/header')?>
 <?= $this-> section('content')?>
 
-
-    <section>
-        
+    <section id="hero" class="d-flex align-items-center">
        <div class="imgBx">
            <img src="assets/Arsha/assets/img/bus.jpg" alt="image login">
        </div>
