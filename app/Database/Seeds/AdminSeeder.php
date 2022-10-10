@@ -49,6 +49,16 @@ class AdminSeeder extends Seeder
                 'harga'  =>  5000,
             ],
         ];
+        $dataBus = [
+            [
+                'nama_bus'  =>  'Surya Kencana',
+                'id_tipe'  => 1,
+                'id_supir'  =>  1,
+                'id_perjalanan'  => 1,
+                'id_jadwal'  =>  1,
+            ],
+        ];
+        $this->db->table('bus')->insertBatch($dataBus);
         $this->db->table('tipe_bus')->insertBatch($dataTipeBus);
         $this->db->table('supir')->insertBatch($dataSupir);
         $this->db->table('perjalanan')->insertBatch($dataPerjalanan);
