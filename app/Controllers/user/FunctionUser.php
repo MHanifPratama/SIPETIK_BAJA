@@ -18,7 +18,7 @@ class FunctionUser extends BaseController
 
     public function ViewRegister(){
 
-        return view('user\login');
+        return view('user\register');
 
     }
     public function login_user(){
