@@ -8,13 +8,13 @@ use App\Models\AdminModel;
 class FunctionUser extends BaseController
 {
     public function index(){
-        return view('pages/home');
+        return view('pages/halaman_user');
     }
     public function view_login()
     {
         return view('user\login');
     }
-        return view('user\register');
+    //    return view('user\register');
 
     public function ViewRegister(){
 
