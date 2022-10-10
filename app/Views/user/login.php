@@ -8,10 +8,17 @@
 <?= $this -> extend('template/header')?>
 <?= $this-> section('content')?>
 
+<<<<<<< Updated upstream
     <section id="hero" class="d-flex align-items-center">
        <div class="imgBx">
            <img src="assets/Arsha/assets/img/bus.jpg" alt="image login">
        </div>
+=======
+    <section id="hero1" class="d-flex align-items-center">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/Arsha/assets/img/provlampung.png" class="img-fluid animated" alt="">
+        </div>
+>>>>>>> Stashed changes
        
        <div class="contentBx">
            <div class="formBx">
@@ -22,7 +29,6 @@
                 <div class ="alert alert-danger"> <?=session() -> getFlashdata('msg')?> </div>
                 <?php endif; ?>
                <form action="/login_user" METHOD="post">
-
                    <div class="inputBx">
                        <span>Username</span>
                        <label>
@@ -37,6 +43,9 @@
                    </div>
                    <div class="inputBx">
                        <input type="submit" value="Sign In" name="login">
+                   </div>
+                   <div>
+                    <a href="ViewRegister"> Belum Punya akun? Daftar</a>
                    </div>
                </form>
            </div>
