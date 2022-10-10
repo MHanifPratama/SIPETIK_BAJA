@@ -3,31 +3,71 @@ namespace App\Controllers\user;
 
 use App\Controllers\BaseController;
 use App\Models\UserModels;
+use App\Models\AdminModel;
 
 class FunctionUser extends BaseController
 {
     public function index(){
-        // $User_model = new UserModels();
-        // $data['akun_user'] = $User_model->findAll();
-        // echo $data;
-        // var_dump($data[0]);
-        // print_r($data);
-        return view('user\login');
+        return view('pages/home');
     }
     public function view_login()
     {
         return view('user\login');
     }
-
-<<<<<<< Updated upstream
-    public function ViewRegister(){
-=======
->>>>>>> Stashed changes
         return view('user\register');
+
+    public function ViewRegister(){
+
+        return view('user\login');
+
     }
+    public function login_user(){
+        // $model = new AdminModel;
+        // $this -> db = $model;
+        // $post = $this->request-> getPost();
+        // $query = $this ->db->table('admin')->getWhere(['username' => $post['username']]);
+        // $admin = $query -> getRow();
+        // if($admin){
+        //     if(password_verify($post['password'],$admin -> password)){
+        //         $param = ['id_admin' => $admin -> id_admin];
+        //         session() ->set($param);
+                
+        //         return redirect() -> to ('/index');
 
+        //     }
+        //     else{
+        //         return redirect() -> back() -> with ('error', 'Password Salah');
+        //     }
+        // }
+        // else{
+        //     return redirect() -> back() -> with ('error', 'Username tidak ada');
+        // }
 
-    public function login_user($data){
+        $session = session();
+        $model = new UserModels();
+        $username = $this -> request -> getPost('username');
+        $password = $this -> request -> getPost('password');
+        $cek = $model -> cek_login_user($username);
+        if ($cek) {
+            $pass = $cek['password']; //password dari database (sudah dienkripsi)
+            $verify = $password==$pass;
+            echo var_dump($pass);
+            echo var_dump($password);
+            echo var_dump($verify);
+            if($verify) {
+                $session ->setFlashdata('msg','Login');
+                session() -> set('username',$cek['username']);
+                return redirect() -> to ('/');
+            }
+            else{
+                $session ->setFlashdata('msg','Password Salah');
+                return redirect() -> to('/ViewRegister');
+            }
+        }
+        else{
+            $session ->setFlashdata('error','User Tidak Ditemukan');
+            return redirect() -> to('/view_login');
+        }
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
         // $conn = db_connect();
@@ -87,11 +127,11 @@ class FunctionUser extends BaseController
             echo "<script>
                        alert('Password Tidak Sesuai');
                        </script>";
-            return view('user\register');
+            return view('user\login');
         }
 
         $userModel->save($data);
-        return redirect()->to('/Home');
+        return redirect()->to('/');
     }
 
 }

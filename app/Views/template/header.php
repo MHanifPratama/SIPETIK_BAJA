@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +9,10 @@
   <title>SISTEM INFORMASI PEMESANAN TIKET</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="assets/Arsha/assets/css/style_login.css">
+  <link href="assets/Arsha/assets/css/style.css" rel="stylesheet">
+
 
   <!-- Favicons -->
   <link href="assets/Arsha/assets/img/favicon.png" rel="icon">
@@ -25,7 +30,6 @@
   <link href="assets/Arsha/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/Arsha/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="assets/Arsha/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Arsha - v4.9.0
@@ -39,7 +43,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">SIPETIK</a></h1>
+      <h1 class="logo me-auto"><a href="<?= base_url(); ?>">SIPETIK</a></h1> <!-- mengembalikan pada base url -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -69,5 +73,6 @@
   <script src="assets/Arsha/assets/js/main.js"></script>
   <?= $this->renderSection('content') ?>
 </body>
+
 
 </html>

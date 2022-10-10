@@ -7,7 +7,7 @@
 ?>
 <?= $this -> extend('template/header')?>
 <?= $this-> section('content')?>
-<<<<<<< Updated upstream
+
     <section class="vh-100">
         <div class="container py-5 h-100">
           <div class="row d-flex align-items-center justify-content-center h-100">
@@ -45,51 +45,46 @@
         </div>
       </section>
 </body>
-=======
 
-    <section id="hero1" class="d-flex align-items-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 d-flex flex-column justify-content-center pt- pt-lg-0 order-4 order-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="contentBx">
-                        <div class="formBx">
-                        <h2>Login</h2>
-                            <?php 
-                                if(session() -> getFlashdata('msg')) : ?>
-                                <div class ="alert alert-danger"> <?=session() -> getFlashdata('msg')?> </div>
-                                <?php endif; ?>
 
-                            <form action="/login_user" METHOD="post">
-                                <div class="inputBx">
-                                    <span>Username</span>
-                                    <label>
-                                        <input type="text" name="username" required autocomplete="off">
-                                    </label>
-                                </div>
-                                <div class="inputBx">
-                                    <span>Password</span>
-                                    <label>
-                                        <input type="password" name="password" required autocomplete="off">
-                                    </label>
-                                </div>
-                                <div class="inputBx">
-                                    <input type="submit" value="Sign In" name="login">
-                                </div>
-                                <div>
-                                    <a href="ViewRegister">Belum Punya Akun? <b>Daftar</b></a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+    <section id="hero" class="d-flex align-items-center">
+       <div class="imgBx">
+           <img src="assets/Arsha/assets/img/bus.jpg" alt="image login">
+       </div>
+       
+       <div class="contentBx">
+           <div class="formBx">
+               
+               <h2>Login</h2>
+               <?php 
+                if(session() -> getFlashdata('msg')) : ?>
+                <div class ="alert alert-danger"> <?=session() -> getFlashdata('msg')?> </div>
+                <?php endif; ?>
+               <form action="/login_user" METHOD="post">
 
-                <div class="col-lg-6 order-3 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="assets/Arsha/assets/img/provlampung.png" class="img-fluid animated" alt="">
-                </div>
-            </div>
-        </div>    
+                   <div class="inputBx">
+                       <span>Username</span>
+                       <label>
+                           <input type="text" name="username" required autocomplete="off">
+                       </label>
+                   </div>
+                   <div class="inputBx">
+                       <span>Password</span>
+                       <label>
+                           <input type="password" name="password" required autocomplete="off">
+                       </label>
+                   </div>
+                   <div class="inputBx">
+                       <input type="submit" value="Sign In" name="login">
+                   </div>
+               </form>
+           </div>
+       </div>
     </section>
   </body>
->>>>>>> Stashed changes
+
+
+
+
 </html>
 <?= $this -> endSection() ?>
