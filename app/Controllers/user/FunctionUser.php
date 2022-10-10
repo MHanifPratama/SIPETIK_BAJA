@@ -10,7 +10,6 @@ class FunctionUser extends BaseController
     public function index(){
         return view('pages/home');
     }
-
     public function view_login()
     {
         return view('user\login');
