@@ -4,22 +4,40 @@ namespace App\Controllers\user;
 use App\Controllers\BaseController;
 use App\Models\UserModels;
 use App\Models\AdminModel;
+use App\Models\BusModel;
 
 class FunctionUser extends BaseController
 {
+    
     public function index(){
-        return view('pages/home');
+        $bus = new BusModel();
+        $dataBus = $bus->getAllData();
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus
+        ];
+    }
+
+    public function cariPerjalanan(){
+        $data = [
+            'tipeBus' => $this -> request -> getPost('tipeBus'),
+            'tujuan' => $this -> request -> getPost('tujuan'),
+            'asal' => $this -> request -> getPost('asal')
+        ];
+        $bus = new BusModel();
+        $dataBus = $bus->search($data);
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus
+        ];
+        return view('pages\cekSadja',$data);
     }
     public function view_login()
     {
         return view('user\login');
     }
-        return view('user\register');
-
     public function ViewRegister(){
-
-        return view('user\login');
-
+        return view('user\register');
     }
     public function login_user(){
         // $model = new AdminModel;
@@ -133,5 +151,6 @@ class FunctionUser extends BaseController
         $userModel->save($data);
         return redirect()->to('/');
     }
+
 
 }
