@@ -7,6 +7,7 @@ use App\Models\UserModels;
 class FunctionUser extends BaseController
 {
     public function index(){
+<<<<<<< Updated upstream
         // $User_model = new UserModels();
         // $data['akun_user'] = $User_model->findAll();
         // echo $data;
@@ -24,6 +25,10 @@ class FunctionUser extends BaseController
         return view('user\login');
     }
 
+=======
+        return view('user\login');
+    }
+>>>>>>> Stashed changes
     public function ViewRegister(){
         return view('user\register');
     }
@@ -31,6 +36,7 @@ class FunctionUser extends BaseController
 
 <<<<<<< Updated upstream
     public function login_user($data){
+<<<<<<< Updated upstream
 =======
     public function login_user(){
         // $model = new AdminModel;
@@ -117,6 +123,8 @@ class FunctionUser extends BaseController
         //     }
         
         // }
+=======
+>>>>>>> Stashed changes
     }
     public function Register_User(){
         // protected $allowedFields = ['username', 'password', 'id_pelanggan', 'email','nama_pelanggan','nomor_hp_pelanggan'];

@@ -40,13 +40,20 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/User', 'user\FunctionUser::index');
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 <<<<<<< Updated upstream
 
 
+<<<<<<< Updated upstream
 =======
 // $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');
 $routes->get('/Home', 'Home::index');
