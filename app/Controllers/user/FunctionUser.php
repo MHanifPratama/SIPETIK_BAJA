@@ -16,8 +16,8 @@ class FunctionUser extends BaseController
         return view('user\login');
     }
     public function ViewRegister(){
-        
-        return view('user\register');
+
+        return view('user\login');
     }
     public function login_user(){
         // $model = new AdminModel;
@@ -125,7 +125,7 @@ class FunctionUser extends BaseController
             echo "<script>
                        alert('Password Tidak Sesuai');
                        </script>";
-            return view('user\register');
+            return view('user\login');
         }
 
         $userModel->save($data);
