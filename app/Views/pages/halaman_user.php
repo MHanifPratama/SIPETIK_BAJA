@@ -56,7 +56,6 @@
 	<!-- ======= Schedule Section ======= -->
     <section id="schedule" class="contact">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Schedule</h2>
           <p>Jadwal Armada Bus BAJA yang beroperasi bisa anda ketahui disini. Untuk Pemesanan Tiket bisa klik tombol pesan tiket yang ada di halaman Home</p>

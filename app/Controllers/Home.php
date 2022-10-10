@@ -14,6 +14,5 @@ class Home extends BaseController
         ];
         // echo var_dump($data);
         return view('pages/halaman_user',$data);
-
     }
 }

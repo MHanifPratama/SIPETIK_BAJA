@@ -32,7 +32,6 @@ class FunctionUser extends BaseController
         ];
         return view('pages\cekSadja',$data);
     }
-
     public function view_login()
     {
         return view('user\login');
@@ -146,7 +145,7 @@ class FunctionUser extends BaseController
             echo "<script>
                        alert('Password Tidak Sesuai');
                        </script>";
-            return view('user\register');
+            return view('user\login');
         }
 
         $userModel->save($data);
