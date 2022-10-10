@@ -19,7 +19,10 @@ class FunctionUser extends BaseController
         return view('user\login');
     }
 
+<<<<<<< Updated upstream
     public function ViewRegister(){
+=======
+>>>>>>> Stashed changes
         return view('user\register');
     }
 

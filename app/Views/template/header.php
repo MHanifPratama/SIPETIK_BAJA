@@ -46,9 +46,9 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="/">About</a></li>
+          <li><a class="nav-link scrollto" href="/">Schedule</a></li>
+          <li><a class="nav-link scrollto" href="/">Team</a></li>
           <li><a class="nav-link scrollto" href="view_login">Sign In</a></li>
         </ul>
       </nav><!-- .navbar -->

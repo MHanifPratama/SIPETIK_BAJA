@@ -59,7 +59,7 @@
 
         <div class="section-title">
           <h2>Schedule</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Jadwal Armada Bus BAJA yang beroperasi bisa anda ketahui disini. Untuk Pemesanan Tiket bisa klik tombol pesan tiket yang ada di halaman Home</p>
         </div>
           <div class="d-flex align-items-center">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
@@ -92,7 +92,7 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Project ini dibuat dan disusun oleh Mahasiswa Ilmu Komputer Universitas Lampung 2020, dengan anggota sebagai berikut. </p>
         </div>
 
         <div class="row">
@@ -113,7 +113,7 @@
 
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>M Hanif Pratama</h4>
                 <span>Backend</span>
@@ -127,7 +127,7 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Muhammad Mufid Sadzili</h4>
                 <span>Frontend</span>
@@ -141,7 +141,7 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Muhammad Ega Putra Anzani</h4>
                 <span>Frontend</span>
