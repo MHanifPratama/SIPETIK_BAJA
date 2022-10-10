@@ -37,9 +37,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-
 $routes->get('/User', 'user\FunctionUser::index');
-
+$routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');

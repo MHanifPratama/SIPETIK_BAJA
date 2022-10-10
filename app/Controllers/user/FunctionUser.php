@@ -8,11 +8,6 @@ use App\Models\AdminModel;
 class FunctionUser extends BaseController
 {
     public function index(){
-        // $User_model = new UserModels();
-        // $data['akun_user'] = $User_model->findAll();
-        // echo $data;
-        // var_dump($data[0]);
-        // print_r($data);
         return view('pages/home');
     }
 
@@ -21,11 +16,11 @@ class FunctionUser extends BaseController
         return view('user\login');
     }
 
+        return view('user\login');
+    }
     public function ViewRegister(){
         return view('user\register');
     }
-
-
     public function login_user(){
         // $model = new AdminModel;
         // $this -> db = $model;
@@ -49,31 +44,30 @@ class FunctionUser extends BaseController
         // }
 
         $session = session();
-        $model = new AdminModel();
+        $model = new UserModels();
         $username = $this -> request -> getPost('username');
         $password = $this -> request -> getPost('password');
         $cek = $model -> cek_login_user($username);
         if ($cek) {
             $pass = $cek['password']; //password dari database (sudah dienkripsi)
-            $verify = password_verify($password,$pass);
+            $verify = $password==$pass;
+            echo var_dump($pass);
+            echo var_dump($password);
+            echo var_dump($verify);
             if($verify) {
+                $session ->setFlashdata('msg','Login');
                 session() -> set('username',$cek['username']);
-                
-                return redirect() -> to ('/index');
+                return redirect() -> to ('/');
             }
             else{
                 $session ->setFlashdata('msg','Password Salah');
-                return redirect() -> to('/view_login');
+                return redirect() -> to('/ViewRegister');
             }
         }
         else{
             $session ->setFlashdata('error','User Tidak Ditemukan');
             return redirect() -> to('/view_login');
         }
-
-
-
-
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
         // $conn = db_connect();
@@ -137,7 +131,7 @@ class FunctionUser extends BaseController
         }
 
         $userModel->save($data);
-        return redirect()->to('/Home');
+        return redirect()->to('/');
     }
 
 }
