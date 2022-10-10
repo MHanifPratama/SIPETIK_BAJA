@@ -10,7 +10,7 @@ $routes = Services::routes();
 if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
     require SYSTEMPATH . 'Config/Routes.php';
 }
-
+// awd
 /*
  * --------------------------------------------------------------------
  * Router Setup
@@ -37,33 +37,21 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-
 $routes->get('/User', 'user\FunctionUser::index');
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
-<<<<<<< Updated upstream
-
-
-<<<<<<< Updated upstream
-=======
-// $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
+$routes->post('/login_user', 'user\FunctionUser::login_user/$1');
+$routes->get('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');
+$routes->get('/view_login', 'user\FunctionUser::view_login');
+$routes->get('/view_login#about', 'user\FunctionUser::index');
 $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
-$routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
+
 $routes->get('/pages', 'Pages::index');
-// $routes->get('(:any)', 'Pages::view/$1');
+$routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------

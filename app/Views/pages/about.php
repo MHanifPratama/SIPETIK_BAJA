@@ -1,7 +1,6 @@
 
-<?= $this -> extend('template/header')?>
+<?= $this -> extend('navbar/about_us')?>
 <?= $this-> section('content')?>
 
 
-<h1>INI ABUT</h1>
 <?= $this -> endSection() ?>

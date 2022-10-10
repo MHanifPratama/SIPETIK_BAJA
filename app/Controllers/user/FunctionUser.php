@@ -3,21 +3,12 @@ namespace App\Controllers\user;
 
 use App\Controllers\BaseController;
 use App\Models\UserModels;
+use App\Models\AdminModel;
 
 class FunctionUser extends BaseController
 {
     public function index(){
-<<<<<<< Updated upstream
-        // $User_model = new UserModels();
-        // $data['akun_user'] = $User_model->findAll();
-        // echo $data;
-        // var_dump($data[0]);
-        // print_r($data);
-<<<<<<< Updated upstream
-        return view('user\login');
-=======
-        return view('/Home');
->>>>>>> Stashed changes
+        return view('pages/home');
     }
 
     public function view_login()
@@ -25,19 +16,11 @@ class FunctionUser extends BaseController
         return view('user\login');
     }
 
-=======
         return view('user\login');
     }
->>>>>>> Stashed changes
     public function ViewRegister(){
         return view('user\register');
     }
-
-
-<<<<<<< Updated upstream
-    public function login_user($data){
-<<<<<<< Updated upstream
-=======
     public function login_user(){
         // $model = new AdminModel;
         // $this -> db = $model;
@@ -83,16 +66,8 @@ class FunctionUser extends BaseController
         }
         else{
             $session ->setFlashdata('error','User Tidak Ditemukan');
-            echo "<script>
-                       alert('Email Tidak Ada');
-                       </script>";
             return redirect() -> to('/view_login');
         }
-
-
-
-
->>>>>>> Stashed changes
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
         // $conn = db_connect();
@@ -123,8 +98,6 @@ class FunctionUser extends BaseController
         //     }
         
         // }
-=======
->>>>>>> Stashed changes
     }
     public function Register_User(){
         // protected $allowedFields = ['username', 'password', 'id_pelanggan', 'email','nama_pelanggan','nomor_hp_pelanggan'];
