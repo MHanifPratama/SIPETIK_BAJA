@@ -6,15 +6,6 @@ class Home extends BaseController
 {
     public function index()
     {
-<<<<<<< Updated upstream
-        return view('pages/home');
-    }
-    public function about()
-    {
-
-        return view('user/template');
-
-=======
         $bus = new BusModel();
         $dataBus = $bus->getAllData();
         $data = [
@@ -23,6 +14,6 @@ class Home extends BaseController
         ];
         // echo var_dump($data);
         return view('pages/halaman_user',$data);
->>>>>>> Stashed changes
+
     }
 }

@@ -33,16 +33,9 @@ class FunctionUser extends BaseController
         return view('pages\cekSadja',$data);
     }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     public function view_login()
     {
         return view('user\login');
-    }
-
-        return view('user\register');
     }
     public function ViewRegister(){
         return view('user\register');
