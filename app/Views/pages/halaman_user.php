@@ -62,20 +62,32 @@
           <p>Jadwal Armada Bus BAJA yang beroperasi bisa anda ketahui disini. Untuk Pemesanan Tiket bisa klik tombol pesan tiket yang ada di halaman Home</p>
         </div>
           <div class="d-flex align-items-center">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="\cariPerjalanan" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Asal</label>
-                  <input type="text" name="asal" class="form-control" id="asal" required>
-                </div>
+                    <select type="text" class="form-control" name="asal" id="asal" required>
+                    <?php foreach($bus as $mhs): ?>
+                      <option value=<?=$mhs['kota_awal']?>><?=$mhs['kota_awal']?></option>
+                  <?php endforeach; ?>
+                  </select>
+                  </div>
                 <div class="form-group col-md-6">
                   <label for="name">Tujuan</label>
-                  <input type="text" class="form-control" name="tujuan" id="tujuan" required>
+                  <select type="text" class="form-control" name="tujuan" id="tujuan" required>
+                  <?php foreach($bus as $mhs): ?>
+                      <option value=<?=$mhs['kota_akhir']?>><?=$mhs['kota_akhir']?></option>
+                  <?php endforeach; ?>
+                </select>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Tipe Bus</label>
-                <input type="text" class="form-control" name="tipeBus" id="tipeBus" required>
+                <select type="text" class="form-control" name="tipeBus" id="tipeBus" required>
+                <?php foreach($bus as $mhs): ?>
+                    <option value=<?=$mhs['id_tipe']?>><?=$mhs['tipe']?></option>
+                <?php endforeach; ?>
+                </select>
               </div>
               <div class="text-center"><button type="submit">Search Schedule</button></div>
             </form>
