@@ -13,7 +13,12 @@ class UserModels extends Model
 
     protected $allowedFields = ['username', 'password','email','nama_pelanggan','nomor_hp_pelanggan'];
 
-
+    public function cek_login_user($username){
+        return $this -> db -> table('akun_user')
+        ->where(array('username' => $username))
+        ->get() ->getRowArray();
+    }
+      
     // public function RegUser($data){
     //     global $conn;
     //     $email = htmlspecialchars( $data["email"]);

@@ -12,7 +12,11 @@ class FunctionUser extends BaseController
         // echo $data;
         // var_dump($data[0]);
         // print_r($data);
+<<<<<<< Updated upstream
         return view('user\login');
+=======
+        return view('/Home');
+>>>>>>> Stashed changes
     }
 
     public function view_login()
@@ -25,7 +29,64 @@ class FunctionUser extends BaseController
     }
 
 
+<<<<<<< Updated upstream
     public function login_user($data){
+=======
+    public function login_user(){
+        // $model = new AdminModel;
+        // $this -> db = $model;
+        // $post = $this->request-> getPost();
+        // $query = $this ->db->table('admin')->getWhere(['username' => $post['username']]);
+        // $admin = $query -> getRow();
+        // if($admin){
+        //     if(password_verify($post['password'],$admin -> password)){
+        //         $param = ['id_admin' => $admin -> id_admin];
+        //         session() ->set($param);
+                
+        //         return redirect() -> to ('/index');
+
+        //     }
+        //     else{
+        //         return redirect() -> back() -> with ('error', 'Password Salah');
+        //     }
+        // }
+        // else{
+        //     return redirect() -> back() -> with ('error', 'Username tidak ada');
+        // }
+
+        $session = session();
+        $model = new UserModels();
+        $username = $this -> request -> getPost('username');
+        $password = $this -> request -> getPost('password');
+        $cek = $model -> cek_login_user($username);
+        if ($cek) {
+            $pass = $cek['password']; //password dari database (sudah dienkripsi)
+            $verify = $password==$pass;
+            echo var_dump($pass);
+            echo var_dump($password);
+            echo var_dump($verify);
+            if($verify) {
+                $session ->setFlashdata('msg','Login');
+                session() -> set('username',$cek['username']);
+                return redirect() -> to ('/');
+            }
+            else{
+                $session ->setFlashdata('msg','Password Salah');
+                return redirect() -> to('/ViewRegister');
+            }
+        }
+        else{
+            $session ->setFlashdata('error','User Tidak Ditemukan');
+            echo "<script>
+                       alert('Email Tidak Ada');
+                       </script>";
+            return redirect() -> to('/view_login');
+        }
+
+
+
+
+>>>>>>> Stashed changes
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
         // $conn = db_connect();
@@ -89,7 +150,7 @@ class FunctionUser extends BaseController
         }
 
         $userModel->save($data);
-        return redirect()->to('/Home');
+        return redirect()->to('/');
     }
 
 }

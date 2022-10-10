@@ -42,8 +42,12 @@ $routes->get('/User', 'user\FunctionUser::index');
 
 
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
+<<<<<<< Updated upstream
 
 
+=======
+// $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
+>>>>>>> Stashed changes
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');
 $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
