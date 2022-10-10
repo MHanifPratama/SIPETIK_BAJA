@@ -7,7 +7,8 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt- pt-lg-0 order-5 order-lg-5" data-aos="fade-up" data-aos-delay="200">
           <h1>Selamat Datang Petikers</h1>
-          <h2>Sistem Informasi Penjualan Tiket Bus Antar Daerah Provinsi Lampung</h2>
+          <h2>Sistem Informasi Penjualan Tiket Armada Bus Baja</h2>
+          <h3>Bus Antar Daerah Provinsi Lampung</h3>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <!-- Pesan Ticket -->
             <a href="view_login" class="btn-get-started scrollto"> Pesan Tiket </a>
@@ -33,24 +34,19 @@
         </div>
 
         <div class="row content">
-          <div class="col-lg-6">
+          <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            SIPETIK BAJA merupakan sebuah sistem berbasis web yang digunakan
+            untuk melakukan berbagai operasi seperti, pemesanan tiket, pembelian
+            tiket, pemberi sumber informasi mengenai jadwal bus dan pemantauan
+            transaksi pembelian tiket di armada Bus Baja
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <p>Fitur - fitur yang dimiliki SIPETIK BAJA</p>
+              <li><i class="ri-check-double-line"></i> Memesan tiket lebih mudah dan cepat</li>
+              <li><i class="ri-check-double-line"></i> Tidak perlu khawatir tiket hilang, karena tiket tersimpan di akun milikmu</li>
+              <li><i class="ri-check-double-line"></i> Anda bisa sesuaikan jadwal keberangkatan anda, karena anda bisa melihat rute serta jadwal keberangkatan</li>
             </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 

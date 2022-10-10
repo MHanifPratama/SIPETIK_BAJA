@@ -14,7 +14,6 @@ class FunctionUser extends BaseController
         // print_r($data);
         return view('user\login');
     }
-
     public function view_login()
     {
         return view('user\login');

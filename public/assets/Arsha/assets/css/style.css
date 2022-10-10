@@ -413,6 +413,10 @@ h6 {
 
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+}
+#hero h3 {
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
   font-size: 24px;
 }
