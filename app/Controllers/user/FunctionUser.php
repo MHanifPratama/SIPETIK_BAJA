@@ -43,7 +43,7 @@ class FunctionUser extends BaseController
     //    return view('user\register');
 
     public function ViewRegister(){
-        return view('user\register');
+       
         if(session('id_admin')){
             return redirect() -> to (site_url('halaman_utama'));
         }
