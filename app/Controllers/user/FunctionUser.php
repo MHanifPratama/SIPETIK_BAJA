@@ -84,6 +84,7 @@ class FunctionUser extends BaseController
             return redirect() -> to('/view_login');
         }
 
+
     }
     public function Register_User(){
         // protected $allowedFields = ['username', 'password', 'id_pelanggan', 'email','nama_pelanggan','nomor_hp_pelanggan'];
