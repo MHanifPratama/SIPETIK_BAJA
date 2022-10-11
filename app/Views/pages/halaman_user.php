@@ -113,9 +113,9 @@
               <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Irfan Saputra</h4>
-                <span>Leader and Fullstack Developer</span>
+                <span>Leader and Backend</span>
                 <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href="https://www.instagram.com/irfanshow"><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
@@ -129,7 +129,7 @@
                 <h4>M Hanif Pratama</h4>
                 <span>Backend</span>
                 <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href="https://www.instagram.com/mhanif_pratama"><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
@@ -138,12 +138,12 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/Arsha/assets/img/team/Mufid.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Muhammad Mufid Sadzili</h4>
                 <span>Frontend</span>
                 <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href="https://www.instagram.com/msdzili_"><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
@@ -152,12 +152,12 @@
 
           <div class="col-lg-6 mt-4">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="assets/Arsha/assets/img/team/ega.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Muhammad Ega Putra Anzani</h4>
                 <span>Frontend</span>
                 <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href="https://www.instagram.com/raanzani64"><i class="ri-instagram-fill"></i></a>
                   <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
