@@ -31,7 +31,7 @@ class FunctionUser extends BaseController
             'title' => 'Bus',
             'bus' => $dataBus
         ];
-        return view('pages\cekSadja',$data);
+        return view('user\cek_schedule',$data);
     }
     public function view_login()
     {
@@ -44,6 +44,12 @@ class FunctionUser extends BaseController
         return view('user\register');
 
     }
+    
+    public function halaman_utama(){
+        return view('user\halaman_utama');
+    }
+
+
     public function login_user(){
         // $model = new AdminModel;
         // $this -> db = $model;
@@ -80,7 +86,7 @@ class FunctionUser extends BaseController
             if($verify) {
                 $session ->setFlashdata('msg','Login');
                 session() -> set('username',$cek['username']);
-                return redirect() -> to ('/');
+                return redirect() -> to ('/halaman_utama');
             }
             else{
                 $session ->setFlashdata('msg','Password Salah');

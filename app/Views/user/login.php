@@ -9,7 +9,7 @@
 <?= $this-> section('content')?>
 
     <section id="hero1" class="d-flex align-items-center">
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+        <div class="col-lg-6 order-3 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/Arsha/assets/img/provlampung.png" class="img-fluid animated" alt="">
         </div>
 
