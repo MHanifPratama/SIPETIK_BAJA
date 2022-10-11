@@ -5,6 +5,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 
+<<<<<<< Updated upstream
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,6 +49,22 @@
               </ul>
             </div>
           </div>
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/Arsha/assets/css/style_hu.css">
+    <title>Video-2</title>
+</head>
+
+<body class="main_bg">
+
+    <div class="form">
+        <div class="form-text">
+            <h1>Book Now</h1>
+            <p>Tes.</p>
+>>>>>>> Stashed changes
         </div>
       </nav>
       <section

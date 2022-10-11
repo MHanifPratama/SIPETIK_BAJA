@@ -23,6 +23,7 @@
                 if(session() -> getFlashdata('msg')) : ?>
                 <div class ="alert alert-danger"> <?=session() -> getFlashdata('msg')?> </div>
                 <?php endif; ?>
+                
                <form action="/login_user" METHOD="post">
 
                    <div class="inputBx">

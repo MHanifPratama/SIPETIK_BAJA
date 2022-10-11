@@ -18,37 +18,36 @@ class FunctionUser extends BaseController
 
     public function view_login()
     {
+        if(session('id_admin')){
+            return redirect() -> to (site_url('halaman_utama'));
+        }
         return view('user\login');
     }
 
     public function ViewRegister(){
+<<<<<<< Updated upstream
         return view('user\register');
+=======
+        if(session('id_admin')){
+            return redirect() -> to (site_url('halaman_utama'));
+        }
+
+        return view('user\register');
+
+    }
+    
+    public function halaman_utama(){
+
+
+        return view('user\halaman_utama');
+>>>>>>> Stashed changes
     }
 
 
     public function login_user(){
-        // $model = new AdminModel;
-        // $this -> db = $model;
-        // $post = $this->request-> getPost();
-        // $query = $this ->db->table('admin')->getWhere(['username' => $post['username']]);
-        // $admin = $query -> getRow();
-        // if($admin){
-        //     if(password_verify($post['password'],$admin -> password)){
-        //         $param = ['id_admin' => $admin -> id_admin];
-        //         session() ->set($param);
-                
-        //         return redirect() -> to ('/index');
-
-        //     }
-        //     else{
-        //         return redirect() -> back() -> with ('error', 'Password Salah');
-        //     }
-        // }
-        // else{
-        //     return redirect() -> back() -> with ('error', 'Username tidak ada');
-        // }
 
         $session = session();
+<<<<<<< Updated upstream
         $model = new AdminModel();
         $username = $this -> request -> getPost('username');
         $password = $this -> request -> getPost('password');
@@ -60,6 +59,20 @@ class FunctionUser extends BaseController
                 session() -> set('username',$cek['username']);
                 
                 return redirect() -> to ('/index');
+=======
+        $post = $this -> request -> getPost();
+        $query = $this ->db ->table('admin')->getWhere(['username' => $post['username']]);
+        $user = $query->getRow();
+        // $password = $this -> request -> getPost('password');
+        // $pass = $user->password; //cek password di fb
+        // $verify = password_verify($password,$pass);
+        if ($user) {
+            if(password_verify($post['password'],$user ->password)) {
+                $session ->setFlashdata('msg','Login');
+                $params = ['id_admin' => $user -> id_admin];
+                $session -> set($params);
+                return redirect() -> to ('/halaman_utama');
+>>>>>>> Stashed changes
             }
             else{
                 $session ->setFlashdata('msg','Password Salah');
@@ -67,7 +80,7 @@ class FunctionUser extends BaseController
             }
         }
         else{
-            $session ->setFlashdata('error','User Tidak Ditemukan');
+            $session ->setFlashdata('msg','User Tidak Ditemukan');
             return redirect() -> to('/view_login');
         }
 
