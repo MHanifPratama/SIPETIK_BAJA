@@ -10,6 +10,7 @@ class FunctionUser extends BaseController
 {
     
     public function index(){
+
         $bus = new BusModel();
         $dataBus = $bus->getAllData();
         $data = [
@@ -36,8 +37,12 @@ class FunctionUser extends BaseController
     {
         return view('user\login');
     }
+    //    return view('user\register');
+
     public function ViewRegister(){
+
         return view('user\register');
+
     }
     public function login_user(){
         // $model = new AdminModel;
