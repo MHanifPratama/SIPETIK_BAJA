@@ -411,6 +411,14 @@ h6 {
 
 #hero .container {
   padding-top: 72px;
+  
+}
+#hero1 .container .judul h2{
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 30px;
+  color: #fff;
 }
 
 #hero h1 {

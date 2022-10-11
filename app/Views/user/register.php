@@ -20,11 +20,6 @@
                         <label>
                           <input type="text" name="username" id="username" required autocomplete="off">
                         </label>
-                     
-                      <span>Password</span>
-                        <label>
-                          <input type="password" name="password" id="password" required autocomplete="off">
-                        </label>
                     
                       <span>Password</span>
                         <label>
