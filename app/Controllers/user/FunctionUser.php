@@ -59,20 +59,7 @@ class FunctionUser extends BaseController
 
     public function login_user(){
         $session = session();
-        $model = new AdminModel();
-        $username = $this -> request -> getPost('username');
-        $password = $this -> request -> getPost('password');
-        $cek = $model -> cek_login_user($username);
-        if ($cek) {
-            $pass = $cek['password']; //password dari database (sudah dienkripsi)
-            $verify = $password==$pass;
-            echo var_dump($pass);
-            echo var_dump($password);
-            echo var_dump($verify);
-            if($verify) {
-                $session ->setFlashdata('msg','Login');
-                session() -> set('username',$cek['username']);         
-                return redirect() -> to ('/index');
+
         $post = $this -> request -> getPost();
         $query = $this ->db ->table('admin')->getWhere(['username' => $post['username']]);
         $user = $query->getRow();
@@ -86,7 +73,6 @@ class FunctionUser extends BaseController
                 $session -> set($params);
                 return redirect() -> to ('/halaman_utama');
 
-                return redirect() -> to ('/halaman_utama');
             }
             else{
                 $session ->setFlashdata('msg','Password Salah');
