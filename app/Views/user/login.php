@@ -5,16 +5,14 @@
 //   exit;
 // }
 ?>
-<?= $this -> extend('template/header')?>
+<?= $this -> extend('template/header2')?>
 <?= $this-> section('content')?>
 
+    <section id="hero1" class="d-flex align-items-center">
+        <div class="col-lg-6 order-3 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/Arsha/assets/img/provlampung.png" class="img-fluid animated" alt="">
+        </div>
 
-    <section>
-        
-       <div class="imgBx">
-           <img src="assets/Arsha/assets/img/bus.jpg" alt="image login">
-       </div>
-       
        <div class="contentBx">
            <div class="formBx">
                
@@ -25,7 +23,6 @@
                 <?php endif; ?>
                 
                <form action="/login_user" METHOD="post">
-
                    <div class="inputBx">
                        <span>Username</span>
                        <label>
@@ -41,13 +38,14 @@
                    <div class="inputBx">
                        <input type="submit" value="Sign In" name="login">
                    </div>
+                   <div>
+                    <a href="ViewRegister"> Belum Punya akun? Daftar</a>
+                   </div>
                </form>
            </div>
        </div>
     </section>
   </body>
-
-
 
 </html>
 <?= $this -> endSection() ?>

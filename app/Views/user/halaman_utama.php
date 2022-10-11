@@ -1,11 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-
-<<<<<<< Updated upstream
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +43,6 @@
               </ul>
             </div>
           </div>
-=======
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,34 +50,54 @@
     <link rel="stylesheet" href="assets/Arsha/assets/css/style_hu.css">
     <title>Video-2</title>
 </head>
-
 <body class="main_bg">
-
     <div class="form">
         <div class="form-text">
             <h1>Book Now</h1>
             <p>Tes.</p>
->>>>>>> Stashed changes
         </div>
-      </nav>
-      <section
-			class="min-vh-100 d-flex align-items-center py-lg-0 py-5"id="tentang">
-			<div class="container">
-				<div class="row align-items-center g-5 g-lg-0">
-					<div class="col-lg-5 order-lg-1 order-5">
-						<img class="my-photo" height="400" src="image/sipetik.svg" alt="JohnDeacon"/>
-					</div>
-					<div class="col-lg-1 order-lg-2 order-2"></div>
-					<div class="col-lg-6 order-lg-3 order-3">
-						<h1 class="main-header">Selamat Datang <br/>
-						</h1>
-            <h1 class=""><b>NGETEST</b></h1>
-						<p class="my-4 text-content">
-						</p>
-						<a href="beli_tiket.php" class="btn btn-dark btn-lg">Pesan Tiket</a>
-					</div>
-				</div>
-			</div>
-		</section>
-  </body>
+        <div class="main-form">
+            <form action="index.php" method="get">
+                <div>
+                    <span>Full Name</span>
+                    <input type="text" name="name" id="name" placeholder="Write your name here..." required>
+                </div>
+                <div>
+                    <span>Email Address</span>
+                    <input type="email" name="name" id="name" placeholder="Write your email here..." required> 
+                </div>
+                <div>
+                    <!-- <---this is the select option--->
+                    <span>Number of People</span>
+                    <select name="people" id="people" required>
+                        <option value=""><---People---></option>
+                        <option value="1">1 People</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                    </select>
+                    <!-- <---this is the select option--->
+                </div>
+                <div>
+                    <span>Time</span>
+                    <input type="text" name="time" id="time" placeholder="Time" required>
+                </div>
+                <div>
+                    <span>Date</span>
+                    <input type="date" name="date" id="date" placeholder="date" required>
+                </div>
+                <div>
+                    <span>Phone Number</span>
+                    <input type="number" name="number" id="number" placeholder="Write your number here..." required>
+                </div>
+                <div id="submit">
+                    <input type="submit" value="SUBMIT" id="submit">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
 </html>

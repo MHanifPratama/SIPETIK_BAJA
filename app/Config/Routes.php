@@ -35,21 +35,19 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+$routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
-
-
+$routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
+$routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
 $routes->get('/User', 'user\FunctionUser::index');
-
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/ViewRegister', 'user\FunctionUser::ViewRegister');
 $routes->get('/view_login', 'user\FunctionUser::view_login');
-$routes->get('/view_login#about', 'user\FunctionUser::index');
 $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
-
 
 $routes->get('/pages', 'Pages::index');
 $routes->get('(:any)', 'Pages::view/$1');

@@ -4,18 +4,35 @@ namespace App\Controllers\user;
 use App\Controllers\BaseController;
 use App\Models\UserModels;
 use App\Models\AdminModel;
+use App\Models\BusModel;
 
 class FunctionUser extends BaseController
 {
+    
     public function index(){
-        // $User_model = new UserModels();
-        // $data['akun_user'] = $User_model->findAll();
-        // echo $data;
-        // var_dump($data[0]);
-        // print_r($data);
-        return view('pages/home');
+
+        $bus = new BusModel();
+        $dataBus = $bus->getAllData();
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus
+        ];
     }
 
+    public function cariPerjalanan(){
+        $data = [
+            'tipeBus' => $this -> request -> getPost('tipeBus'),
+            'tujuan' => $this -> request -> getPost('tujuan'),
+            'asal' => $this -> request -> getPost('asal')
+        ];
+        $bus = new BusModel();
+        $dataBus = $bus->search($data);
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus
+        ];
+        return view('user\cek_schedule',$data);
+    }
     public function view_login()
     {
         if(session('id_admin')){
@@ -23,43 +40,39 @@ class FunctionUser extends BaseController
         }
         return view('user\login');
     }
+    //    return view('user\register');
 
     public function ViewRegister(){
-<<<<<<< Updated upstream
         return view('user\register');
-=======
         if(session('id_admin')){
             return redirect() -> to (site_url('halaman_utama'));
         }
 
         return view('user\register');
 
+
     }
-    
     public function halaman_utama(){
-
-
         return view('user\halaman_utama');
->>>>>>> Stashed changes
     }
 
 
     public function login_user(){
-
         $session = session();
-<<<<<<< Updated upstream
         $model = new AdminModel();
         $username = $this -> request -> getPost('username');
         $password = $this -> request -> getPost('password');
         $cek = $model -> cek_login_user($username);
         if ($cek) {
             $pass = $cek['password']; //password dari database (sudah dienkripsi)
-            $verify = password_verify($password,$pass);
+            $verify = $password==$pass;
+            echo var_dump($pass);
+            echo var_dump($password);
+            echo var_dump($verify);
             if($verify) {
-                session() -> set('username',$cek['username']);
-                
+                $session ->setFlashdata('msg','Login');
+                session() -> set('username',$cek['username']);         
                 return redirect() -> to ('/index');
-=======
         $post = $this -> request -> getPost();
         $query = $this ->db ->table('admin')->getWhere(['username' => $post['username']]);
         $user = $query->getRow();
@@ -72,21 +85,18 @@ class FunctionUser extends BaseController
                 $params = ['id_admin' => $user -> id_admin];
                 $session -> set($params);
                 return redirect() -> to ('/halaman_utama');
->>>>>>> Stashed changes
+
+                return redirect() -> to ('/halaman_utama');
             }
             else{
                 $session ->setFlashdata('msg','Password Salah');
-                return redirect() -> to('/view_login');
+                return redirect() -> to('/ViewRegister');
             }
         }
         else{
             $session ->setFlashdata('msg','User Tidak Ditemukan');
             return redirect() -> to('/view_login');
         }
-
-
-
-
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
         // $conn = db_connect();
@@ -146,11 +156,12 @@ class FunctionUser extends BaseController
             echo "<script>
                        alert('Password Tidak Sesuai');
                        </script>";
-            return view('user\register');
+            return view('user\login');
         }
 
         $userModel->save($data);
-        return redirect()->to('/Home');
+        return redirect()->to('/');
     }
+
 
 }
