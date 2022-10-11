@@ -5,7 +5,7 @@
 //   exit;
 // }
 ?>
-<?= $this -> extend('template/header')?>
+<?= $this -> extend('template/header2')?>
 <?= $this-> section('content')?>
 
     <section id="hero1" class="d-flex align-items-center">
