@@ -35,18 +35,18 @@ class FunctionUser extends BaseController
     }
     public function view_login()
     {
-        if(session('id_admin')){
-            return redirect() -> to (site_url('halaman_utama'));
-        }
+        // if(session('id_admin')){
+        //     return redirect() -> to (site_url('halaman_utama'));
+        // }
         return view('user\login');
     }
     //    return view('user\register');
 
     public function ViewRegister(){
        
-        if(session('id_admin')){
-            return redirect() -> to (site_url('halaman_utama'));
-        }
+        // if(session('id_admin')){
+        //     return redirect() -> to (site_url('halaman_utama'));
+        // }
 
         return view('user\register');
 
@@ -104,12 +104,14 @@ class FunctionUser extends BaseController
         $passwordconf = $this -> request -> getPost('confpassword');
         $userModel = new UserModels();
         $data = [
+            
             'username' => $this -> request -> getPost('username'),
-            'password' => $this -> request -> getPost('password'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
             'email' => $this -> request -> getPost('email'),
             'nama_pelanggan' => $this -> request -> getPost('nama_pelanggan'),
             'nomor_hp_pelanggan' => $this -> request -> getPost('nomor_hp_pelanggan')
         ];
+        $passwordconf= $data['password'];
         if($data['password'] !== $passwordconf){
             echo "<script>
                        alert('Password Tidak Sesuai');
@@ -118,7 +120,7 @@ class FunctionUser extends BaseController
         }
 
         $userModel->save($data);
-        return redirect()->to('/');
+        return redirect()->to('/view_login');
     }
 
 
