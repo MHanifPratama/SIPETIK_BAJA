@@ -13,11 +13,7 @@ class AdminModel extends Model
 
     protected $allowedFields = ['username', 'password','email'];
 
-    public function cek_login_user($username){
-        return $this -> db -> table('admin')
-        ->where(array('username' => $username))
-        ->get() ->getRowArray();
-    }
+
 
 
 
