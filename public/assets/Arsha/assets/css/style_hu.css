@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main_bg{
+    background-color: #0e1c22;
+    max-width: 1280px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.form{
+    width: 650px;
+}
+
+.form-text{
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+.form-text h1 span img{
+    margin: 0 10px;
+
+}
+.form-text h1{
+    color: #fff;
+    font-family: 'Popping', cursive;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.form-text p{
+    color: #fff;
+    font-family: 'Poppins', cursive;
+    font-size: large;
+}
+
+.main-form div{
+    margin: 10px 10px;
+    width: 300px;
+    display: inline-block;
+}
+.main-form div input {
+    width: 100%;
+    font-family: 'Poppins', cursive;
+    background: none;
+    border: 1px solid #47b2e4;;
+    font-size: 20px;
+    color: #fff;
+    outline: none;
+    padding: 3px 0 3px 10px;
+    margin-top: 10px;
+}
+.main-form div select{
+    width: 104%;
+    font-family: 'Poppins', cursive;
+    background: none;
+    border: 1px solid #47b2e4;;
+    font-size: 20px;
+    color: #47b2e4;
+    outline: none;
+    padding: 3px 0 3px 10px;
+    margin-top: 10px;
+}
+.main-form div span{
+    width: 100%;
+    font-family: 'Poppins', cursive;
+    color: #fff;
+    font-size: 25px;
+}
+
+#submit{
+    width: 95%;
+    text-align: center;
+}
+#submit input{
+    background: #47b2e4;
+    color: #fff;
+    outline: none;
+    border: 1px solid #607d8b;
+    font-weight: 500;
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width:710px) {
+    .main-form{
+        text-align: center;
+    }
+}

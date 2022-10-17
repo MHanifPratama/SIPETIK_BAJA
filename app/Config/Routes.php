@@ -38,8 +38,7 @@ $routes->set404Override();
 
 $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
-<<<<<<< Updated upstream
-=======
+
 $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 //Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir');
@@ -66,7 +65,7 @@ $routes->get('/editTipe/(:num)', 'admin\FunctionTipeBus::editTipe/$1');
 $routes->post('/updateTipe/(:num)', 'admin\FunctionTipeBus::update/$1');
 
 
->>>>>>> Stashed changes
+
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
 $routes->get('/User', 'user\FunctionUser::index');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');

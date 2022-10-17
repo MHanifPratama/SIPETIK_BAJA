@@ -14,7 +14,9 @@
                 <th scope="col">Tipe</th>
                 <th scope="col">Asal</th>
                 <th scope="col">Tujuan</th>
+
                 <th scope="col">Tanggal</th>
+
                 <th scope="col">Harga</th>
             </tr>
         </thead>
@@ -27,7 +29,9 @@
                     <td><?= $mhs['tipe']?></td>
                     <td><?= $mhs['kota_awal']?></td>
                     <td><?= $mhs['kota_akhir']?></td>
+
                     <td><?= $mhs['tanggal']?></td>
+
                     <td><?= $mhs['harga'] * $mhs['total_km']?></td>
                 </tr>
                 <?php endforeach; ?>
