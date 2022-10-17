@@ -32,6 +32,12 @@ class AdminSeeder extends Seeder
                 'total_km'  => 42,
                 
             ],
+            [
+                'kota_awal'  => 'Pringsewu',
+                'kota_akhir'  =>  'Bandar Lampung',
+                'total_km'  => 42,
+                
+            ],
         ];
         $dataSupir = [
             [
@@ -48,12 +54,41 @@ class AdminSeeder extends Seeder
                 'tipe'  => 'EKONOMI',
                 'harga'  =>  5000,
             ],
+            [
+                'tipe'  => 'Bisnis',
+                'harga'  =>  10000,
+            ],
+            [
+                'tipe'  => 'Ekslusif',
+                'harga'  =>  15000,
+            ],
         ];
         $dataBus = [
             [
                 'nama_bus'  =>  'Surya Kencana',
                 'id_tipe'  => 1,
                 'id_supir'  =>  1,
+                'id_perjalanan'  => 1,
+                'id_jadwal'  =>  1,
+            ],
+            [
+                'nama_bus'  =>  'Harapan Jaya',
+                'id_tipe'  => 2,
+                'id_supir'  =>  2,
+                'id_perjalanan'  => 2,
+                'id_jadwal'  =>  2,
+            ],
+            [
+                'nama_bus'  =>  'Lele Group',
+                'id_tipe'  => 1,
+                'id_supir'  =>  2,
+                'id_perjalanan'  => 2,
+                'id_jadwal'  =>  1,
+            ],
+            [
+                'nama_bus'  =>  'Harapan Bersama',
+                'id_tipe'  => 1,
+                'id_supir'  =>  2,
                 'id_perjalanan'  => 1,
                 'id_jadwal'  =>  1,
             ],

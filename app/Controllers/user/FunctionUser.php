@@ -5,6 +5,7 @@ use App\Controllers\BaseController;
 use App\Models\UserModels;
 use App\Models\AdminModel;
 use App\Models\BusModel;
+use App\Models\SupirModel;
 
 class FunctionUser extends BaseController
 {
@@ -36,9 +37,31 @@ class FunctionUser extends BaseController
     {
         return view('user\login');
     }
+<<<<<<< Updated upstream
     public function ViewRegister(){
         return view('user\register');
     }
+=======
+    // public function destroySession(){
+    //     session('id_admin')->remove('some_name');
+    //     return view('user\login');
+    // }
+    
+
+    public function ViewRegister(){
+        return view('user\register');
+        if(session('id_admin')){
+            return redirect() -> to (site_url('halaman_utama'));
+        }
+        return view('user\register');
+    }
+
+    public function halaman_utama(){
+        return view('user\halaman_utama');
+    }
+
+
+>>>>>>> Stashed changes
     public function login_user(){
         // $model = new AdminModel;
         // $this -> db = $model;
@@ -86,6 +109,7 @@ class FunctionUser extends BaseController
             $session ->setFlashdata('error','User Tidak Ditemukan');
             return redirect() -> to('/view_login');
         }
+<<<<<<< Updated upstream
         // $um = new UserModels();
         // $dataa['akun_user'] = $um->findAll();
         // $conn = db_connect();
@@ -117,6 +141,11 @@ class FunctionUser extends BaseController
         
         // }
     }
+=======
+    }
+    
+    
+>>>>>>> Stashed changes
     public function Register_User(){
         // protected $allowedFields = ['username', 'password', 'id_pelanggan', 'email','nama_pelanggan','nomor_hp_pelanggan'];
         if(!$this->validate([
@@ -141,13 +170,14 @@ class FunctionUser extends BaseController
             'nama_pelanggan' => $this -> request -> getPost('nama_pelanggan'),
             'nomor_hp_pelanggan' => $this -> request -> getPost('nomor_hp_pelanggan')
         ];
+        
         if($data['password'] !== $passwordconf){
             echo "<script>
                        alert('Password Tidak Sesuai');
                        </script>";
             return view('user\login');
         }
-
+        
         $userModel->save($data);
         return redirect()->to('/');
     }
