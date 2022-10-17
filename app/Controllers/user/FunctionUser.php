@@ -9,7 +9,6 @@ use App\Models\SupirModel;
 
 class FunctionUser extends BaseController
 {
-    
     public function index(){
 
         $bus = new BusModel();
@@ -18,6 +17,7 @@ class FunctionUser extends BaseController
             'title' => 'Bus',
             'bus' => $dataBus
         ];
+        return view('pages/halaman_user',$data);
     }
 
     public function cariPerjalanan(){
@@ -36,58 +36,17 @@ class FunctionUser extends BaseController
     }
     public function view_login()
     {
-        // if(session('id_admin')){
-        //     return redirect() -> to (site_url('halaman_utama'));
-        // }
         return view('user\login');
     }
 
     public function ViewRegister(){
-       
-        // if(session('id_admin')){
-        //     return redirect() -> to (site_url('halaman_utama'));
-        // }
-
         return view('user\register');
 
-
     }
+
+
+
     
-
-    public function ViewRegister(){
-        return view('user\register');
-        if(session('id_admin')){
-            return redirect() -> to (site_url('halaman_utama'));
-        }
-        return view('user\register');
-    }
-
-    public function halaman_utama(){
-        return view('user\halaman_utama');
-    }
-
-
-    public function login_user(){
-        // $model = new AdminModel;
-        // $this -> db = $model;
-        // $post = $this->request-> getPost();
-        // $query = $this ->db->table('admin')->getWhere(['username' => $post['username']]);
-        // $admin = $query -> getRow();
-        // if($admin){
-        //     if(password_verify($post['password'],$admin -> password)){
-        //         $param = ['id_admin' => $admin -> id_admin];
-        //         session() ->set($param);
-                
-        //         return redirect() -> to ('/index');
-
-        //     }
-        //     else{
-        //         return redirect() -> back() -> with ('error', 'Password Salah');
-        //     }
-        // }
-        // else{
-        //     return redirect() -> back() -> with ('error', 'Username tidak ada');
-        // }
 
 
     public function login_user(){
@@ -117,7 +76,7 @@ class FunctionUser extends BaseController
             return redirect() -> to('/view_login');
         }
     }
-    }
+
     
     public function Register_User(){
         // protected $allowedFields = ['username', 'password', 'id_pelanggan', 'email','nama_pelanggan','nomor_hp_pelanggan'];
