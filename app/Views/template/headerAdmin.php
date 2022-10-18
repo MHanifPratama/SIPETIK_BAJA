@@ -10,8 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assetsAdmin/NiceAdmin/assets/img/favicon.png" rel="icon">
-  <link href="assetsAdmin/NiceAdmin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -145,7 +144,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewTipeBus">
-          <i class="bi bi-envelope"></i>
+          <i class="bi bi-truck-front"></i>
           <span>Tipe Bus</span>
         </a>
       </li><!-- End Contact Page Nav -->
