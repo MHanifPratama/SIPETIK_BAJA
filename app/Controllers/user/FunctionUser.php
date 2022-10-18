@@ -37,18 +37,18 @@ class FunctionUser extends BaseController
     public function view_login()
     {
 
-        // if(session('id_akun')){
-        //     return redirect() -> to(site_url());
-        // }
+        if(session('id_akun')){
+            return redirect() -> to("/tit");
+        }
 
         return view('user\login');
     }
 
     public function ViewRegister(){
 
-        // if(session('id_akun')){
-        //     return redirect() -> to(site_url());
-        // }
+        if(session('id_akun')){
+            return redirect() -> to("/tit");
+        }
         return view('user\register');
 
     }
@@ -72,7 +72,7 @@ class FunctionUser extends BaseController
                
                 $params = ['id_akun' => $user -> id_akun];
                 $session -> set($params);
-                return redirect() -> to ('/halaman_utama');
+                return redirect() -> to ('/tit');
 
             }
             else{

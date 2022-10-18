@@ -79,6 +79,7 @@ $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
+$routes->get('/logout', 'user\FunctionUser::logout');
 
 $routes->get('/pages', 'Pages::index');
 $routes->get('(:any)', 'Pages::view/$1');
