@@ -43,16 +43,13 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a class="text-decoration-none" href="<?= base_url(); ?>" >SIPETIK</a></h1> <!-- mengembalikan pada base url -->
+      <h1 class="logo me-auto"><a class="text-decoration-none" href="<?= base_url(); ?>">SIPETIK</a></h1> <!-- mengembalikan pada base url -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="view_login">Sign In</a></li>
         </ul>
       </nav><!-- .navbar -->

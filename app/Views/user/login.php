@@ -5,7 +5,7 @@
 //   exit;
 // }
 ?>
-<?= $this -> extend('template/header')?>
+<?= $this -> extend('template/header2')?>
 <?= $this-> section('content')?>
 
     <section id="hero1" class="d-flex align-items-center">
@@ -21,6 +21,7 @@
                 if(session() -> getFlashdata('msg')) : ?>
                 <div class ="alert alert-danger"> <?=session() -> getFlashdata('msg')?> </div>
                 <?php endif; ?>
+                
                <form action="/login_user" METHOD="post">
                    <div class="inputBx">
                        <span>Username</span>

@@ -18,8 +18,5 @@ class AdminModel extends Model
         ->where(array('username' => $username))
         ->get() ->getRowArray();
     }
-
-
-
 }
 ?>

@@ -35,9 +35,37 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index/$1');
+
+// $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
-$routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
+
+// $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
+//Supir(Admin)
+$routes->get('/viewSupir', 'admin\FunctionSupir::listSupir');
+$routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir');
+$routes->POST('/simpanDataSupir', 'admin\FunctionSupir::simpan');
+$routes->delete('/hapusSupir/(:num)', 'admin\FunctionSupir::hapus/$1');
+$routes->get('/editSupir/(:num)', 'admin\FunctionSupir::editSupir/$1');
+$routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1');
+
+//Perjalanan(Admin)
+$routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan');
+$routes->get('/viewTambahPerjalanan', 'admin\FunctionPerjalanan::tambahPerjalanan');
+$routes->POST('/simpanDataPerjalanan', 'admin\FunctionPerjalanan::simpan');
+$routes->delete('/hapusPerjalanan/(:num)', 'admin\FunctionPerjalanan::hapus/$1');
+$routes->get('/editPerjalanan/(:num)', 'admin\FunctionPerjalanan::editPerjalanan/$1');
+$routes->post('/updatePerjalanan/(:num)', 'admin\FunctionPerjalanan::update/$1');
+
+//Tipe Bus(Admin)
+$routes->get('/viewTipeBus', 'admin\FunctionTipeBus::listTipeBus');
+$routes->get('/viewTambahTipeBus', 'admin\FunctionTipeBus::tambahTipeBus');
+$routes->POST('/simpanDataTipe', 'admin\FunctionTipeBus::simpan');
+$routes->delete('/hapusTipe/(:num)', 'admin\FunctionTipeBus::hapus/$1');
+$routes->get('/editTipe/(:num)', 'admin\FunctionTipeBus::editTipe/$1');
+$routes->post('/updateTipe/(:num)', 'admin\FunctionTipeBus::update/$1');
+
+
+
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
 $routes->get('/User', 'user\FunctionUser::index');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
