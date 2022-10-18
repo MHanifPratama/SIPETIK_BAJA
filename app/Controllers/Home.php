@@ -13,6 +13,7 @@ class Home extends BaseController
             'bus' => $dataBus
         ];
         // echo var_dump($data);
-        return view('pages/halaman_user',$data);
+         return view('pages/halaman_user',$data);
+        // return redirect()->to('/');
     }
 }

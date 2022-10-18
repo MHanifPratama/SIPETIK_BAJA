@@ -14,17 +14,19 @@ class BusModel extends Model
 
     public function getAllData(){
         return $this->db->table('bus')
-         ->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
-         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
+        ->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
+        ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
+        ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
             ->GroupBy('kota_akhir')
-            ->GroupBy('tipe')
-            ->GroupBy('kota_awal')
-         ->get()->getResultArray();
+            // ->GroupBy('tipe')
+            // ->GroupBy('kota_awal')
+            ->get()->getResultArray();
     }
     public function search($tipeBus){
         return $this->table('bus')
         ->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
+        ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
         ->like('bus.id_tipe',$tipeBus['tipeBus'])
         ->like('kota_awal',$tipeBus['asal'])
         ->like('kota_akhir',$tipeBus['tujuan'])
