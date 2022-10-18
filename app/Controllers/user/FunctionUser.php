@@ -35,21 +35,37 @@ class FunctionUser extends BaseController
     }
     public function view_login()
     {
+<<<<<<< Updated upstream
         if(session('id_admin')){
             return redirect() -> to (site_url('halaman_utama'));
         }
+=======
+        // if(session('id_akun')){
+        //     return redirect() -> to(site_url());
+        // }
+>>>>>>> Stashed changes
         return view('user\login');
     }
     //    return view('user\register');
 
     public function ViewRegister(){
+<<<<<<< Updated upstream
        
         if(session('id_admin')){
             return redirect() -> to (site_url('halaman_utama'));
         }
+=======
+        // if(session('id_akun')){
+        //     return redirect() -> to(site_url());
+        // }
+        return view('user\register');
+
+    }
+>>>>>>> Stashed changes
 
         return view('user\register');
 
+<<<<<<< Updated upstream
 
     }
     public function halaman_utama(){
@@ -57,19 +73,21 @@ class FunctionUser extends BaseController
     }
 
 
+=======
+>>>>>>> Stashed changes
     public function login_user(){
         $session = session();
 
         $post = $this -> request -> getPost();
-        $query = $this ->db ->table('admin')->getWhere(['username' => $post['username']]);
+        $query = $this ->db ->table('akun_user')->getWhere(['username' => $post['username']]);
         $user = $query->getRow();
         // $password = $this -> request -> getPost('password');
         // $pass = $user->password; //cek password di fb
         // $verify = password_verify($password,$pass);
         if ($user) {
             if(password_verify($post['password'],$user ->password)) {
-                $session ->setFlashdata('msg','Login');
-                $params = ['id_admin' => $user -> id_admin];
+               
+                $params = ['id_akun' => $user -> id_akun];
                 $session -> set($params);
                 return redirect() -> to ('/halaman_utama');
 
@@ -101,25 +119,50 @@ class FunctionUser extends BaseController
            return view('user\register');
         }
 
-        $passwordconf = $this -> request -> getPost('confpassword');
+
         $userModel = new UserModels();
         $data = [
             'username' => $this -> request -> getPost('username'),
+<<<<<<< Updated upstream
             'password' => $this -> request -> getPost('password'),
+=======
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_BCRYPT),
+            'confpassword' => $this -> request -> getPost('confpassword'),
+>>>>>>> Stashed changes
             'email' => $this -> request -> getPost('email'),
             'nama_pelanggan' => $this -> request -> getPost('nama_pelanggan'),
             'nomor_hp_pelanggan' => $this -> request -> getPost('nomor_hp_pelanggan')
         ];
-        if($data['password'] !== $passwordconf){
-            echo "<script>
-                       alert('Password Tidak Sesuai');
-                       </script>";
-            return view('user\login');
-        }
+        if($data['password'] === $data['confpassword']){
+            $userModel->save($data);
+            // echo "<script>
+            //            alert('Password Tidak Sesuai');
+            //            </script>";
 
+            return view('user\ViewRegister');
+        }
+<<<<<<< Updated upstream
+
+=======
+        // else if($data['password'] === $data['confpassword']){
+        //     $userModel->save($data);
+        //     // echo "<script>
+        //     //            alert('Password Tidak Sesuai');
+        //     //            </script>";
+
+        //     return view('user\ViewRegister');
+        // }
+        
+>>>>>>> Stashed changes
         $userModel->save($data);
         return redirect()->to('/');
     }
 
+
+    public function logout() {
+        session() -> remove('id_akun');
+
+        return redirect()->to('/view_login');
+    }
 
 }
