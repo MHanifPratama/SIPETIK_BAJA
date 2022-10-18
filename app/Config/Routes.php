@@ -38,7 +38,8 @@ $routes->set404Override();
 
 // $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
-
+$routes->get('/tit', 'Home::test');
+$routes->get('/list', 'Home::list');
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 //Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir');
