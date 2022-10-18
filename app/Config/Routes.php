@@ -36,10 +36,11 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->get('/', 'Home::index/$1');
+// $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
-
-$routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
+$routes->get('/tit', 'Home::test');
+$routes->get('/list', 'Home::list');
+// $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 //Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir');
 $routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir');
@@ -47,7 +48,7 @@ $routes->POST('/simpanDataSupir', 'admin\FunctionSupir::simpan');
 $routes->delete('/hapusSupir/(:num)', 'admin\FunctionSupir::hapus/$1');
 $routes->get('/editSupir/(:num)', 'admin\FunctionSupir::editSupir/$1');
 $routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1');
-
+$routes->get('/dashboard','admin\FunctionDashboard::dashboard');
 //Perjalanan(Admin)
 $routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan');
 $routes->get('/viewTambahPerjalanan', 'admin\FunctionPerjalanan::tambahPerjalanan');

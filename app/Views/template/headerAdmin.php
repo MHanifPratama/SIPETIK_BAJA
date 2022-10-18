@@ -150,6 +150,7 @@
       </li>
 
       <li class="nav-item">
+
         <a class="nav-link collapsed" href="/viewTipeBus">
           <i class="bi bi-truck-front"></i>
           <span>Tipe Bus</span>

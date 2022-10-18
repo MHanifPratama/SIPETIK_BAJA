@@ -13,6 +13,19 @@ class Home extends BaseController
             'bus' => $dataBus
         ];
         // echo var_dump($data);
-        return view('pages/halaman_user',$data);
+         return view('pages/halaman_user',$data);
+        // return redirect()->to('/');
+    }
+    public function test()
+    {
+ 
+         return view('user/halaman_utama');
+        // return redirect()->to('/');
+    }
+    public function list()
+    {
+ 
+         return view('user/table_user');
+        // return redirect()->to('/');
     }
 }
