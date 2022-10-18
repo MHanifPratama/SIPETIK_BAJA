@@ -18,16 +18,16 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assetsAdmin/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assetsAdmin/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assetsAdmin/NiceAdmin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assetsAdmin/NiceAdmin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assetsAdmin/NiceAdmin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assetsAdmin/NiceAdmin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assetsAdmin/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assetsAdmin/NiceAdmin/assets/css/style.css" rel="stylesheet">
+  <link href="/assetsAdmin/NiceAdmin/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.1
@@ -68,7 +68,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assetsAdmin/NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="/assetsAdmin/NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">Muhammad Irfan Hanif P.Anzani</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -138,7 +138,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewPerjalanan">
-          <i class="bi bi-envelope"></i>
+          <i class="bi bi-pin-map"></i>
           <span>Perjalanan</span>
         </a>
       </li><!-- End Contact Page Nav -->
@@ -156,17 +156,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/chart.js/chart.min.js"></script>
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/quill/quill.min.js"></script>
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assetsAdmin/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/chart.js/chart.min.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/quill/quill.min.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assetsAdmin/NiceAdmin/assets/js/main.js"></script>
+  <script src="/assetsAdmin/NiceAdmin/assets/js/main.js"></script>
   <?= $this->renderSection('contentAdmin') ?>
 
 </body>
