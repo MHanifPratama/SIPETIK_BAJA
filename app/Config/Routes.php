@@ -64,6 +64,8 @@ $routes->delete('/hapusTipe/(:num)', 'admin\FunctionTipeBus::hapus/$1');
 $routes->get('/editTipe/(:num)', 'admin\FunctionTipeBus::editTipe/$1');
 $routes->post('/updateTipe/(:num)', 'admin\FunctionTipeBus::update/$1');
 
+//Tipe Jadwal(Admin)
+$routes->get('/viewJadwal', 'admin\FunctionJadwal::listjadwal');
 
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
