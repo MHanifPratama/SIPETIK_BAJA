@@ -47,7 +47,7 @@ $routes->POST('/simpanDataSupir', 'admin\FunctionSupir::simpan');
 $routes->delete('/hapusSupir/(:num)', 'admin\FunctionSupir::hapus/$1');
 $routes->get('/editSupir/(:num)', 'admin\FunctionSupir::editSupir/$1');
 $routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1');
-
+$routes->get('/dashboard','admin\FunctionDashboard::dashboard');
 //Perjalanan(Admin)
 $routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan');
 $routes->get('/viewTambahPerjalanan', 'admin\FunctionPerjalanan::tambahPerjalanan');
