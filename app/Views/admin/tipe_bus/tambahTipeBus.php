@@ -1,20 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<form method="post" action="\simpanDataTipe">
-  <label for="tipe">Name Tipe</label><br>
-  <input type="text" id="tipe" name="tipe"><br>
-  <label for="harga">Harga</label><br>
-  <input type="text" id="harga" name="harga">
-  <input type="submit" value="Submit">
-</form>
+<?= $this -> extend('template/headerAdmin')?>
+<?= $this-> section('contentAdmin')?>
 
-</body>
+<main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Tambah Tipe Bus</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Tipe Bus / Tambah Tipe Bus</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+  <form method="post" action="\simpanDataTipe">
+    <div class="form-row">
+      <div class="form-group col-md-6 mb-3">
+          <label for="tipe">Name Tipe</label>
+          <input type="text" class="form-control" id="tipe" name="tipe">
+      </div>
+      <div class="form-group col-md-6 mb-3">
+          <label for="harga">Harga</label>
+          <input type="text" class="form-control" id="harga" name="harga">
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+  </form>
+
+</main>
+
 </html>
+<?= $this -> endSection() ?>
