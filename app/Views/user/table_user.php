@@ -56,7 +56,7 @@
     <table>
         <thead>
             <tr>
-                <th>S No.</th>
+                <th>No.</th>
                 <th>Image</th>
                 <th>Username</th>
                 <th>Email</th>
