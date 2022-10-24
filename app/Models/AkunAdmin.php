@@ -11,7 +11,9 @@ class AkunAdmin extends Model
 
     protected $useAutoIncrement = true;
 
-    protected $allowedFields = ['id_akun_admin','username', 'password','email','nama_admin'];
+
+    protected $allowedFields = ['id_akun_admin','username', 'password','email'];
+
 
 }
 ?>

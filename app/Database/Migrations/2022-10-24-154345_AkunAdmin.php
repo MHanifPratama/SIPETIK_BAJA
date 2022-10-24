@@ -28,10 +28,6 @@ class AkunAdmin extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '1000',
 			],
-			'nama_admin'      => [
-				'type'           => 'VARCHAR',
-				'constraint'     => '1000',
-			],
 		]);
 		$this->forge->addKey('id_akun_admin', TRUE);
 		$this->forge->createTable('akun_admin', TRUE);
