@@ -11,6 +11,4 @@
       </nav>
     </div><!-
 
-Ini Dashboard
-
 <?= $this -> endSection() ?>

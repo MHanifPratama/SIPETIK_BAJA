@@ -38,7 +38,7 @@
                     <a class="nav-link" href="about.php">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Log Out</a>
+                    <a class="nav-link" href="/logout">Log Out</a>
                   </li>
               </ul>
             </div>
@@ -56,7 +56,7 @@
     <table>
         <thead>
             <tr>
-                <th>S No.</th>
+                <th>No.</th>
                 <th>Image</th>
                 <th>Username</th>
                 <th>Email</th>

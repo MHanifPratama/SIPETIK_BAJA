@@ -6,6 +6,12 @@
         <div class = "judul">
             <h2>Jadwal Perjalanan Armada Bus BAJA</h2>
         </div>
+        <div>
+            <a href="/tit">
+                <button type="button" class="btn btn-primary">Pesan Tiket</button>
+            </a>
+        </div>
+
         <table class="table table-hover">
         <thead>
             <tr class="table-primary">
@@ -22,17 +28,18 @@
         </thead>
             <tbody>
                 <?php ?>
-                <?php foreach ($bus as $mhs) : ?>
+                <?php foreach ($bus as $bus) : ?>
                 <tr>
-                    <td><?= $mhs['id_bus']?></td>
-                    <td><?= $mhs['nama_bus']?></td>
-                    <td><?= $mhs['tipe']?></td>
-                    <td><?= $mhs['kota_awal']?></td>
-                    <td><?= $mhs['kota_akhir']?></td>
+                    <td><?= $bus['id_bus']?></td>
+                    <td><?= $bus['nama_bus']?></td>
+                    <td><?= $bus['tipe']?></td>
+                    <td><?= $bus['kota_awal']?></td>
+                    <td><?= $bus['kota_akhir']?></td>
 
-                    <td><?= $mhs['tanggal']?></td>
+                    <td><?= $bus['tanggal']?></td>
 
-                    <td><?= $mhs['harga'] * $mhs['total_km']?></td>
+                    <td><?= $bus['harga'] * $bus['total_km']?></td>
+
                 </tr>
                 <?php endforeach; ?>
             </tbody>
