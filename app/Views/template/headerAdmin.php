@@ -10,8 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assetsAdmin/NiceAdmin/assets/img/favicon.png" rel="icon">
-  <link href="assetsAdmin/NiceAdmin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -43,7 +42,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/dashboard" class="logo d-flex align-items-center">
         <span class="d-none d-lg-block">SIPETIK ADMIN</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -122,7 +121,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed " href="index.html">
+        <a class="nav-link collapsed " href="/dashboard">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -144,8 +143,16 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
+        <a class="nav-link collapsed" href="/viewJadwal">
+          <i class="bi bi-calendar"></i>
+          <span>Jadwal</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+
         <a class="nav-link collapsed" href="/viewTipeBus">
-          <i class="bi bi-envelope"></i>
+          <i class="bi bi-truck-front"></i>
           <span>Tipe Bus</span>
         </a>
       </li><!-- End Contact Page Nav -->

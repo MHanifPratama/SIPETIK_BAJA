@@ -14,34 +14,32 @@
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-        <a href = "/viewTambahPerjalanan" class="btn btn-outline-primary"> Tambah Perjalanan </a>
+        <a href = "/viewTambahJadwal" class="btn btn-outline-primary"> Tambah Perjalanan </a>
 
         <div class="row p-3">
             <table >
                     <thead>
                             <th scope="col">No</th>
-                            <th scope="col">Kota Awal</th>
-                            <th scope="col">Kota Akhir</th>
-                            <th scope="col">Jarak Tempuh</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Waktu Keberangan</th>
                             <th scope="col">Aksi</th>
                     </thead>
                     <tbody>
                         <?php ?>
-                        <?php foreach ($perjalanan as $prjl) : ?>
+                        <?php foreach ($jadwal as $jdwl) : ?>
                         <tr>
-                            <td><?= $prjl['id_perjalanan']?></td><br>
-                            <td><?= $prjl['kota_awal']?></td><br>
-                            <td><?= $prjl['kota_akhir']?></td><br>
-                            <td><?= $prjl['total_km']?></td><br>
+                            <td><?= $jdwl['id_jadwal']?></td><br>
+                            <td><?= $jdwl['tanggal']?></td><br>
+                            <td><?= $jdwl['waktu_keberangkatan']?></td><br>
                             <td>
-                            <form action="/hapusPerjalanan/<?= $prjl['id_perjalanan'] ?>" method="post">
+                            <form action="/hapusJadwal/<?= $jdwl['id_jadwal'] ?>" method="post">
                                 <input type="hidden" name="_method" value="DELETE" />
                                 <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
                             </form>
                             </td>
                             <td>
                                 <div>
-                                    <a href="/editPerjalanan/<?= $prjl['id_perjalanan'] ?>">Edit</a>
+                                    <a href="/editJadwal/<?= $jdwl['id_jadwal'] ?>">Edit</a>
                                 </div>
                             </td>
                                 

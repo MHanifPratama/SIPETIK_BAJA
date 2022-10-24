@@ -38,7 +38,8 @@ $routes->set404Override();
 
 // $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
-
+$routes->get('/tit', 'Home::test');
+$routes->get('/list', 'Home::list');
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 //Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir');
@@ -47,7 +48,7 @@ $routes->POST('/simpanDataSupir', 'admin\FunctionSupir::simpan');
 $routes->delete('/hapusSupir/(:num)', 'admin\FunctionSupir::hapus/$1');
 $routes->get('/editSupir/(:num)', 'admin\FunctionSupir::editSupir/$1');
 $routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1');
-
+$routes->get('/dashboard','admin\FunctionDashboard::dashboard');
 //Perjalanan(Admin)
 $routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan');
 $routes->get('/viewTambahPerjalanan', 'admin\FunctionPerjalanan::tambahPerjalanan');
@@ -64,6 +65,8 @@ $routes->delete('/hapusTipe/(:num)', 'admin\FunctionTipeBus::hapus/$1');
 $routes->get('/editTipe/(:num)', 'admin\FunctionTipeBus::editTipe/$1');
 $routes->post('/updateTipe/(:num)', 'admin\FunctionTipeBus::update/$1');
 
+//Tipe Jadwal(Admin)
+$routes->get('/viewJadwal', 'admin\FunctionJadwal::listjadwal');
 
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
@@ -76,6 +79,7 @@ $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
+$routes->get('/logout', 'user\FunctionUser::logout');
 
 $routes->get('/pages', 'Pages::index');
 $routes->get('(:any)', 'Pages::view/$1');

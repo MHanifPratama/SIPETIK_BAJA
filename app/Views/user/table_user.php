@@ -48,66 +48,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/Arsha/assets/css/style_hu.css">
+    <link rel="stylesheet" href="assets/Arsha/assets/css/style_t.css">
     <title>Pesan Tiket</title>
 </head>
 <body class="main_bg">
-<div class="container">
-    <div class="title">Pesan Tiket</div>
-    <div class="content">
-      <form action="#">
-        <div class="user-details">
-          <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" placeholder="Nama Lengkap" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Destination</span>
-            <input type="text" placeholder="Masukkan Destinasi" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Email</span>
-            <input type="text" placeholder="Masukkan Email" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Phone Number</span>
-            <input type="text" placeholder="Masukkan Nomor HP" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Passenger</span>
-            <input type="text" placeholder="Masukkan Jumlah Penumpang" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Agen Travel</span>
-            <input type="text" placeholder="Pilih Agen Travel" required>
-          </div>
-        </div>
-        <div class="gender-details">
-          <input type="radio" name="tipe_bus" id="dot-1">
-          <input type="radio" name="tipe_bus" id="dot-3">
-          <input type="radio" name="tipe_bus" id="dot-2">
-          <span class="gender-title">Tipe Bus</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Ekonomi</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="gender">Eksklusif</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot three"></span>
-            <span class="gender">VIP</span>
-            </label>
-          </div>
-        </div>
-        <div class="button">
-          <input type="submit" value="Pesan Tiket">
-        </div>
-      </form>
-    </div>
-  </div>
+<div class="header_fixed">
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Image</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src=https://drive.google.com/uc?export=view&id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_ /></td>
+                <td>Rakhi Gupta</td>
+                <td>rakhigupta@gmail.com</td>
+                <td>Engineering</td>
+                <td><button>View</button></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
 
 </body>
 
