@@ -38,7 +38,7 @@
                     <a class="nav-link" href="about.php">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Log Out</a>
+                    <a class="nav-link" href="/logout">Log Out</a>
                   </li>
               </ul>
             </div>
@@ -49,15 +49,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/Arsha/assets/css/style_hu.css">
-    <title>Video-2</title>
+    <title>Pesan Tiket</title>
 </head>
 <body class="main_bg">
-<<<<<<< Updated upstream
+
     <div class="form">
         <div class="form-text">
             <h1>Book Now</h1>
             <p>Tes.</p>
-=======
+
 <div class="container">
     <div class="title">Pesan Tiket</div>
     <div class="content">
@@ -96,51 +96,36 @@
                 <?php endforeach; ?>
             </select>
           </div>
->>>>>>> Stashed changes
+
+
         </div>
-        <div class="main-form">
-            <form action="index.php" method="get">
-                <div>
-                    <span>Full Name</span>
-                    <input type="text" name="name" id="name" placeholder="Write your name here..." required>
-                </div>
-                <div>
-                    <span>Email Address</span>
-                    <input type="email" name="name" id="name" placeholder="Write your email here..." required> 
-                </div>
-                <div>
-                    <!-- <---this is the select option--->
-                    <span>Number of People</span>
-                    <select name="people" id="people" required>
-                        <option value=""><---People---></option>
-                        <option value="1">1 People</option>
-                        <option value="2">2 People</option>
-                        <option value="3">3 People</option>
-                        <option value="4">4 People</option>
-                    </select>
-                    <!-- <---this is the select option--->
-                </div>
-                <div>
-                    <span>Time</span>
-                    <input type="text" name="time" id="time" placeholder="Time" required>
-                </div>
-                <div>
-                    <span>Date</span>
-                    <input type="date" name="date" id="date" placeholder="date" required>
-                </div>
-                <div>
-                    <span>Phone Number</span>
-                    <input type="number" name="number" id="number" placeholder="Write your number here..." required>
-                </div>
-                <div id="submit">
-
-                    <input type="submit" value="SUBMIT" id="submit">
-                </div>
-
-
-            </form>
+        <div class="gender-details">
+          <input type="radio" name="tipe_bus" id="dot-1">
+          <input type="radio" name="tipe_bus" id="dot-3">
+          <input type="radio" name="tipe_bus" id="dot-2">
+          <span class="gender-title">Tipe Bus</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Ekonomi</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Eksklusif</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">VIP</span>
+            </label>
+          </div>
         </div>
+        <div class="button">
+          <input type="submit" value="Pesan Tiket">
+        </div>
+      </form>
     </div>
+  </div>
+
 </body>
 
 </html>

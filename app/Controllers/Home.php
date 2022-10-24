@@ -22,8 +22,7 @@ class Home extends BaseController
          return view('pages/halaman_user',$data);
         // return redirect()->to('/');
     }
-<<<<<<< Updated upstream
-=======
+
     public function pesanTiket()
     {
         $bus = new BusModel();
@@ -72,11 +71,12 @@ class Home extends BaseController
 
     }
 
+
     public function list()
     {
  
          return view('user/table_user');
         // return redirect()->to('/');
     }
->>>>>>> Stashed changes
+    
 }

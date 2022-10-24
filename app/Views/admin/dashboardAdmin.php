@@ -2,6 +2,4 @@
 <?= $this-> section('contentAdmin')?>
 
 
-Ini Dashboard
-
 <?= $this -> endSection() ?>
