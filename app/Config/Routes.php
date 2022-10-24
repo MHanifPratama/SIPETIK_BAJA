@@ -41,6 +41,11 @@ $routes->get('/', 'Home::index');
 $routes->get('/tit', 'Home::test');
 $routes->get('/list', 'Home::list');
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
+
+//Login (Admin)
+$routes->get('/loginAdmin', 'admin\FunctionUmum::viewLogin');
+//Register (Admin)
+$routes->get('/registerAdmin', 'admin\FunctionUmum::viewRegister');
 //Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir');
 $routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir');
@@ -67,7 +72,19 @@ $routes->post('/updateTipe/(:num)', 'admin\FunctionTipeBus::update/$1');
 
 //Tipe Jadwal(Admin)
 $routes->get('/viewJadwal', 'admin\FunctionJadwal::listjadwal');
+$routes->get('/viewTambahJadwal', 'admin\FunctionJadwal::tambahJadwal');
+$routes->POST('/simpanDataJadwal', 'admin\FunctionJadwal::simpan');
+$routes->delete('/hapusJadwal/(:num)', 'admin\FunctionJadwal::hapus/$1');
+$routes->get('/editJadwal/(:num)', 'admin\FunctionJadwal::editJadwal/$1');
+$routes->post('/updateJadwal/(:num)', 'admin\FunctionJadwal::update/$1');
 
+//Armada(Admin)
+$routes->get('/viewBus', 'admin\FunctionArmadaBus::listArmadaBus');
+$routes->get('/viewTambahBus', 'admin\FunctionArmadaBus::tambahArmadaBus'); 
+$routes->POST('/simpanDataBus', 'admin\FunctionArmadaBus::simpan');
+$routes->delete('/hapusBus/(:num)', 'admin\FunctionArmadaBus::hapus/$1');
+$routes->get('/editBus/(:num)', 'admin\FunctionArmadaBus::editBus/$1');
+$routes->post('/updateBus/(:num)', 'admin\FunctionArmadaBus::update/$1');
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
 $routes->get('/User', 'user\FunctionUser::index');
@@ -79,6 +96,9 @@ $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
+
+
+
 
 $routes->get('/pages', 'Pages::index');
 $routes->get('(:any)', 'Pages::view/$1');

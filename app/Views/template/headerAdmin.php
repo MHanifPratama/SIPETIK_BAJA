@@ -148,7 +148,12 @@
           <span>Jadwal</span>
         </a>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/viewBus">
+          <i class="bi bi-calendar"></i>
+          <span>Armada Bus</span>
+        </a>
+      </li>
       <li class="nav-item">
 
         <a class="nav-link collapsed" href="/viewTipeBus">

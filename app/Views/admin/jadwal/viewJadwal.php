@@ -4,17 +4,17 @@
 
 <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Perjalanan</h1>
+      <h1>Jadwal</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Perjalanan</li>
+          <li class="breadcrumb-item active">Jadwal</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-        <a href = "/viewTambahJadwal" class="btn btn-outline-primary"> Tambah Perjalanan </a>
+        <a href = "/viewTambahJadwal" class="btn btn-outline-primary"> Tambah Jadwal </a>
 
         <div class="row p-3">
             <table >
