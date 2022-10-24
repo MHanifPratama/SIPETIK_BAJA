@@ -7,9 +7,15 @@ class FunctionUmum extends BaseController{
 
 
     public function viewLogin(){
+        if (session('logged_in') == true) {
+            return redirect()->to('/dashboard');
+        }
         return view('admin\loginRegister\loginAdmin');
     }
     public function viewRegister(){
+        if (session('logged_in') == true) {
+            return redirect()->to('/dashboard');
+        }
         return view('admin\loginRegister\registerAdmin');
     }
     public function saveRegister(){
