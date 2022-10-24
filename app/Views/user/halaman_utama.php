@@ -52,35 +52,52 @@
     <title>Pesan Tiket</title>
 </head>
 <body class="main_bg">
+
+    <div class="form">
+        <div class="form-text">
+            <h1>Book Now</h1>
+            <p>Tes.</p>
+
 <div class="container">
     <div class="title">Pesan Tiket</div>
     <div class="content">
-      <form action="#">
+      <form action="/prosesTiket">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
           </div>
           <div class="input-box">
             <span class="details">Destination</span>
-            <input type="text" placeholder="Masukkan Destinasi" required>
+            <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
+                <?php foreach ($perjalanan as $prjl) : ?>
+                    <option value="<?= $prjl['id_perjalanan'] ?>"><?=  $prjl['kota_awal'],"  -  ",$prjl['kota_akhir']?></option>
+                <?php endforeach; ?>
+            </select>
+
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Masukkan Email" required>
+            <input type="text" placeholder="Masukkan Email" required id="email" name="email">
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Masukkan Nomor HP" required>
+            <input type="text" placeholder="Masukkan Nomor HP" required name="nomor_hp" id="nomor_hp">
           </div>
           <div class="input-box">
             <span class="details">Passenger</span>
-            <input type="text" placeholder="Masukkan Jumlah Penumpang" required>
+            <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
           </div>
           <div class="input-box">
             <span class="details">Agen Travel</span>
-            <input type="text" placeholder="Pilih Agen Travel" required>
+            <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
+                <?php foreach ($bus as $bus) : ?>
+                    <option value="<?= $bus['id_bus'] ?>"><?=  $bus['nama_bus']?></option>
+                <?php endforeach; ?>
+            </select>
           </div>
+
+
         </div>
         <div class="gender-details">
           <input type="radio" name="tipe_bus" id="dot-1">

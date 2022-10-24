@@ -38,8 +38,11 @@ $routes->set404Override();
 
 // $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
-$routes->get('/tit', 'Home::test');
+
+
 $routes->get('/list', 'Home::list');
+// $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
+
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 
 //Login (Admin)
@@ -86,6 +89,7 @@ $routes->delete('/hapusBus/(:num)', 'admin\FunctionArmadaBus::hapus/$1');
 $routes->get('/editBus/(:num)', 'admin\FunctionArmadaBus::editBus/$1');
 $routes->post('/updateBus/(:num)', 'admin\FunctionArmadaBus::update/$1');
 
+
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
 $routes->get('/User', 'user\FunctionUser::index');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
@@ -96,7 +100,13 @@ $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
+
 $routes->get('/logout', 'user\FunctionUser::logout');
+
+//Pessan Tiket
+// $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
+$routes->get('/tit', 'Home::pesanTiket');
+$routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 
 
 
