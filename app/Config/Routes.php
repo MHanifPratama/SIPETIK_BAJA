@@ -38,6 +38,12 @@ $routes->set404Override();
 
 // $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
+<<<<<<< Updated upstream
+=======
+
+$routes->get('/list', 'Home::list');
+// $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
+>>>>>>> Stashed changes
 
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 //Supir(Admin)
@@ -66,6 +72,7 @@ $routes->post('/updateTipe/(:num)', 'admin\FunctionTipeBus::update/$1');
 
 
 
+
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
 $routes->get('/User', 'user\FunctionUser::index');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
@@ -76,6 +83,17 @@ $routes->get('/Home', 'Home::index');
 $routes->get('/About', 'Home::about');
 $routes->get('/User/(:any)', 'user\FunctionUser::login_user/$1');
 $routes->post('/Register_User', 'user\FunctionUser::Register_User');
+<<<<<<< Updated upstream
+=======
+$routes->get('/logout', 'user\FunctionUser::logout');
+
+//Pessan Tiket
+// $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
+$routes->get('/tit', 'Home::pesanTiket');
+$routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
+
+
+>>>>>>> Stashed changes
 
 $routes->get('/pages', 'Pages::index');
 $routes->get('(:any)', 'Pages::view/$1');

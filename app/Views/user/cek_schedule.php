@@ -6,6 +6,12 @@
         <div class = "judul">
             <h2>Jadwal Perjalanan Armada Bus BAJA</h2>
         </div>
+        <div>
+            <a href="/tit">
+                <button type="button" class="btn btn-primary">Pesan Tiket</button>
+            </a>
+        </div>
+
         <table class="table table-hover">
         <thead>
             <tr class="table-primary">
@@ -32,7 +38,15 @@
 
                     <td><?= $mhs['tanggal']?></td>
 
+<<<<<<< Updated upstream
                     <td><?= $mhs['harga'] * $mhs['total_km']?></td>
+=======
+                    <td><?= $bus['harga'] * $bus['total_km']?></td>
+
+                    <td>
+
+                    </td>
+>>>>>>> Stashed changes
                 </tr>
                 <?php endforeach; ?>
             </tbody>
