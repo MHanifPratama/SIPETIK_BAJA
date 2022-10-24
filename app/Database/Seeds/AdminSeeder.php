@@ -11,7 +11,7 @@ class AdminSeeder extends Seeder
         $data = [
             [
                 'username'  => 'admin',
-                'password'  =>  password_hash(123,PASSWORD_BCRYPT),
+                'password'  =>  password_hash(123,PASSWORD_DEFAULT),
                 
             ],
             [
@@ -92,7 +92,18 @@ class AdminSeeder extends Seeder
                 'id_perjalanan'  => 1,
                 'id_jadwal'  =>  1,
             ],
+            
+            
         ];
+        $dataAkunAdmin = [
+            [
+            'username'  =>  'MHanifPratama',
+            'email'  => 'mhanifp27@gmail.com',
+            'password'  => password_hash(12345678,PASSWORD_DEFAULT),
+        ]
+    ];
+        
+        $this->db->table('akun_admin')->insertBatch($dataAkunAdmin);
         $this->db->table('bus')->insertBatch($dataBus);
         $this->db->table('tipe_bus')->insertBatch($dataTipeBus);
         $this->db->table('supir')->insertBatch($dataSupir);
