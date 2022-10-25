@@ -106,7 +106,8 @@ $routes->get('/logout', 'user\FunctionUser::logout');
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
 $routes->get('/tit', 'Home::pesanTiket');
-$routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
+$routes->post('/prosesTiket', 'user/PesanTiket::pesanTiket');
+// $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 
 
 

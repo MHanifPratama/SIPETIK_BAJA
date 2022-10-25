@@ -66,7 +66,7 @@ class Home extends BaseController
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus')
         ];
-        $tiket->insert($data);
+        $tiket->save($data);
         return redirect()->to('/');
 
     }
