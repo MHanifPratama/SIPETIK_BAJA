@@ -9,6 +9,7 @@
           <li class="breadcrumb-item active">Perjalanan</li>
         </ol>
       </nav>
-    </div><!-
+    </div>
+    
 
 <?= $this -> endSection() ?>
