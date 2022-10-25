@@ -11,7 +11,7 @@ class UserSeeder extends Seeder
         $data = [
             [
                 'username'  => 'admin',
-                'password'  =>  password_hash(123,PASSWORD_BCRYPT),
+                'password'  =>  password_hash(123,PASSWORD_DEFAULT),
                 'email'  =>  'mhanifp27@gmail.com',
                 'nama_pelanggan'  =>  'M Hanif Pratama',
                 'nomor_hp_pelanggan'      =>'081272562034'

@@ -1,7 +1,15 @@
 <?= $this -> extend('template/headerAdmin')?>
 <?= $this-> section('contentAdmin')?>
-
-
+<main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Selamat Datang <?=$_SESSION['username']?></h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Perjalanan</li>
+        </ol>
+      </nav>
+    </div>
  <!-- Customers Card -->
  <div class="col-xxl-4 col-xl-12">
 
@@ -38,5 +46,6 @@
     </div>
 
 </div><!-- End Customers Card -->
+
 
 <?= $this -> endSection() ?>

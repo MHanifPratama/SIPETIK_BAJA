@@ -68,12 +68,12 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="/assetsAdmin/NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Muhammad Irfan Hanif P.Anzani</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?=$_SESSION['username'];?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Muhammad Irfan Hanif P.Anzani</h6>
+              <h6><?=$_SESSION['username'];?></h6>
               <span>Web Designer</span>
             </li>
             <li>
@@ -101,7 +101,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="/logoutAdmin">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -148,7 +148,12 @@
           <span>Jadwal</span>
         </a>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/viewBus">
+          <i class="bi bi-calendar"></i>
+          <span>Armada Bus</span>
+        </a>
+      </li>
       <li class="nav-item">
 
         <a class="nav-link collapsed" href="/viewTipeBus">
