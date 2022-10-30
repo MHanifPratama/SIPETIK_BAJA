@@ -18,6 +18,7 @@ class FunctionDashboard extends BaseController{
         $dataSupir = $supir->countAllData();
         $dataJadwal = $jadwal->findAll();
         $dataPerjalanan = $perjalanan->countAllData();
+        $dataArmada = $bus->countAllResults();
         $dataTipeBus = $tipeBus->findAll();
         $data = [
             'title' => 'Dashboard',
@@ -25,7 +26,8 @@ class FunctionDashboard extends BaseController{
             'supir' => $dataSupir,
             'jadwal' => $dataJadwal,
             'perjalanan' => $dataPerjalanan,
-            'tipeBus' => $dataTipeBus
+            'tipeBus' => $dataTipeBus,
+            'armada' => $dataArmada
         ];
         return view('admin\dashboard\dashboard', $data);
     }

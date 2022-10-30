@@ -52,7 +52,7 @@ class Home extends BaseController
             'penumpang' => 'required',
             'id_perjalanan'=>'required',
             'id_bus'=>'required',
-            'tipe_bus'=>'required',
+            'id_tipe'=>'required',
         ])){
             return redirect()->to('/tit');
         }
@@ -64,7 +64,8 @@ class Home extends BaseController
             'email' => $this->request->getPost('email'),
             'no_hp' => $this->request->getPost('no_hp'),
             'penumpang' => $this->request->getPost('penumpang'),
-            'id_bus' => $this->request->getPost('id_bus')
+            'id_bus' => $this->request->getPost('id_bus'),
+            'id_tipe' => $this->request->getPost('id_tipe')
         ];
         $tiket->save($data);
         return redirect()->to('/');

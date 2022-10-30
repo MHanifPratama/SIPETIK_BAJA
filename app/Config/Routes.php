@@ -93,8 +93,7 @@ $routes->delete('/hapusBus/(:num)', 'admin\FunctionArmadaBus::hapus/$1',['filter
 $routes->get('/editBus/(:num)', 'admin\FunctionArmadaBus::editBus/$1',['filter' => 'auth']);
 $routes->post('/updateBus/(:num)', 'admin\FunctionArmadaBus::update/$1',['filter' => 'auth']);
 
-<<<<<<< Updated upstream
-=======
+
 //StaffKeuangan
 $routes->get('/viewStaffKeuangan', 'admin\FunctionStaffKeuangan::listStaff',['filter' => 'auth']);
 $routes->get('/viewTambahStaff', 'admin\FunctionStaffKeuangan::tambahStaff',['filter' => 'auth']);
@@ -103,7 +102,7 @@ $routes->delete('/hapusStaff/(:num)', 'admin\FunctionStaffKeuangan::hapus/$1',['
 $routes->get('/editStaff/(:num)', 'admin\FunctionStaffKeuangan::editStaff/$1',['filter' => 'auth']);
 $routes->post('/updateStaff/(:num)', 'admin\FunctionStaffKeuangan::update/$1',['filter' => 'auth']);
 
->>>>>>> Stashed changes
+
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
@@ -124,8 +123,8 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
-$routes->get('/tit', 'Home::pesanTiket');
-$routes->post('/prosesTiket', 'user/PesanTiket::pesanTiket');
+$routes->get('/tit', 'user\PesanTiket::tambahTiket');
+$routes->post('/prosesTiket', 'user\PesanTiket::pesanTiket');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 
 

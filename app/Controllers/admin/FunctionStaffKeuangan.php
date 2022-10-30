@@ -1,12 +1,11 @@
 <?php 
 namespace App\Controllers\admin;
 use App\Controllers\BaseController;
-
+use App\Models\StaffKeuangan;
 class FunctionStaffKeuangan extends BaseController{
+    public function listStaff(){
 
-<<<<<<< Updated upstream
-    
-=======
+
         $staff_keuangan = new StaffKeuangan() ;
         $dataStaff = $staff_keuangan->findAll();
         $data = [
@@ -15,6 +14,7 @@ class FunctionStaffKeuangan extends BaseController{
         ];
         return view('admin\staffKeuangan\viewStaff',$data);
     }
+
     public function tambahStaff(){
         $staff_keuangan = new StaffKeuangan() ;
         $dataStaff = $staff_keuangan->findAll();
@@ -84,5 +84,4 @@ class FunctionStaffKeuangan extends BaseController{
         $staffModel->update($id_akun_staff_keuangan, $data);
         return redirect()->to('/viewStaffKeuangan');
     }
->>>>>>> Stashed changes
 }
