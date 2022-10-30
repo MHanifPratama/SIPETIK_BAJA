@@ -16,7 +16,8 @@ class TiketModel extends Model
         'no_hp',
         'penumpang',
         'id_perjalanan',
-        'id_bus', ];
+        'id_bus',
+        'id_tipe' ];
 
     
     public function getAllDataFromAllTable(){

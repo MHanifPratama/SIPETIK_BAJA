@@ -55,7 +55,7 @@
 <div class="container">
     <div class="title">Pesan Tiket</div>
     <div class="content">
-      <form action="/prosesTiket">
+      <form action="/prosesTiket" method="post">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
@@ -76,7 +76,7 @@
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Masukkan Nomor HP" required name="nomor_hp" id="nomor_hp">
+            <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp">
           </div>
           <div class="input-box">
             <span class="details">Passenger</span>

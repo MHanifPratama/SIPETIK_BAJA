@@ -119,8 +119,8 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
-$routes->get('/tit', 'Home::pesanTiket');
-$routes->post('/prosesTiket', 'user/PesanTiket::pesanTiket');
+$routes->get('/tit', 'user\PesanTiket::tambahTiket');
+$routes->post('/prosesTiket', 'user\PesanTiket::pesanTiket');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 
 
