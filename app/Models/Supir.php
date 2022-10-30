@@ -11,4 +11,8 @@ class Supir extends Model
 
     protected $useAutoIncrement = true;
     protected $allowedFields = ['id_supir', 'nama_supir', 'nomor_hp_supir'];
+
+    public function countAllData(){
+        return $this->countAllResults();
+    }
 }

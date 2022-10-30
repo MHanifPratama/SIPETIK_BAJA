@@ -116,22 +116,9 @@ class FunctionUser extends BaseController
 
         if($data['password'] === $data['confpassword']){
             $userModel->save($data);
-            // echo "<script>
-            //            alert('Password Tidak Sesuai');
-            //            </script>";
 
             return view('user\ViewRegister');
         }
-
-        // else if($data['password'] === $data['confpassword']){
-        //     $userModel->save($data);
-        //     // echo "<script>
-        //     //            alert('Password Tidak Sesuai');
-        //     //            </script>";
-
-        //     return view('user\ViewRegister');
-        // }
-        
 
         $userModel->save($data);
         return redirect()->to('/view_login');

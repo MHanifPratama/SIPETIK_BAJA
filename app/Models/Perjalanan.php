@@ -11,4 +11,7 @@ class Perjalanan extends Model
 
     protected $useAutoIncrement = true;
     protected $allowedFields = ['id_perjalanan', 'kota_awal', 'kota_akhir','total_km'];
+    public function countAllData(){
+        return $this->countAllResults();
+    }
 }
