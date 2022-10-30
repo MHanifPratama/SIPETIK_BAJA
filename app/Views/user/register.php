@@ -8,51 +8,42 @@
       <div class="col-lg-6 d-flex flex-column justify-content-center pt- pt-lg-0 order-4 order-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="contentBx">
               <div class="formBx">
-                <h2>Register</h2>
-                  <form action="/Register_User" METHOD="post">
+                <h2><?=lang('Auth.register')?></h2>
+                <?= view('Myth\Auth\Views\_message_block') ?>
+                  <form action="<?= url_to('register') ?>" method="post">
+                        <?= csrf_field() ?>
                     <div class="inputBx">
-                      <span>Email</span>
+                      <span><?=lang('Auth.email')?></span>
                         <label>
-                          <input type="email" name="email" id="email" required autocomplete="off">
-                        </label>
-                      
-                      <span>Username</span>
+                          <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>"
+                                   name="email" aria-describedby="emailHelp" placeholder="<?=lang('Auth.email')?>" value="<?= old('email') ?>" required autocomplete="off">
+                                   <small id="emailHelp" class="form-text text-muted"><?=lang('Auth.weNeverShare')?></small>
+                                  </label>
+                      <span><?=lang('Auth.username')?></span>
                         <label>
-                          <input type="text" name="username" id="username" required autocomplete="off">
+                          <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?=lang('Auth.username')?>" value="<?= old('username') ?>" required autocomplete="off">
                         </label>
                     
-                      <span>Password</span>
+                      <span><?=lang('Auth.password')?></span>
                         <label>
-                          <input type="password" name="password" id="password" required autocomplete="off">
+                          <input type="password" name="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>" required autocomplete="off">
                         </label>
 
-                      <span>Konfirmasi Password</span>
+                      <span><?=lang('Auth.repeatPassword')?></span>
                         <label>
-                          <input type="password" name="confpassword" id="confpassword" required autocomplete="off">
-                        </label>
-
-                      <span>Nama Pelanggan</span>
-                        <label>
-                          <input type="text" name="nama_pelanggan" id="nama_pelanggan" required autocomplete="off">
-                        </label>
-
-                      <span>No Hp</span>
-                        <label>
-                          <input type="text" name="nomor_hp_pelanggan" id="nomor_hp_pelanggan" required autocomplete="off">
-                        </label>
-                    </div>
-
+                          <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.repeatPassword')?>" required autocomplete="off">
+                        </label> -->
                     <div class="inputBx">
                           <input type="submit" value="Sign Up" name="register">
                     </div>
                     <div>
-                      <a href="view_login">Sudah Punya Akun?</a>
+                    <p><?=lang('Auth.alreadyRegistered')?> <a href="<?= url_to('login') ?>"><?=lang('Auth.signIn')?></a></p>
                     </div>
                 </form>
+                
               </div>
             </div>
           </div>
-
       <div class="col-lg-6 order-3 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
         <img src="assets/Arsha/assets/img/provlampung.png" class="img-fluid animated" alt="">
       </div>

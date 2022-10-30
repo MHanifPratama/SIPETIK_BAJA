@@ -121,7 +121,7 @@ $routes->post('/prosesTiket', 'user/PesanTiket::pesanTiket');
 
 
 $routes->get('/pages', 'Pages::index');
-$routes->get('(:any)', 'Pages::view/$1');
+// $routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------
