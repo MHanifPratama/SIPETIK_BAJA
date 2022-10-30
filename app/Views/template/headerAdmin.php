@@ -126,6 +126,12 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/viewBus">
+          <i class="bi bi-truck-front-fill"></i>
+          <span>Staff Keuangan</span>
+        </a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewSupir">
@@ -147,14 +153,15 @@
           <span>Jadwal</span>
         </a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewBus">
           <i class="bi bi-truck-front-fill"></i>
           <span>Armada Bus</span>
         </a>
       </li>
-      <li class="nav-item">
 
+      <li class="nav-item">
         <a class="nav-link collapsed" href="/viewTipeBus">
           <i class="bi bi-truck-front"></i>
           <span>Tipe Bus</span>

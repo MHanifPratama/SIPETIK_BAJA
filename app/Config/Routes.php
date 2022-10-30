@@ -49,8 +49,8 @@ $routes->get('/list', 'Home::list');
 $routes->get('/loginAdmin', 'admin\FunctionUmum::viewLogin');
 $routes->get('/registerAdmin', 'admin\FunctionUmum::viewRegister');
 $routes->get('/logoutAdmin', 'admin\FunctionUmum::logoutAdmin');
-//Supir(Admin)
 
+//Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir', ['filter' => 'auth']);
 $routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir',['filter' => 'auth']);
 $routes->POST('/simpanDataSupir', 'admin\FunctionSupir::simpan',['filter' => 'auth']);
@@ -60,6 +60,9 @@ $routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1',['filter' 
 
 //Dashboard
 $routes->get('/dashboard','admin\FunctionDashboard::dashboard',['filter' => 'auth']);
+
+//staff(Admin)
+
 
 //Perjalanan(Admin)
 $routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan',['filter' => 'auth']);
