@@ -120,7 +120,18 @@
             <h6>1244</h6>
             <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
 
+<<<<<<< Updated upstream
         </div>
+=======
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-green order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">Total Armada Bus</h6>
+                    <h2 class="text-right"><i class="bi bi-sign-turn-right f-left m-3"></i><span><?=$armada?></span></h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->
+                </div>
+            </div>
+>>>>>>> Stashed changes
         </div>
 
     </div>

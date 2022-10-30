@@ -93,6 +93,9 @@ $routes->delete('/hapusBus/(:num)', 'admin\FunctionArmadaBus::hapus/$1',['filter
 $routes->get('/editBus/(:num)', 'admin\FunctionArmadaBus::editBus/$1',['filter' => 'auth']);
 $routes->post('/updateBus/(:num)', 'admin\FunctionArmadaBus::update/$1',['filter' => 'auth']);
 
+//StaffKeuangan
+$routes->get('/viewStaffKeuangan', 'admin\FunctionStaffKeuangan::listStaff',['filter' => 'auth']);
+
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
