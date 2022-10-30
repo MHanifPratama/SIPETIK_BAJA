@@ -1,51 +1,74 @@
-<?php
-// session_start();
-// if(isset($_SESSION['login'])){
-//   header('Location: index.php');
-//   exit;
-// }
-?>
-<?= $this -> extend('template/header2')?>
-<?= $this-> section('content')?>
+<?= $this->extend($config->viewLayout) ?>
+<?= $this->section('main') ?>
 
-    <section id="hero1" class="d-flex align-items-center">
-        <div class="col-lg-6 order-3 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/Arsha/assets/img/provlampung.png" class="img-fluid animated" alt="">
-        </div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 offset-sm-3">
 
-       <div class="contentBx">
-           <div class="formBx">
-               
-               <h2>Login</h2>
-               <?php 
-                if(session() -> getFlashdata('msg')) : ?>
-                <div class ="alert alert-danger"> <?=session() -> getFlashdata('msg')?> </div>
-                <?php endif; ?>
-                
-               <form action="/login_user" METHOD="post">
-                   <div class="inputBx">
-                       <span>Username</span>
-                       <label>
-                           <input type="text" name="username" required autocomplete="off">
-                       </label>
-                   </div>
-                   <div class="inputBx">
-                       <span>Password</span>
-                       <label>
-                           <input type="password" name="password" required autocomplete="off">
-                       </label>
-                   </div>
-                   <div class="inputBx">
-                       <input type="submit" value="Sign In" name="login">
-                   </div>
-                   <div>
-                    <a href="ViewRegister"> Belum Punya akun? Daftar</a>
-                   </div>
-               </form>
-           </div>
-       </div>
-    </section>
-  </body>
+			<div class="card">
+				<h2 class="card-header"><?=lang('Auth.loginTitle')?></h2>
+				<div class="card-body">
 
-</html>
-<?= $this -> endSection() ?>
+					<?= view('Myth\Auth\Views\_message_block') ?>
+
+					<form action="<?= url_to('login') ?>" method="post">
+						<?= csrf_field() ?>
+
+<?php if ($config->validFields === ['email']): ?>
+						<div class="form-group">
+							<label for="login"><?=lang('Auth.email')?></label>
+							<input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+								   name="login" placeholder="<?=lang('Auth.email')?>">
+							<div class="invalid-feedback">
+								<?= session('errors.login') ?>
+							</div>
+						</div>
+<?php else: ?>
+						<div class="form-group">
+							<label for="login"><?=lang('Auth.emailOrUsername')?></label>
+							<input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+								   name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
+							<div class="invalid-feedback">
+								<?= session('errors.login') ?>
+							</div>
+						</div>
+<?php endif; ?>
+
+						<div class="form-group">
+							<label for="password"><?=lang('Auth.password')?></label>
+							<input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
+							<div class="invalid-feedback">
+								<?= session('errors.password') ?>
+							</div>
+						</div>
+
+<?php if ($config->allowRemembering): ?>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
+								<?=lang('Auth.rememberMe')?>
+							</label>
+						</div>
+<?php endif; ?>
+
+						<br>
+
+						<button type="submit" class="btn btn-primary btn-block"><?=lang('Auth.loginAction')?></button>
+					</form>
+
+					<hr>
+
+<?php if ($config->allowRegistration) : ?>
+					<p><a href="<?= url_to('register') ?>"><?=lang('Auth.needAnAccount')?></a></p>
+<?php endif; ?>
+<?php if ($config->activeResetter): ?>
+					<p><a href="<?= url_to('forgot') ?>"><?=lang('Auth.forgotYourPassword')?></a></p>
+<?php endif; ?>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<?= $this->endSection() ?>

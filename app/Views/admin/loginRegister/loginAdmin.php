@@ -31,7 +31,7 @@
 						</div>
 					</div>
 
-					<div class="text-center p-t-115">
+					<div class="text-center p-t-35">
 						<span class="txt1">
 							Don’t have an account?
 						</span>

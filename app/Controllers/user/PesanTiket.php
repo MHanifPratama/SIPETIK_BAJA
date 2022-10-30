@@ -42,14 +42,28 @@ class PesanTiket extends BaseController
 
     public function pesanTiket(){
 
+        if(!$this->validate([
+            'nama'=>'required',
+            'email'=>'required',
+            'no_hp'=>'required',
+            'penumpang' => 'required',
+            'id_perjalanan'=>'required',
+            'id_bus'=>'required',
+            'tipe_bus'=>'required',
+        ])){
+            return redirect()->to('/tit');
+        }
+
         $tiket = new TiketModel();
         $data = [
-            'nama_bus' => $this->request->getPost('nama_bus'),
-            'id_supir' => $this->request->getPost('id_supir'),
-            'id_tipe' => $this->request->getPost('id_tipe'),
-            'id_jadwal' => $this->request->getPost('id_jadwal'),
-            'id_perjalanan' => $this->request->getPost('id_perjalanan')
+            'nama' => $this->request->getPost('nama'),
+            'id_perjalanan' => $this->request->getPost('id_perjalanan'),
+            'email' => $this->request->getPost('email'),
+            'no_hp' => $this->request->getPost('no_hp'),
+            'penumpang' => $this->request->getPost('penumpang'),
+            'id_bus' => $this->request->getPost('id_bus')
         ];
-        $tiket->insert($data);
+        $tiket->save($data);
+        return redirect()->to('/');
     }
 }

@@ -67,22 +67,15 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="/assetsAdmin/NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-<<<<<<< Updated upstream
+
             <span class="d-none d-md-block dropdown-toggle ps-2"><?=$_SESSION['username'];?></span>
-=======
-            <span class="d-none d-md-block dropdown-toggle ps-2"><?=$_SESSION['username']?></span>
->>>>>>> Stashed changes
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-<<<<<<< Updated upstream
               <h6><?=$_SESSION['username'];?></h6>
-              <span>Web Designer</span>
-=======
-              <h6><?=$_SESSION['username']?></h6>
               <span>Admin</span>
->>>>>>> Stashed changes
+
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -135,15 +128,14 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
-<<<<<<< Updated upstream
-=======
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewStaffKeuangan">
           <i class="bi bi-truck-front-fill"></i>
           <span>Staff Keuangan</span>
         </a>
       </li>
->>>>>>> Stashed changes
+
+
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewSupir">
@@ -165,14 +157,15 @@
           <span>Jadwal</span>
         </a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewBus">
-          <i class="bi bi-calendar"></i>
+          <i class="bi bi-truck-front-fill"></i>
           <span>Armada Bus</span>
         </a>
       </li>
-      <li class="nav-item">
 
+      <li class="nav-item">
         <a class="nav-link collapsed" href="/viewTipeBus">
           <i class="bi bi-truck-front"></i>
           <span>Tipe Bus</span>

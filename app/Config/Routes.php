@@ -49,8 +49,8 @@ $routes->get('/list', 'Home::list');
 $routes->get('/loginAdmin', 'admin\FunctionUmum::viewLogin');
 $routes->get('/registerAdmin', 'admin\FunctionUmum::viewRegister');
 $routes->get('/logoutAdmin', 'admin\FunctionUmum::logoutAdmin');
-//Supir(Admin)
 
+//Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir', ['filter' => 'auth']);
 $routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir',['filter' => 'auth']);
 $routes->POST('/simpanDataSupir', 'admin\FunctionSupir::simpan',['filter' => 'auth']);
@@ -60,6 +60,9 @@ $routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1',['filter' 
 
 //Dashboard
 $routes->get('/dashboard','admin\FunctionDashboard::dashboard',['filter' => 'auth']);
+
+//staff(Admin)
+
 
 //Perjalanan(Admin)
 $routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan',['filter' => 'auth']);
@@ -117,13 +120,14 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
 $routes->get('/tit', 'Home::pesanTiket');
-$routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
+$routes->post('/prosesTiket', 'user/PesanTiket::pesanTiket');
+// $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 
 
 
 
 $routes->get('/pages', 'Pages::index');
-$routes->get('(:any)', 'Pages::view/$1');
+// $routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------
