@@ -3,7 +3,7 @@
 
 
 <main id="main" class="main">
-    <div class="pagetitle">
+    <div class="pagetitle mb-5">
       <h1>Perjalanan</h1>
       <nav>
         <ol class="breadcrumb">

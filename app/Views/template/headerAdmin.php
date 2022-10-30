@@ -150,7 +150,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewBus">
-          <i class="bi bi-calendar"></i>
+          <i class="bi bi-truck-front-fill"></i>
           <span>Armada Bus</span>
         </a>
       </li>

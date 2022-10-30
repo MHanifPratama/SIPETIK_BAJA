@@ -1,12 +1,12 @@
 <?= $this -> extend('template/headerAdmin')?>
 <?= $this-> section('contentAdmin')?>
 <main id="main" class="main">
-    <div class="pagetitle">
+    <div class="pagetitle mb-5">
       <h1>Selamat Datang <?=$_SESSION['username']?></h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Perjalanan</li>
+          <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
     </div>
