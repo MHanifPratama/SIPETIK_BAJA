@@ -96,15 +96,17 @@
                 </div>
             </div>
         </div>
+        </div>
 
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-green order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">Total Armada Bus</h6>
-                    <h2 class="text-right"><i class="bi bi-sign-turn-right f-left m-3"></i><span><?=$perjalanan?></span></h2>
+                    <h2 class="text-right"><i class="bi bi-sign-turn-right f-left m-3"></i><span><?=$armada?></span></h2>
                     <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->
                 </div>
             </div>
+
         </div>
 
          <!-- Reports -->
