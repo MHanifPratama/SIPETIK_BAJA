@@ -2,11 +2,11 @@
 <?= $this-> section('contentAdmin')?>
 
 <main id="main" class="main">
-    <div class="pagetitle">
+    <div class="pagetitle mb-5">
       <h1>Supir</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
           <li class="breadcrumb-item active">Data Supir</li>
         </ol>
       </nav>
@@ -19,8 +19,8 @@
             <table >
                 <thead>
                     <th scope="col">No</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">No HP</th>
                     <th scope="col">Aksi</th>
                 </thead>
                 <tbody>

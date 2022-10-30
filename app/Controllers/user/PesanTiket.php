@@ -20,36 +20,48 @@ class PesanTiket extends BaseController
     public function tambahTiket(){
         $bus = new BusModel();
         $perjalanan = new Perjalanan();
-        $supir = new Supir();
-        $jadwal = new Jadwal();
         $tipeBus = new TipeBus();
 
         $dataBus = $bus->findAll();
-        $dataSupir = $supir->findAll();
         $dataTipeBus = $tipeBus->findAll();
-        $dataJadwal = $jadwal->findAll();
         $dataPerjalanan = $perjalanan->findAll();
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus,
-            'supir' => $dataSupir,
             'tipeBus' => $dataTipeBus,
-            'jadwal'=> $dataJadwal,
             'perjalanan' => $dataPerjalanan
+            
         ];
+ 
+         return view('user/halaman_utama',$data);
     }
 
 
     public function pesanTiket(){
 
+        if(!$this->validate([
+            'nama'=>'required',
+            'email'=>'required',
+            'no_hp'=>'required',
+            'penumpang' => 'required',
+            'id_perjalanan'=>'required',
+            'id_bus'=>'required',
+            'id_tipe'=>'required',
+        ])){
+            return redirect()->to('/tit');
+        }
+
         $tiket = new TiketModel();
         $data = [
-            'nama_bus' => $this->request->getPost('nama_bus'),
-            'id_supir' => $this->request->getPost('id_supir'),
+            'nama' => $this->request->getPost('nama'),
+            'id_perjalanan' => $this->request->getPost('id_perjalanan'),
+            'email' => $this->request->getPost('email'),
+            'no_hp' => $this->request->getPost('no_hp'),
+            'penumpang' => $this->request->getPost('penumpang'),
+            'id_bus' => $this->request->getPost('id_bus'),
             'id_tipe' => $this->request->getPost('id_tipe'),
-            'id_jadwal' => $this->request->getPost('id_jadwal'),
-            'id_perjalanan' => $this->request->getPost('id_perjalanan')
         ];
-        $tiket->insert($data);
+        $tiket->save($data);
+        return redirect()->to('/');
     }
 }

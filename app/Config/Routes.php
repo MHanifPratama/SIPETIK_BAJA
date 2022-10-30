@@ -49,8 +49,8 @@ $routes->get('/list', 'Home::list');
 $routes->get('/loginAdmin', 'admin\FunctionUmum::viewLogin');
 $routes->get('/registerAdmin', 'admin\FunctionUmum::viewRegister');
 $routes->get('/logoutAdmin', 'admin\FunctionUmum::logoutAdmin');
-//Supir(Admin)
 
+//Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir', ['filter' => 'auth']);
 $routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir',['filter' => 'auth']);
 $routes->POST('/simpanDataSupir', 'admin\FunctionSupir::simpan',['filter' => 'auth']);
@@ -93,6 +93,16 @@ $routes->delete('/hapusBus/(:num)', 'admin\FunctionArmadaBus::hapus/$1',['filter
 $routes->get('/editBus/(:num)', 'admin\FunctionArmadaBus::editBus/$1',['filter' => 'auth']);
 $routes->post('/updateBus/(:num)', 'admin\FunctionArmadaBus::update/$1',['filter' => 'auth']);
 
+
+//StaffKeuangan
+$routes->get('/viewStaffKeuangan', 'admin\FunctionStaffKeuangan::listStaff',['filter' => 'auth']);
+$routes->get('/viewTambahStaff', 'admin\FunctionStaffKeuangan::tambahStaff',['filter' => 'auth']);
+$routes->POST('/simpanDataStaff', 'admin\FunctionStaffKeuangan::simpan',['filter' => 'auth']);
+$routes->delete('/hapusStaff/(:num)', 'admin\FunctionStaffKeuangan::hapus/$1',['filter' => 'auth']);
+$routes->get('/editStaff/(:num)', 'admin\FunctionStaffKeuangan::editStaff/$1',['filter' => 'auth']);
+$routes->post('/updateStaff/(:num)', 'admin\FunctionStaffKeuangan::update/$1',['filter' => 'auth']);
+
+
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
@@ -113,14 +123,15 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
-$routes->get('/tit', 'Home::pesanTiket');
-$routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
+$routes->get('/tit', 'user\PesanTiket::tambahTiket');
+$routes->post('/prosesTiket', 'user\PesanTiket::pesanTiket');
+// $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 
 
 
 
 $routes->get('/pages', 'Pages::index');
-$routes->get('(:any)', 'Pages::view/$1');
+// $routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------

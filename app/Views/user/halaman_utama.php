@@ -51,17 +51,11 @@
     <link rel="stylesheet" href="assets/Arsha/assets/css/style_hu.css">
     <title>Pesan Tiket</title>
 </head>
-<body class="main_bg">
-
-    <div class="form">
-        <div class="form-text">
-            <h1>Book Now</h1>
-            <p>Tes.</p>
 
 <div class="container">
     <div class="title">Pesan Tiket</div>
     <div class="content">
-      <form action="/prosesTiket">
+      <form action="/prosesTiket" method="post">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
@@ -82,7 +76,7 @@
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Masukkan Nomor HP" required name="nomor_hp" id="nomor_hp">
+            <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp">
           </div>
           <div class="input-box">
             <span class="details">Passenger</span>
@@ -99,25 +93,14 @@
 
 
         </div>
-        <div class="gender-details">
-          <input type="radio" name="tipe_bus" id="dot-1">
-          <input type="radio" name="tipe_bus" id="dot-3">
-          <input type="radio" name="tipe_bus" id="dot-2">
-          <span class="gender-title">Tipe Bus</span>
-          <div class="category">
-            <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">Ekonomi</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="gender">Eksklusif</span>
-          </label>
-          <label for="dot-3">
-            <span class="dot three"></span>
-            <span class="gender">VIP</span>
-            </label>
-          </div>
+        <div class="input-box">
+        <span class="details">Tipe Bus</span>
+          <select class="form-select text-dark" type="text" name="id_tipe" id="id_tipe">
+              <?php foreach ($tipeBus as $tipe) : ?>
+                  <option value="<?= $tipe['id_tipe'] ?>"><?=  $tipe['tipe']?></option>
+              <?php endforeach; ?>
+          </select>
+          
         </div>
         <div class="button">
           <input type="submit" value="Pesan Tiket">
