@@ -130,12 +130,10 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewStaffKeuangan">
-          <i class="bi bi-truck-front-fill"></i>
+          <i class="bi bi-cash"></i>
           <span>Staff Keuangan</span>
         </a>
       </li>
-
-
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewSupir">

@@ -61,9 +61,6 @@ $routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1',['filter' 
 //Dashboard
 $routes->get('/dashboard','admin\FunctionDashboard::dashboard',['filter' => 'auth']);
 
-//staff(Admin)
-
-
 //Perjalanan(Admin)
 $routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan',['filter' => 'auth']);
 $routes->get('/viewTambahPerjalanan', 'admin\FunctionPerjalanan::tambahPerjalanan',['filter' => 'auth']);
@@ -96,8 +93,15 @@ $routes->delete('/hapusBus/(:num)', 'admin\FunctionArmadaBus::hapus/$1',['filter
 $routes->get('/editBus/(:num)', 'admin\FunctionArmadaBus::editBus/$1',['filter' => 'auth']);
 $routes->post('/updateBus/(:num)', 'admin\FunctionArmadaBus::update/$1',['filter' => 'auth']);
 
+
 //StaffKeuangan
 $routes->get('/viewStaffKeuangan', 'admin\FunctionStaffKeuangan::listStaff',['filter' => 'auth']);
+$routes->get('/viewTambahStaff', 'admin\FunctionStaffKeuangan::tambahStaff',['filter' => 'auth']);
+$routes->POST('/simpanDataStaff', 'admin\FunctionStaffKeuangan::simpan',['filter' => 'auth']);
+$routes->delete('/hapusStaff/(:num)', 'admin\FunctionStaffKeuangan::hapus/$1',['filter' => 'auth']);
+$routes->get('/editStaff/(:num)', 'admin\FunctionStaffKeuangan::editStaff/$1',['filter' => 'auth']);
+$routes->post('/updateStaff/(:num)', 'admin\FunctionStaffKeuangan::update/$1',['filter' => 'auth']);
+
 
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');

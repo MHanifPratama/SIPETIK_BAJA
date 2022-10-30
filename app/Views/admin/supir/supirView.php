@@ -19,8 +19,8 @@
             <table >
                 <thead>
                     <th scope="col">No</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">No HP</th>
                     <th scope="col">Aksi</th>
                 </thead>
                 <tbody>
