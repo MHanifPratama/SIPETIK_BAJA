@@ -127,8 +127,13 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
+<<<<<<< Updated upstream
         <a class="nav-link collapsed" href="/viewBus">
           <i class="bi bi-truck-front-fill"></i>
+=======
+        <a class="nav-link collapsed" href="/viewStaffKeuangan">
+          <i class="bi bi-cash"></i>
+>>>>>>> Stashed changes
           <span>Staff Keuangan</span>
         </a>
       </li>
