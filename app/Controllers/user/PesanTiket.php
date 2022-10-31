@@ -62,6 +62,6 @@ class PesanTiket extends BaseController
             'id_tipe' => $this->request->getPost('id_tipe'),
         ];
         $tiket->save($data);
-        return redirect()->to('/');
+        return redirect()->to('/PembayaranTiket');
     }
 }
