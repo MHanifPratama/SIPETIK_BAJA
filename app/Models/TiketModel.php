@@ -27,5 +27,17 @@ class TiketModel extends Model
         ->get()->getResultArray();
     }
 
+    public function search($tipeBus){
+        return $this->table('tiket_bus')
+        ->join('tipe_bus','tipe_bus.id_tipe=tiket_bus.id_tipe')
+        ->join('perjalanan','perjalanan.id_perjalanan=tiket_bus.id_perjalanan')
+        // ->join('jadwal','jadwal.id_jadwal=tiket_bus.id_jadwal')
+        // ->like('tiket_bus.id_tipe',$tipeBus['id_tipe'])
+        // ->like('kota_awal',$tipeBus['id_perjalanan'])
+
+        ->get() ->getResultArray();
+        
+        // return $this->table('bus')->like('nama_bus','Surya Kencana');
+    }
 
 }

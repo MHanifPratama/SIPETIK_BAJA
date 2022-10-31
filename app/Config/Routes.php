@@ -107,7 +107,7 @@ $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
 
-$routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
+$routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
@@ -126,6 +126,9 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 $routes->get('/tit', 'user\PesanTiket::tambahTiket');
 $routes->post('/prosesTiket', 'user\PesanTiket::pesanTiket');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
+
+//Pembayaran
+$routes->get('/PembayaranTiket', 'user\PembayaranTiket::Pembayaran');
 
 
 
