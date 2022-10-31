@@ -16,7 +16,7 @@
         <a href = "/viewTambahStaff" class="btn btn-outline-primary"> Tambah Staff Keuangan </a>
 
         <div class="row p-3">
-            <table >
+            <table class ="table table-dark">
                 <thead>
                     <th scope="col">No</th>
                     <th scope="col">Email</th>
@@ -34,19 +34,15 @@
                         <td><?= $StaffKeuangan['nama_staff']?></td><br>
                         <td><?= $StaffKeuangan['password']?></td><br>
                         <td><?= $StaffKeuangan['no_hp']?></td><br>
-
-
                         <td>
-                            <form action="/hapusStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>" method="post">
-                                <input type="hidden" name="_method" value="DELETE" />
-                                <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
-                            </form>
-                        </td>
-                        <td>
-                            <div>
-                                <a href="/editStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>">Edit</a>
+                            <div class="d-flex">
+                                <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>"></a>
+                                <form action="/hapusStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>" method="post">
+                                    <input type="hidden" name="_method" value="DELETE" />
+                                    <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                </form>
                             </div>
-                        </td>       
+                        </td>      
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
