@@ -33,11 +33,15 @@
 
                         <td>
                             <div class="d-flex">
-                                <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editSupir/<?= $mhs['id_supir'] ?>"></a>
-                                <form action="/hapusSupir/<?= $mhs['id_supir'] ?>" method="post">
-                                    <input type="hidden" name="_method" value="DELETE" />
-                                    <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
-                                </form>
+                                <div class="box">
+                                    <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editSupir/<?= $mhs['id_supir'] ?>"></a>
+                                </div>
+                                <div class="box">
+                                    <form action="/hapusSupir/<?= $mhs['id_supir'] ?>" method="post">
+                                        <input type="hidden" name="_method" value="DELETE" />
+                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                    </form>
+                                </div>
                             </div>    
                         </td>   
                     </tr>

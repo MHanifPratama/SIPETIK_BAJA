@@ -43,11 +43,15 @@
                             <td><?= $Bus['waktu_keberangkatan']?></td>
                             <td>
                                 <div class="d-flex">
-                                    <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editBus/<?= $Bus['id_bus'] ?>"></a>
-                                    <form action="/hapusBus/<?= $Bus['id_bus'] ?>" method="post">
-                                        <input type="hidden" name="_method" value="DELETE" />
-                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
-                                    </form>
+                                    <div class="box">
+                                        <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editBus/<?= $Bus['id_bus'] ?>"></a>
+                                    </div>
+                                    <div class="box">
+                                        <form action="/hapusBus/<?= $Bus['id_bus'] ?>" method="post">
+                                            <input type="hidden" name="_method" value="DELETE" />
+                                            <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                        </form>
+                                    </div>
                                 </div>
                             </td>      
                         </tr>
