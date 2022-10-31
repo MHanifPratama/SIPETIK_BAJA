@@ -16,7 +16,7 @@
         <a href = "/viewTambahSupir" class="btn btn-outline-primary"> Tambah Supir </a>
 
         <div class="row p-3">
-            <table >
+            <table class ="table table-dark" >
                 <thead>
                     <th scope="col">No</th>
                     <th scope="col">Email</th>
@@ -32,17 +32,14 @@
                         <td><?= $mhs['nomor_hp_supir']?></td><br>
 
                         <td>
-                            <form action="/hapusSupir/<?= $mhs['id_supir'] ?>" method="post">
-                                <input type="hidden" name="_method" value="DELETE" />
-                                <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
-                            </form>
-                        </td>
-                        <td>
-                            <div>
-                                <a href="/editSupir/<?= $mhs['id_supir'] ?>">Edit</a>
-                            </div>
-                        </td>
-                                
+                            <div class="d-flex">
+                                <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editSupir/<?= $mhs['id_supir'] ?>"></a>
+                                <form action="/hapusSupir/<?= $mhs['id_supir'] ?>" method="post">
+                                    <input type="hidden" name="_method" value="DELETE" />
+                                    <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                </form>
+                            </div>    
+                        </td>   
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

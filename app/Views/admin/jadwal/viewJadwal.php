@@ -17,7 +17,7 @@
         <a href = "/viewTambahJadwal" class="btn btn-outline-primary"> Tambah Jadwal </a>
 
         <div class="row p-3">
-            <table >
+            <table class="table table-dark">
                     <thead>
                             <th scope="col">No</th>
                             <th scope="col">Tanggal</th>
@@ -32,17 +32,14 @@
                             <td><?= $jdwl['tanggal']?></td><br>
                             <td><?= $jdwl['waktu_keberangkatan']?></td><br>
                             <td>
-                            <form action="/hapusJadwal/<?= $jdwl['id_jadwal'] ?>" method="post">
-                                <input type="hidden" name="_method" value="DELETE" />
-                                <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
-                            </form>
-                            </td>
-                            <td>
-                                <div>
-                                    <a href="/editJadwal/<?= $jdwl['id_jadwal'] ?>">Edit</a>
+                                <div class="d-flex">
+                                    <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editJadwal/<?= $jdwl['id_jadwal'] ?>"></a>
+                                    <form action="/hapusJadwal/<?= $jdwl['id_jadwal'] ?>" method="post">
+                                        <input type="hidden" name="_method" value="DELETE" />
+                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                    </form>
                                 </div>
-                            </td>
-                                
+                            </td>          
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
