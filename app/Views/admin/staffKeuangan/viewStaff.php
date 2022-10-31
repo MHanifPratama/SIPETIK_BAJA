@@ -21,7 +21,6 @@
                     <th scope="col">No</th>
                     <th scope="col">Email</th>
                     <th scope="col">Nama Staff</th>
-                    <th scope="col">Password</th>
                     <th scope="col">No HP</th>
                     <th scope="col">Aksi</th>
                 </thead>
@@ -32,15 +31,18 @@
                         <td><?= $StaffKeuangan['id_akun_staff_keuangan']?></td><br>
                         <td><?= $StaffKeuangan['email']?></td><br>
                         <td><?= $StaffKeuangan['nama_staff']?></td><br>
-                        <td><?= $StaffKeuangan['password']?></td><br>
                         <td><?= $StaffKeuangan['no_hp']?></td><br>
                         <td>
                             <div class="d-flex">
-                                <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>"></a>
-                                <form action="/hapusStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>" method="post">
-                                    <input type="hidden" name="_method" value="DELETE" />
-                                    <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
-                                </form>
+                                <div class="box">
+                                    <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>"></a>
+                                </div>
+                                <div class="box">
+                                    <form action="/hapusStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>" method="post">
+                                        <input type="hidden" name="_method" value="DELETE" />
+                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                    </form>
+                                </div>
                             </div>
                         </td>      
                     </tr>
