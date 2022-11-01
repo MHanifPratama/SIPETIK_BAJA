@@ -32,6 +32,7 @@
                         <td><?= $mhs['nomor_hp_supir']?></td><br>
 
                         <td>
+<<<<<<< Updated upstream
                             <form action="/hapusSupir/<?= $mhs['id_supir'] ?>" method="post">
                                 <input type="hidden" name="_method" value="DELETE" />
                                 <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
@@ -43,6 +44,20 @@
                             </div>
                         </td>
                                 
+=======
+                            <div class="d-flex">
+                                <div class="box">
+                                    <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editSupir/<?= $mhs['id_supir'] ?>"></a>
+                                </div>
+                                <div class="box">
+                                    <form action="/hapusSupir/<?= $mhs['id_supir'] ?>" method="post">
+                                        <input type="hidden" name="_method" value="DELETE" />
+                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3" onclick="return confirm('Apakah Ingin Menghapus Data ini ?')"></button>
+                                    </form>
+                                </div>
+                            </div>    
+                        </td>   
+>>>>>>> Stashed changes
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

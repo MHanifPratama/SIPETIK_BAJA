@@ -64,6 +64,10 @@ class PesanTiket extends BaseController
             'id_bus' => $this->request->getPost('id_bus')
         ];
         $tiket->save($data);
+<<<<<<< Updated upstream
         return redirect()->to('/');
+=======
+        // return redirect()->to('/PembayaranTiket');
+>>>>>>> Stashed changes
     }
 }

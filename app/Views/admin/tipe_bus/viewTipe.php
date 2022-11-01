@@ -30,6 +30,7 @@
                         <td><?= $tipe['tipe']?></td><br>
                         <td><?= $tipe['harga']?></td><br>
                         <td>
+<<<<<<< Updated upstream
                         <form action="/hapusTipe/<?= $tipe['id_tipe'] ?>" method="post">
                             <input type="hidden" name="_method" value="DELETE" />
                             <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
@@ -38,6 +39,18 @@
                         <td>
                             <div>
                                 <a href="/editTipe/<?= $tipe['id_tipe'] ?>">Edit</a>
+=======
+                            <div class="d-flex">
+                                <div class="box">
+                                    <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editTipe/<?= $tipe['id_tipe'] ?>"></a>
+                                </div>
+                                <div class="box">
+                                    <form action="/hapusTipe/<?= $tipe['id_tipe'] ?>" method="post">
+                                        <input type="hidden" name="_method" value="DELETE" />
+                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3" onclick="return confirm('Apakah Ingin Menghapus Data ini ?')"></button>
+                                    </form>
+                                </div>
+>>>>>>> Stashed changes
                             </div>
                         </td>
                         

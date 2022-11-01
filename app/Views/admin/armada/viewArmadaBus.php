@@ -41,6 +41,7 @@
                             <td><?= $Bus['tanggal']?></td><br>
                             <td><?= $Bus['waktu_keberangkatan']?></td><br>
                             <td>
+<<<<<<< Updated upstream
                             <form action="/hapusBus/<?= $Bus['id_bus'] ?>" method="post">
                                 <input type="hidden" name="_method" value="DELETE" />
                                 <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
@@ -49,6 +50,18 @@
                             <td>
                                 <div>
                                     <a href="/editBus/<?= $Bus['id_bus'] ?>">Edit</a>
+=======
+                                <div class="d-flex">
+                                    <div class="box">
+                                        <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editBus/<?= $Bus['id_bus'] ?>"></a>
+                                    </div>
+                                    <div class="box">
+                                        <form action="/hapusBus/<?= $Bus['id_bus'] ?>" method="post">
+                                            <input type="hidden" name="_method" value="DELETE" />
+                                            <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3" onclick="return confirm('Apakah Ingin Menghapus Data ini ?')"></button>
+                                        </form>
+                                    </div>
+>>>>>>> Stashed changes
                                 </div>
                             </td>
                                 

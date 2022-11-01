@@ -49,7 +49,9 @@ $routes->get('/list', 'Home::list');
 $routes->get('/loginAdmin', 'admin\FunctionUmum::viewLogin');
 $routes->get('/registerAdmin', 'admin\FunctionUmum::viewRegister');
 $routes->get('/logoutAdmin', 'admin\FunctionUmum::logoutAdmin');
-
+//Profile Admin
+$routes->get('/profileAdmin', 'admin\FunctionUmum::viewProfileAdmin',['filter' => 'auth']);
+$routes->post('/updateProfileAdmin/(:num)', 'admin\FunctionUmum::updateProfileAdmin/$1',['filter' => 'auth']);
 //Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir', ['filter' => 'auth']);
 $routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir',['filter' => 'auth']);
@@ -102,6 +104,7 @@ $routes->get('/viewStaffKeuangan', 'admin\FunctionStaffKeuangan::listStaff',['fi
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
+$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard');
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
 $routes->get('/User', 'user\FunctionUser::index');
