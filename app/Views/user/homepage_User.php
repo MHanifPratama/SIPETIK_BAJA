@@ -146,5 +146,5 @@
   
   <script src="assets/Arsha/assets/js/TableFilter.min.js" defer></script>
   <script src="assets/Arsha/assets/js/popup.js"></script>
-  <script src="assets/Arsha/assets/js/popup_1.min.js"></script>
+  <script src="assets/Arsha/assets/js/popup_1.js"></script>
 </body>
