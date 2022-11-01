@@ -32,6 +32,14 @@
                             <td><?= $jdwl['tanggal']?></td><br>
                             <td><?= $jdwl['waktu_keberangkatan']?></td><br>
                             <td>
+                            <form action="/hapusJadwal/<?= $jdwl['id_jadwal'] ?>" method="post">
+                                <input type="hidden" name="_method" value="DELETE" />
+                                <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
+                            </form>
+                            </td>
+                            <td>
+                                <div>
+                                    <a href="/editJadwal/<?= $jdwl['id_jadwal'] ?>">Edit</a>
                                 <div class="d-flex">
                                     <div class="box">
                                         <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editJadwal/<?= $jdwl['id_jadwal'] ?>"></a>
@@ -39,7 +47,7 @@
                                     <div class="box">
                                         <form action="/hapusJadwal/<?= $jdwl['id_jadwal'] ?>" method="post">
                                             <input type="hidden" name="_method" value="DELETE" />
-                                            <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                            <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3" onclick="return confirm('Apakah Ingin Menghapus Data ini ?')"></button>
                                         </form>
                                     </div>
                                 </div>

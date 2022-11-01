@@ -56,7 +56,7 @@
 
 <main id="main" class="main">
     <div class="pagetitle mb-5">
-      <h1>Selamat Datang <?=$_SESSION['username']?></h1>
+      <h1>Selamat Datang <?=$admin['username']?></h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
@@ -92,7 +92,7 @@
             <div class="card bg-c-pink order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">Staff Keuangan</h6>
-                    <h2 class="text-right"><i class="bi bi-sign-turn-right f-left m-3"></i><span><?=$perjalanan?></span></h2>
+                    <h2 class="text-right"><i class="bi bi-sign-turn-right f-left m-3"></i><span><?=$staffKeuangan?></span></h2>
                     <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->
                 </div>
             </div>
