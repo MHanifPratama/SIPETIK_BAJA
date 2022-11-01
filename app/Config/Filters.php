@@ -18,6 +18,7 @@ class Filters extends BaseConfig
      */
     public $aliases = [
         'auth'     => \App\Filters\Auth::class,
+        'authStaff'=> \App\Filters\AuthStaff::class,
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
