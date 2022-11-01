@@ -109,7 +109,11 @@ $routes->post('/updateStaff/(:num)', 'admin\FunctionStaffKeuangan::update/$1',['
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
-$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard');
+$routes->post('/verifyLoginStaff','staffKeuangan\FunctionUmum::verifyLoginStaff');
+
+$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard',['filter' => 'authStaff']);
+$routes->get('/loginStaff', 'staffKeuangan\FunctionUmum::viewLogin');
+
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');
