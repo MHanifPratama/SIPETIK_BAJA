@@ -9,41 +9,7 @@
     <link rel="stylesheet" href="edit.css">
   </head>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <nav class="navbar navbar-light fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">HOME</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Daftar Tabel</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="beli_tiket.php">Pesan Tiket Bus</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="lihat_tiket.php">Lihat Tiket</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="profile.php">Akun</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.php">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/logout">Log Out</a>
-                  </li>
-              </ul>
-            </div>
-          </div>
-
+    
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,6 +19,7 @@
     <title>SIPETIK</title>
 </head>
 <body>
+    
 <div class="img"></div>
   <div class="center">
     <div class="title">Sistem Pemesanan Tiket</div>
@@ -177,7 +144,7 @@
             </main>
   </div>
   
-  <script src="TableFilter.min.js" defer></script>
-  <script src="popup.js"></script>
-  <script src="popup_1.js"></script>
+  <script src="assets/Arsha/assets/js/TableFilter.min.js" defer></script>
+  <script src="assets/Arsha/assets/js/popup.js"></script>
+  <script src="assets/Arsha/assets/js/popup_1.min.js"></script>
 </body>
