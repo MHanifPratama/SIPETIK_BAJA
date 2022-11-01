@@ -57,21 +57,25 @@
         <thead>
             <tr>
                 <th>No.</th>
-                <th>Image</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Department</th>
-                <th>Action</th>
+                <th>Id Bus</th>
+                <th>Nama Bus</th>
+                <th>Tipe Bus</th>
+                <th>Perjalanan</th>
+                <th>Jadwal Keberangkatan</th>
+                <th>Harga</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>1</td>
-                <td><img src=https://drive.google.com/uc?export=view&id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_ /></td>
-                <td>Rakhi Gupta</td>
-                <td>rakhigupta@gmail.com</td>
-                <td>Engineering</td>
-                <td><button>View</button></td>
+                <td></td>
+                <td>Mupid</td>
+                <td>Mupid</td>
+                <td>Mupid</td>
+                <td>Mupid</td>
+                <td>2000</td>
+                <td><button>Beli</button></td>
             </tr>
             
         </tbody>

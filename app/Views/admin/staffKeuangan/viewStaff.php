@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <?= $this -> extend('template/headerAdmin')?>
 <?= $this-> section('contentAdmin')?>
 
@@ -57,4 +55,4 @@
 </main>
 </html>
 <?= $this -> endSection() ?>
->>>>>>> Stashed changes
+

@@ -17,7 +17,7 @@
         <a href = "/viewTambahBus" class="btn btn-outline-primary"> Tambah Perjalanan </a>
 
         <div class="row p-3">
-            <table >
+            <table class="table table-dark" >
                     <thead>
                             <th scope="col">No</th>
                             <th scope="col">Nama Bus</th>
@@ -27,6 +27,7 @@
                             <th scope="col">Kota Akhir</th>
                             <th scope="col">Tanggal Keberangan</th>
                             <th scope="col">Waktu Keberangkatan</th>
+                            <th scope="col">Aksi</th>
                     </thead>
                     <tbody>
                         <?php ?>
@@ -34,14 +35,13 @@
                         <tr>
                             <td><?= $Bus['id_bus']?></td><br>
                             <td><?= $Bus['nama_bus']?></td><br>
-                            <td><?= $Bus['tipe']?></td><br>
-                            <td><?= $Bus['nama_supir']?></td><br>
-                            <td><?= $Bus['kota_awal']?></td><br>
-                            <td><?= $Bus['kota_akhir']?></td><br>
-                            <td><?= $Bus['tanggal']?></td><br>
-                            <td><?= $Bus['waktu_keberangkatan']?></td><br>
+                            <td><?= $Bus['tipe']?></td>
+                            <td><?= $Bus['nama_supir']?></td>
+                            <td><?= $Bus['kota_awal']?></td>
+                            <td><?= $Bus['kota_akhir']?></td>
+                            <td><?= $Bus['tanggal']?></td>
+                            <td><?= $Bus['waktu_keberangkatan']?></td>
                             <td>
-<<<<<<< Updated upstream
                             <form action="/hapusBus/<?= $Bus['id_bus'] ?>" method="post">
                                 <input type="hidden" name="_method" value="DELETE" />
                                 <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
@@ -50,7 +50,6 @@
                             <td>
                                 <div>
                                     <a href="/editBus/<?= $Bus['id_bus'] ?>">Edit</a>
-=======
                                 <div class="d-flex">
                                     <div class="box">
                                         <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editBus/<?= $Bus['id_bus'] ?>"></a>
@@ -61,10 +60,8 @@
                                             <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3" onclick="return confirm('Apakah Ingin Menghapus Data ini ?')"></button>
                                         </form>
                                     </div>
->>>>>>> Stashed changes
                                 </div>
-                            </td>
-                                
+                            </td>      
                         </tr>
                         <?php endforeach; ?>
                     </tbody>

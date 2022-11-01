@@ -63,9 +63,6 @@ $routes->post('/updateSupir/(:num)', 'admin\FunctionSupir::update/$1',['filter' 
 //Dashboard
 $routes->get('/dashboard','admin\FunctionDashboard::dashboard',['filter' => 'auth']);
 
-//staff(Admin)
-
-
 //Perjalanan(Admin)
 $routes->get('/viewPerjalanan', 'admin\FunctionPerjalanan::listPerjalanan',['filter' => 'auth']);
 $routes->get('/viewTambahPerjalanan', 'admin\FunctionPerjalanan::tambahPerjalanan',['filter' => 'auth']);
@@ -98,15 +95,22 @@ $routes->delete('/hapusBus/(:num)', 'admin\FunctionArmadaBus::hapus/$1',['filter
 $routes->get('/editBus/(:num)', 'admin\FunctionArmadaBus::editBus/$1',['filter' => 'auth']);
 $routes->post('/updateBus/(:num)', 'admin\FunctionArmadaBus::update/$1',['filter' => 'auth']);
 
+
 //StaffKeuangan
 $routes->get('/viewStaffKeuangan', 'admin\FunctionStaffKeuangan::listStaff',['filter' => 'auth']);
+$routes->get('/viewTambahStaff', 'admin\FunctionStaffKeuangan::tambahStaff',['filter' => 'auth']);
+$routes->POST('/simpanDataStaff', 'admin\FunctionStaffKeuangan::simpan',['filter' => 'auth']);
+$routes->delete('/hapusStaff/(:num)', 'admin\FunctionStaffKeuangan::hapus/$1',['filter' => 'auth']);
+$routes->get('/editStaff/(:num)', 'admin\FunctionStaffKeuangan::editStaff/$1',['filter' => 'auth']);
+$routes->post('/updateStaff/(:num)', 'admin\FunctionStaffKeuangan::update/$1',['filter' => 'auth']);
+
 
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
 $routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard');
 
-$routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
+$routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
@@ -122,9 +126,12 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
-$routes->get('/tit', 'Home::pesanTiket');
-$routes->post('/prosesTiket', 'user/PesanTiket::pesanTiket');
+$routes->get('/tit', 'user\PesanTiket::tambahTiket');
+$routes->post('/prosesTiket', 'user\PesanTiket::pesanTiket');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
+
+//Pembayaran
+$routes->get('/PembayaranTiket', 'user\PembayaranTiket::Pembayaran');
 
 
 
