@@ -41,6 +41,7 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('/list', 'Home::list');
+$routes->get('/ayang', 'Home::ayang');
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');

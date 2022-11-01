@@ -79,5 +79,11 @@ class Home extends BaseController
          return view('user/table_user');
         // return redirect()->to('/');
     }
+    public function ayang()
+    {
+ 
+         return view('user/homepage_User');
+        // return redirect()->to('/');
+    }
     
 }
