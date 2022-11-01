@@ -1,6 +1,11 @@
 <?= $this -> extend('template/loginTemplate')?>
 <?= $this-> section('LoginAdmin')?>
-
+<?php if ($validation !== NULL) : ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?php echo $validation->listErrors(); ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+<?php endif; ?>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">

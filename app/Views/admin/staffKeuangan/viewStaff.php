@@ -40,7 +40,7 @@
                                 <div class="box">
                                     <form action="/hapusStaff/<?= $StaffKeuangan['id_akun_staff_keuangan'] ?>" method="post">
                                         <input type="hidden" name="_method" value="DELETE" />
-                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                        <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3" onclick="return confirm('Apakah Ingin Menghapus Data ini ?')"></button>
                                     </form>
                                 </div>
                             </div>
@@ -55,3 +55,4 @@
 </main>
 </html>
 <?= $this -> endSection() ?>
+
