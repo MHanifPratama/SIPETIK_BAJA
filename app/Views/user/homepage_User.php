@@ -17,50 +17,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/Arsha/assets/css/homepage.css">
     <title>SIPETIK</title>
-</head>
-<body>
-    
-<div class="img"></div>
-  <div class="center">
-    <div class="title">Sistem Pemesanan Tiket</div>
-    <div class="sub_title">Bus Antar Kota</div>
-    <div class="btns">
-      <button id="show">Book Now</button>
-         </div>
-        <div class="popup">
-        <div class="btn">&times;</div>
-        <div class="container">
-        <div class="title1">Pesan Tiket</div>
-        <div class="content">
-          <form action="/prosesTiket" method="post">
-            <div class="user-details">
-              <div class="input-box">
-                <span class="details">Full Name</span>
-                <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
-              </div>
-              <div class="input-box">
-                <span class="details">Destination</span>
-                <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
-                </select>
-    
-              </div>
-              <div class="input-box">
-                <span class="details">Email</span>
-                <input type="text" placeholder="Masukkan Email" required id="email" name="email">
-              </div>
-              <div class="input-box">
-                <span class="details">Phone Number</span>
-                <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp">
-              </div>
-              <div class="input-box">
-                <span class="details">Passenger</span>
-                <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
-              </div>
-              <div class="input-box">
-                <span class="details">Agen Travel</span>
-                <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
-                </select>
-              </div>
     
     
             </div>
@@ -94,15 +50,15 @@
                         <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                Example
+                                Jadwal Keberangkatan
                             </div>
                             <div class="card-body">
         
                                 <div style="margin-bottom: 20px;">
         
-                                    <input type="text" id="filter0" placeholder="Filter By Name">
-                                    <input type="text" id="filter1" placeholder="Filter By Email">
-                                    <input type="text" id="filter2" placeholder="Filter By Status">
+                                    <input type="text" id="filter0" placeholder="Filter By ID">
+                                    <input type="text" id="filter1" placeholder="Filter By Jadwal">
+                                    <input type="text" id="filter2" placeholder="Filter By Tipe">
         
                                 </div>
         
