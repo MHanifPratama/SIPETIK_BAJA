@@ -28,15 +28,19 @@ class TiketModel extends Model
         ->join('jadwal','jadwal.id_jadwal=tiket_bus.id_jadwal')
         ->get()->getResultArray();
     }
-    public function search($tipeBus){
-        return $this->table('bus')
+    public function search($harga){
+        return $this->table('tiket_bus')
         ->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
-        ->like('bus.id_tipe',$tipeBus['tipeBus'])
-        ->like('kota_awal',$tipeBus['asal'])
-        ->like('kota_akhir',$tipeBus['tujuan'])
-        ->get() ->getResultArray();
+        ->like('tiket_bus.id_tiket',$harga['harga'])
 
+        ->get() ->getResultArray();
+        
+        // return $this->table('bus')->like('nama_bus','Surya Kencana');
+    }
+
+    public function getKodePembayaran() {
+        return $this->db->table('tiket_bus');
     }
 }
