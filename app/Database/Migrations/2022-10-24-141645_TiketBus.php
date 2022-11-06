@@ -45,6 +45,14 @@ class TiketBus extends Migration
 				'type'           => 'INT',
                 'constraint' => '50'
 			],
+			'id_jadwal'      => [
+				'type'           => 'INT',
+                'constraint' => '50'
+			],
+			'total_harga'      => [
+				'type'           => 'INT',
+                'constraint' => '50'
+			],
 		]);
 		$this->forge->addKey('id_tiket', TRUE);
 		$this->forge->createTable('tiket_bus', TRUE);

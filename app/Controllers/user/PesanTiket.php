@@ -21,15 +21,18 @@ class PesanTiket extends BaseController
         $bus = new BusModel();
         $perjalanan = new Perjalanan();
         $tipeBus = new TipeBus();
+        $jadwal = new Jadwal();
 
-        $dataBus = $bus->findAll();
+        $dataBus = $bus->getAllDataFromAllTable();
         $dataTipeBus = $tipeBus->findAll();
         $dataPerjalanan = $perjalanan->findAll();
+        $dataJadwal = $jadwal->findAll();
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus,
             'tipeBus' => $dataTipeBus,
-            'perjalanan' => $dataPerjalanan
+            'perjalanan' => $dataPerjalanan,
+            'jadwal' => $dataJadwal,
             
         ];
  
@@ -47,6 +50,8 @@ class PesanTiket extends BaseController
             'id_perjalanan'=>'required',
             'id_bus'=>'required',
             'id_tipe'=>'required',
+            'id_jadwal'=>'required',
+            'total_harga'=>'required'
         ])){
             return redirect()->to('/tit');
         }
@@ -60,6 +65,8 @@ class PesanTiket extends BaseController
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus'),
             'id_tipe' => $this->request->getPost('id_tipe'),
+            'id_jadwal' => $this->request->getPost('id_jadwal'),
+            'total_harga' => $this->request->getPost('total_harga')
         ];
         $tiket->save($data);
         return redirect()->to('/PembayaranTiket');
