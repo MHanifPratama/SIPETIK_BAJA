@@ -17,8 +17,8 @@
         <a href = "/viewTambahJadwal" class="btn btn-outline-primary"> Tambah Jadwal </a>
 
         <div class="row p-3">
-            <table class="table table-dark">
-                    <thead>
+            <table class="table">
+                    <thead class="table-dark">
                             <th scope="col">No</th>
                             <th scope="col">Tanggal</th>
                             <th scope="col">Waktu Keberangan</th>
