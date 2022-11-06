@@ -16,7 +16,8 @@ class FunctionUmum extends BaseController{
         if (session('logged_in') == true) {
             return redirect()->to('/dashboard');
         }
-        return view('admin\loginRegister\registerAdmin');
+        $data['validation'] = NULL;
+        return view('admin\loginRegister\registerAdmin',$data);
     }
     public function saveRegister(){
         $rules = [
@@ -38,7 +39,7 @@ class FunctionUmum extends BaseController{
         }   
         else{
             $data['validation'] = $this->validator;
-            echo view('admin\loginRegister\registerAdmin', $data);
+            return view('admin\loginRegister\registerAdmin', $data);
         }
 
     }
@@ -58,7 +59,7 @@ class FunctionUmum extends BaseController{
                     'logged_in'     => TRUE
                 ];
                 session()->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/dashboard',);
             }
             else{
                 session()->setFlashdata('msg', 'Wrong Password');
@@ -74,6 +75,31 @@ class FunctionUmum extends BaseController{
         $session = session();
         $session->destroy();
         return redirect()->to('/loginAdmin');
+    }
+    public function viewProfileAdmin(){
+        $model = new AkunAdmin();
+        $data['admin'] = $model->where('id_akun_admin', session('id'))->first();
+        // echo var_dump($data['admin']);
+        // echo $data['admin']['username'];
+        $data = [
+            'title' => 'Profile Admin',
+            'data' => $data
+        ];
+        return view('admin\profileAdmin\editProfile', $data);
+    }
+    public function updateProfileAdmin($id){
+        if(!$this->validate([
+            'username'=>'required',
+        ])){
+            return redirect()->to('/profileAdmin');
+        }
+        $adminModel = new AkunAdmin();
+        $data = [
+            'username' => $this -> request -> getVar('username'),
+        ];
+
+        $adminModel->update($id, $data);
+        return redirect()->to('/dashboard');
     }
 }
 

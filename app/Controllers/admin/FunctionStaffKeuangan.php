@@ -37,9 +37,8 @@ class FunctionStaffKeuangan extends BaseController{
         $data = [
             'email' => $this -> request -> getPost('email'),
             'nama_staff' => $this -> request -> getPost('nama_staff'),
-            'password' => $this -> request -> getPost('password'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
             'no_hp' => $this -> request -> getPost('no_hp')
-            
         ];
 
         $dataStaff->save($data);
@@ -59,7 +58,7 @@ class FunctionStaffKeuangan extends BaseController{
         
         $data = [
             'title' => ' Edit Staff Keuangan',
-            'staff' => $dataStaff,
+            'StaffKeuangan' => $dataStaff,
         ];
         return view('admin/staffKeuangan/viewEditStaff', $data);
     }
@@ -77,7 +76,7 @@ class FunctionStaffKeuangan extends BaseController{
         $data = [
             'email' => $this -> request -> getVar('email'),
             'nama_staff' => $this -> request -> getVar('nama_staff'),
-            'password' => $this -> request -> getVar('password'),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
             'no_hp' => $this -> request -> getVar('no_hp'),
         ];
 

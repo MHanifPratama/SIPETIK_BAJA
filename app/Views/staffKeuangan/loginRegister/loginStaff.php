@@ -1,17 +1,11 @@
 <?= $this -> extend('template/loginTemplate')?>
 <?= $this-> section('LoginAdmin')?>
-<?php if (session()->getFlashdata('msg') !== NULL) : ?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <?php echo session()->getFlashdata('msg'); ?>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    </div>
-<?php endif; ?>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="/verifyLoginAdmin" method="post">
+				<form class="login100-form validate-form" action="/verifyLoginStaff" method="post">
 					<span class="login100-form-title p-b-26">
-						Welcome
+						Welcome Staff
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
@@ -34,16 +28,6 @@
 								Login
 							</button>
 						</div>
-					</div>
-
-					<div class="text-center p-t-35">
-						<span class="txt1">
-							Don’t have an account?
-						</span>
-
-						<a class="txt2" href="/registerAdmin">
-							Sign Up
-						</a>
 					</div>
 				</form>
 			</div>

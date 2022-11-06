@@ -34,6 +34,7 @@
                             <td><?= $prjl['kota_akhir']?></td><br>
                             <td><?= $prjl['total_km']?></td><br>
                             <td>
+                                
                                 <div class = "d-flex">
                                     <div class="box">
                                         <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editPerjalanan/<?= $prjl['id_perjalanan'] ?>"></a>
@@ -41,9 +42,10 @@
                                     <div class="box">
                                         <form action="/hapusPerjalanan/<?= $prjl['id_perjalanan'] ?>" method="post">
                                             <input type="hidden" name="_method" value="DELETE" />
-                                            <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3"></button>
+                                            <button type="submit" class="btn btn-danger bi bi-trash3-fill mr-3 ml-3" onclick="return confirm('Apakah Ingin Menghapus Data ini ?')"></button>
                                         </form>
                                     </div>
+
                                 </div>
                             </td>    
                         </tr>

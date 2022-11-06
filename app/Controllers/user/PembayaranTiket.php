@@ -7,41 +7,24 @@ use App\Models\BusModel;
 use App\Models\TiketModel;
 use App\Models\Jadwal;
 use App\Models\Perjalanan;
-use App\Models\Supir;
 use App\Models\TipeBus;
 
-class PesanTiket extends BaseController
+class PembayaranTiket extends BaseController
 {
-    public function index()
+    public function Pembayaran()
     {
+        $tiket = new TiketModel();
 
+
+
+
+        return view('user\pembayaran\pembayaran_tiket');
     }
 
-    public function tambahTiket(){
-        $bus = new BusModel();
-        $perjalanan = new Perjalanan();
-        $tipeBus = new TipeBus();
-        $jadwal = new Jadwal();
-
-        $dataBus = $bus->getAllDataFromAllTable();
-        $dataTipeBus = $tipeBus->findAll();
-        $dataPerjalanan = $perjalanan->findAll();
-        $dataJadwal = $jadwal->findAll();
-        $data = [
-            'title' => 'Bus',
-            'bus' => $dataBus,
-            'tipeBus' => $dataTipeBus,
-            'perjalanan' => $dataPerjalanan,
-            'jadwal' => $dataJadwal,
-            
-        ];
- 
-         return view('user/halaman_utama',$data);
-    }
 
 
     public function pesanTiket(){
-        $session = session();
+
         if(!$this->validate([
             'nama'=>'required',
             'email'=>'required',
@@ -68,20 +51,7 @@ class PesanTiket extends BaseController
             'id_jadwal' => $this->request->getPost('id_jadwal'),
             'total_harga' => $this->request->getPost('total_harga')
         ];
-
-        //Harga
-        $harga = $this->request->getPost('total_harga');
-        //Generate Tiket
-        $code = $this->request->getPost('no_hp');
-        $Kodetiket = "KSB".$code;
-
-        
-        session()->setFlashdata('kode', $Kodetiket);
-        session()->setFlashdata('harga', $harga);
-
-
         $tiket->save($data);
-
         return redirect()->to('/PembayaranTiket');
     }
 }

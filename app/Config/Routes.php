@@ -41,6 +41,7 @@ $routes->get('/', 'Home::index');
 
 
 $routes->get('/list', 'Home::list');
+$routes->get('/ayang', 'Home::ayang');
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
 
 // $routes->get('/halaman_utama', 'user\FunctionUser::halaman_utama');
@@ -49,7 +50,9 @@ $routes->get('/list', 'Home::list');
 $routes->get('/loginAdmin', 'admin\FunctionUmum::viewLogin');
 $routes->get('/registerAdmin', 'admin\FunctionUmum::viewRegister');
 $routes->get('/logoutAdmin', 'admin\FunctionUmum::logoutAdmin');
-
+//Profile Admin
+$routes->get('/profileAdmin', 'admin\FunctionUmum::viewProfileAdmin',['filter' => 'auth']);
+$routes->post('/updateProfileAdmin/(:num)', 'admin\FunctionUmum::updateProfileAdmin/$1',['filter' => 'auth']);
 //Supir(Admin)
 $routes->get('/viewSupir', 'admin\FunctionSupir::listSupir', ['filter' => 'auth']);
 $routes->get('/viewTambahSupir', 'admin\FunctionSupir::tambahSupir',['filter' => 'auth']);
@@ -106,8 +109,13 @@ $routes->post('/updateStaff/(:num)', 'admin\FunctionStaffKeuangan::update/$1',['
 $routes->post('/saveRegisterAdmin', 'admin\FunctionUmum::saveRegister');
 $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
+$routes->post('/verifyLoginStaff','staffKeuangan\FunctionUmum::verifyLoginStaff');
 
-$routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan/$1');
+$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard',['filter' => 'authStaff']);
+$routes->get('/loginStaff', 'staffKeuangan\FunctionUmum::viewLogin');
+
+
+$routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');
 $routes->post('/login_user', 'user\FunctionUser::login_user/$1');
 $routes->get('/login_user', 'user\FunctionUser::login_user/$1');
@@ -126,6 +134,9 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 $routes->get('/tit', 'user\PesanTiket::tambahTiket');
 $routes->post('/prosesTiket', 'user\PesanTiket::pesanTiket');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
+
+//Pembayaran
+$routes->get('/PembayaranTiket', 'user\PembayaranTiket::Pembayaran');
 
 
 

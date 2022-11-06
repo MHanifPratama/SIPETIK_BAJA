@@ -24,8 +24,8 @@
             </div>
 
             <div class="form-group col-md-6 mb-3">
-                <label for="password">Password</label>
-                <input type="text" class="form-control" id="password" name="password" value="<?=$StaffKeuangan['password']?>" >
+                <label for="password">New Password</label>
+                <input type="text" class="form-control" id="password" name="password" >
             </div>
 
             <div class="form-group col-md-6 mb-3">

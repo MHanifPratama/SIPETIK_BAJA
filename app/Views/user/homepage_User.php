@@ -37,68 +37,54 @@
         <div class="content">
           <form action="/prosesTiket" method="post">
             <div class="user-details">
-            <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
-          </div>
-          <div class="input-box">
-            <span class="details">Destination</span>
-            <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
+              </div>
+              <div class="input-box">
+                <span class="details">Destination</span>
+                <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
+
                 <?php foreach ($perjalanan as $prjl) : ?>
                     <option value="<?= $prjl['id_perjalanan'] ?>"><?=  $prjl['kota_awal'],"  -  ",$prjl['kota_akhir']?></option>
                 <?php endforeach; ?>
-            </select>
-
-          </div>
-          <div class="input-box">
-            <span class="details">Email</span>
-            <input type="text" placeholder="Masukkan Email" required id="email" name="email">
-          </div>
-          <div class="input-box">
-            <span class="details">Phone Number</span>
-            <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp">
-          </div>
-          <div class="input-box">
-            <span class="details">Passenger</span>
-            <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
-          </div>
-          <div class="input-box">
-            <span class="details">Nama Bus</span>
-            <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
+              </select>
+    
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Masukkan Email" required id="email" name="email">
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp">
+              </div>
+              <div class="input-box">
+                <span class="details">Passenger</span>
+                <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
+              </div>
+              <div class="input-box">
+                <span class="details">Nama Bus</span>
+                <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
                 <?php foreach ($bus as $bus) : ?>
                     <option value="<?= $bus['id_bus'] ?>"><?=  $bus['nama_bus']?></option>
                 <?php endforeach; ?>
             </select>
-          </div>
 
-          <div class="input-box">
-            <span class="details">Jadwal Keberangkatan</span>
-            <select class="form-select text-dark" type="text" name="id_jadwal" id="id_jadwal">
-                <?php foreach ($jadwal as $jadwal) : ?>
-                    <option value="<?= $jadwal['id_jadwal'] ?>"><?=  $jadwal['tanggal']," : ",$jadwal['waktu_keberangkatan']?></option>
-                <?php endforeach; ?>
-            </select>
-          </div>
-
-          <div class="input-box">
-        <span class="details">Tipe Bus</span>
-          <select class="form-select text-dark" type="text" name="id_tipe" id="id_tipe">
+              </div>
+    
+    
+            </div>
+            <div class="input-box">
+            <span class="details">Tipe Bus</span>
+            <select class="form-select text-dark" type="text" name="id_tipe" id="id_tipe">
               <?php foreach ($tipeBus as $tipe) : ?>
                   <option value="<?= $tipe['id_tipe'] ?>"><?=  $tipe['tipe']?></option>
               <?php endforeach; ?>
           </select>
-          
-        </div>
 
-        </div>
-
-        
-        <div class="input-box">
-        <span class="details">Harga</span>
-
-            <input class="form-control text-center" type="number" id="total_harga" name="total_harga" value="210000">
-    
-        </div>
+              
+            </div>
             <div class="button">
               <input type="submit" value="Pesan Tiket">
             </div>
