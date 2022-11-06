@@ -59,7 +59,7 @@ class FunctionUmum extends BaseController{
                     'logged_in'     => TRUE
                 ];
                 session()->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/dashboard',);
             }
             else{
                 session()->setFlashdata('msg', 'Wrong Password');
