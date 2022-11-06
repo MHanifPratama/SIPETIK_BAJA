@@ -83,7 +83,7 @@
             <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
           </div>
           <div class="input-box">
-            <span class="details">Agen Travel</span>
+            <span class="details">Nama Bus</span>
             <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
                 <?php foreach ($bus as $bus) : ?>
                     <option value="<?= $bus['id_bus'] ?>"><?=  $bus['nama_bus']?></option>
@@ -91,9 +91,16 @@
             </select>
           </div>
 
+          <div class="input-box">
+            <span class="details">Jadwal Keberangkatan</span>
+            <select class="form-select text-dark" type="text" name="id_jadwal" id="id_jadwal">
+                <?php foreach ($jadwal as $jadwal) : ?>
+                    <option value="<?= $jadwal['id_jadwal'] ?>"><?=  $jadwal['tanggal']," : ",$jadwal['waktu_keberangkatan']?></option>
+                <?php endforeach; ?>
+            </select>
+          </div>
 
-        </div>
-        <div class="input-box">
+          <div class="input-box">
         <span class="details">Tipe Bus</span>
           <select class="form-select text-dark" type="text" name="id_tipe" id="id_tipe">
               <?php foreach ($tipeBus as $tipe) : ?>
@@ -102,6 +109,20 @@
           </select>
           
         </div>
+
+        </div>
+
+        
+        <div class="input-box">
+        <span class="details">Harga</span>
+
+            <input class="form-control text-center" type="number" id="total_harga" name="total_harga" value="210000">
+    
+        </div>
+
+
+        
+
         <div class="button">
           <input type="submit" value="Pesan Tiket">
         </div>
