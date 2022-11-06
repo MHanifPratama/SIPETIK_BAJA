@@ -14,20 +14,6 @@ class PembayaranTiket extends BaseController
     public function Pembayaran()
     {
 
-
-        $data = [
-            'tipeBus' => $this -> request -> getPost('id_tipe'),
-            'tujuan' => $this -> request -> getPost('id_perjalanan'),
-            // 'asal' => $this -> request -> getPost('asal')
-        ];
-        $tiket = new TiketModel();
-        $dataTiket = $tiket->search($data);
-        $data = [
-
-            'tiket' => $dataTiket
-        ];
-
- 
-        return view('user\pembayaran\pembayaran_tiket',$data);
+        return view('user\pembayaran\pembayaran_tiket');
     }
 }
