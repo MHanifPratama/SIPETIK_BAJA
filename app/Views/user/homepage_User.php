@@ -18,6 +18,57 @@
     <link rel="stylesheet" href="assets/Arsha/assets/css/homepage.css">
     <title>SIPETIK</title>
     
+</head>
+<body>
+    
+<div class="img"></div>
+<a class="fixedButton" href>
+         <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
+                                                            ebsdvcvevbc  1q2
+      </a>
+      
+
+  <div class="center">
+    <div class="title">Sistem Pemesanan Tiket</div>
+    <div class="sub_title">Bus Antar Kota</div>
+    <div class="btns">
+      <button id="show">Book Now</button>
+         </div>
+        <div class="popup">
+        <div class="btn">&times;</div>
+        <div class="container">
+        <div class="title1">Pesan Tiket</div>
+        <div class="content">
+          <form action="/prosesTiket" method="post">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
+              </div>
+              <div class="input-box">
+                <span class="details">Destination</span>
+                <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
+                </select>
+    
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Masukkan Email" required id="email" name="email">
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp">
+              </div>
+              <div class="input-box">
+                <span class="details">Passenger</span>
+                <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
+              </div>
+              <div class="input-box">
+                <span class="details">Agen Travel</span>
+                <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
+                </select>
+              </div>
+    
     
             </div>
             <div class="input-box">
@@ -38,7 +89,7 @@
   </div>
     </div>
     <div class="tabelll">
-        <button id="show_1">Schedule</button>
+        <button id="show_2">Schedule</button>
         </div>
         <div class="popup_1">
             <div class="btn_1">&times;</div>
