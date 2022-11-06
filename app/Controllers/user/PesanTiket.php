@@ -41,7 +41,7 @@ class PesanTiket extends BaseController
 
 
     public function pesanTiket(){
-
+        $session = session();
         if(!$this->validate([
             'nama'=>'required',
             'email'=>'required',
@@ -68,7 +68,20 @@ class PesanTiket extends BaseController
             'id_jadwal' => $this->request->getPost('id_jadwal'),
             'total_harga' => $this->request->getPost('total_harga')
         ];
+
+        //Harga
+        $harga = $this->request->getPost('total_harga');
+        //Generate Tiket
+        $code = $this->request->getPost('no_hp');
+        $Kodetiket = "KSB".$code;
+
+        
+        session()->setFlashdata('kode', $Kodetiket);
+        session()->setFlashdata('harga', $harga);
+
+
         $tiket->save($data);
+
         return redirect()->to('/PembayaranTiket');
     }
 }
