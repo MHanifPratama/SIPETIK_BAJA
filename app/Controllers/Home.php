@@ -81,8 +81,22 @@ class Home extends BaseController
     }
     public function ayang()
     {
+        $bus = new BusModel();
+        $perjalanan = new Perjalanan();
+        $tipeBus = new TipeBus();
+
+        $dataBus = $bus->findAll();
+        $dataTipeBus = $tipeBus->findAll();
+        $dataPerjalanan = $perjalanan->findAll();
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus,
+            'tipeBus' => $dataTipeBus,
+            'perjalanan' => $dataPerjalanan
+            
+        ];
  
-         return view('user/homepage_User');
+         return view('user/homepage_User',$data);
         // return redirect()->to('/');
     }
     
