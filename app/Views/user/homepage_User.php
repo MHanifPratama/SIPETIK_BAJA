@@ -22,10 +22,6 @@
 <body>
     
 <div class="img"></div>
-<a class="fixedButton" href>
-         <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
-                                                            ebsdvcvevbc  1q2
-      </a>
       
 
   <div class="center">
@@ -85,11 +81,10 @@
         </div>
       </div>
     </div>
-    
   </div>
     </div>
-    <div class="tabelll">
-        <button id="show_2">Schedule</button>
+    <div class="fixedButton">
+        <button class="roundedFixedBtn" id="show_1" class="fa fa-phone"></button>
         </div>
         <div class="popup_1">
             <div class="btn_1">&times;</div>
@@ -134,6 +129,13 @@
                                             <td>03</td>
                                             <td>11.00 WIB</td>
                                             <td>VVIP</td>
+                                            <td>20000</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>04</td>
+                                            <td>15.00 WIB</td>
+                                            <td>Ekonomi</td>
                                             <td>20000</td>
                                         </tr>
                                         
