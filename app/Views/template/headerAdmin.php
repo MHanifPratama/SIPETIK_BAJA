@@ -15,7 +15,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
   <!-- Vendor CSS Files -->
   <link href="/assetsAdmin/NiceAdmin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assetsAdmin/NiceAdmin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -48,13 +47,6 @@
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
-
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -68,20 +60,22 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="/assetsAdmin/NiceAdmin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Muhammad Irfan Hanif P.Anzani</span>
+
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?=$_SESSION['email']?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Muhammad Irfan Hanif P.Anzani</h6>
-              <span>Web Designer</span>
+              <h6><?=$_SESSION['email'];?></h6>
+              <span>Admin</span>
+
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="/profileAdmin">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -89,19 +83,12 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="/logoutAdmin">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -127,6 +114,12 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/viewStaffKeuangan">
+          <i class="bi bi-cash"></i>
+          <span>Staff Keuangan</span>
+        </a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewSupir">
@@ -148,14 +141,15 @@
           <span>Jadwal</span>
         </a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="/viewBus">
-          <i class="bi bi-calendar"></i>
+          <i class="bi bi-truck-front-fill"></i>
           <span>Armada Bus</span>
         </a>
       </li>
-      <li class="nav-item">
 
+      <li class="nav-item">
         <a class="nav-link collapsed" href="/viewTipeBus">
           <i class="bi bi-truck-front"></i>
           <span>Tipe Bus</span>
@@ -176,7 +170,7 @@
   <script src="/assetsAdmin/NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="/assetsAdmin/NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="/assetsAdmin/NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
-
+  
   <!-- Template Main JS File -->
   <script src="/assetsAdmin/NiceAdmin/assets/js/main.js"></script>
   <?= $this->renderSection('contentAdmin') ?>

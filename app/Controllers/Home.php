@@ -53,8 +53,7 @@ class Home extends BaseController
          return view('user/table_user');
         // return redirect()->to('/');
     }
-<<<<<<< Updated upstream
-=======
+
     public function ayang()
     {
         $bus = new BusModel();
@@ -81,7 +80,6 @@ class Home extends BaseController
     }
 
 
-    
->>>>>>> Stashed changes
+
     
 }
