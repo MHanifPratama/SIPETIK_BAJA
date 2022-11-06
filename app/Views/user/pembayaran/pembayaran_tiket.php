@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-5 ml-1">
+                <div class="col-md-5 ml-1 mt-1">
                     <div class="card" style="width: 18rem;" >
                         <img class="card-img-top" src="assets/Arsha/assets/img/team/MANDIRI.png" alt="Card image cap">
                         <div class="card-body">
