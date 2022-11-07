@@ -111,9 +111,11 @@ $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
 $routes->post('/verifyLoginStaff','staffKeuangan\FunctionUmum::verifyLoginStaff');
 
-$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard',['filter' => 'authStaff']);
 $routes->get('/loginStaff', 'staffKeuangan\FunctionUmum::viewLogin');
-
+$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard',['filter' => 'authStaff']);
+$routes->get('/viewValidasi', 'staffKeuangan\FunctionValidasi::listValidasi',['filter' => 'authStaff']);
+$routes->get('/validasitiket/(:num)','staffKeuangan\FunctionValidasi::validasiTiket/$1',['filter' => 'authStaff']);
+$routes->post('/validasiPembayaranFix/(:num)','staffKeuangan\FunctionValidasi::validasiPembayaranFix/$1',['filter' => 'authStaff']);
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');

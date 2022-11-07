@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<table class="table table-hover">
+<?= $this -> extend('template/temDashboard')?>
+<?= $this-> section('contentStaff')?>
+
+
+
+<main id="main" class="main">
+    <div class="pagetitle mb-5">
+      <h1>Armada Bus</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+          <li class="breadcrumb-item active">Armada Bus</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+        <a href = "/viewTambahBus" class="btn btn-outline-primary"> Tambah Perjalanan </a>
+
+        <div class="row p-3">
+        <table class="table table-hover">
             <thead>
                 <tr class="table-primary">
                     <th scope="col">tiket</th>
@@ -35,8 +46,8 @@
                         <div class="d-flex">
                             <div class="box">
                                 <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3"
-                                    href="/prosesTiket/<?= $tiket['id_tiket'] ?>">
-                                Upload</a>
+                                    href="/validasitiket/<?= $tiket['id_tiket'] ?>">
+                                Validasi Tiket</a>
                             </div>
                         </div>
                     </td>
@@ -44,5 +55,9 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-</body>
+        </div>
+    </section>
+</main>
 </html>
+
+<?= $this -> endSection() ?>
