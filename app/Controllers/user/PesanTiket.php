@@ -82,9 +82,10 @@ class PesanTiket extends BaseController
             'no_hp' => $this->request->getPost('no_hp'),
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus'),
-            'total_harga' => $this->request->getPost('total_harga'),
+            'total_harga' => $this->request->getPost('total_harga') * $this->request->getPost('penumpang'),
             'validasi_pembayaran' => 'Belum Lunas',
             'kode_tiket'  => $kodePembayaran,
+            'foto_bukti_pembayaran' => 'ini Gambar',
            
         ];
         $tiket->save($data);
