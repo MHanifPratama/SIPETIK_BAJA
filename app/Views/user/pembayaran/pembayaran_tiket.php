@@ -75,11 +75,11 @@
 
 
             <h6>Total Pembayaran yang harus dibayar</h6>
-            <h4><?= session()->getFlashdata('harga') ?></h4>
+            <h4><?=$total_harga?></h4>
 
             <hr>
-            <h6>Kode Pembayaran</h6>
-            <h4><?= session()->getFlashdata('kode') ?></h4>
+            <h6>Kode Tiket</h6>
+            <h4><?= $kode_pembayaran?></h4>
 
             <hr><br><br>
             <p class="text-danger small text-center">*Jika Sudah Melakukan Pembayaran Silahkan Konfirmasi Pembayaran Dengan Klik Link <a href="">Konfirmasi Pembayaran</a></p>

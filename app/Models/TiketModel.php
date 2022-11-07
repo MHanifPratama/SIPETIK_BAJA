@@ -15,7 +15,7 @@ class TiketModel extends Model
         'email',
         'no_hp',
         'penumpang',
-        'id_bus','total_harga' ];
+        'id_bus','total_harga','validasi_pembayaran','foto_bukti_pembayaran','kode_tiket'];
 
     
     public function getAllDataFromAllTable(){
