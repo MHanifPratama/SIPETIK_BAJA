@@ -59,7 +59,12 @@ class PesanTiket extends BaseController
             'no_hp' => $this->request->getPost('no_hp'),
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus'),
+<<<<<<< Updated upstream
             'id_tipe' => $this->request->getPost('id_tipe'),
+=======
+            'total_harga' => $this->request->getPost('total_harga'),
+            'validasi_pembayaran' => 'Belum Lunas',
+>>>>>>> Stashed changes
         ];
         $tiket->save($data);
         return redirect()->to('/PembayaranTiket');
