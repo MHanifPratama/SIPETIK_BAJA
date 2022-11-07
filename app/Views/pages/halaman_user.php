@@ -11,7 +11,7 @@
           <h3>Bus Antar Daerah Provinsi Lampung</h3>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <!-- Pesan Ticket -->
-            <a href="login" class="btn-get-started scrollto"> Pesan Tiket </a>
+            <a href="#schedule" class="btn-get-started scrollto"> Pesan Tiket </a>
           </div>
         </div>
         <!-- Picture (mau diganti siger) -->

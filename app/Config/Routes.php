@@ -132,7 +132,8 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
 $routes->get('/tit', 'user\PesanTiket::tambahTiket');
-$routes->post('/prosesTiket', 'user\PesanTiket::pesanTiket');
+$routes->get('/prosesTiket/(:num)', 'user\PesanTiket::pesanTiket/$1');
+$routes->post('/menuPembayaran', 'user\PesanTiket::tambahTiketKeDb');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 
 //Pembayaran
