@@ -1,5 +1,5 @@
-<?= $this -> extend('template/loginTemplate')?>
-<?= $this-> section('LoginAdmin')?>
+<?= $this -> extend('template/loginStaff')?>
+<?= $this-> section('LoginStaff')?>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
