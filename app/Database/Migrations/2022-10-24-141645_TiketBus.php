@@ -19,10 +19,6 @@ class TiketBus extends Migration
 				'type'           => 'VARCHAR',
                 'constraint' => '50'
 			],
-			'id_perjalanan'      => [
-				'type'           => 'INT',
-                'constraint' => '50'
-			],
 			'email'      => [
 				'type'           => 'VARCHAR',
                 'constraint' => '50'
@@ -35,13 +31,11 @@ class TiketBus extends Migration
 				'type'           => 'INT',
                 'constraint' => '50'
 			],
-
             'id_bus'      => [
 				'type'           => 'INT',
                 'constraint' => '50'
 			],
-			
-            'id_tipe'      => [
+			'total_harga'      => [
 				'type'           => 'INT',
                 'constraint' => '50'
 			],

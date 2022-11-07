@@ -17,8 +17,8 @@
         <a href = "/viewTambahJadwal" class="btn btn-outline-primary"> Tambah Jadwal </a>
 
         <div class="row p-3">
-            <table class="table table-dark">
-                    <thead>
+            <table class="table">
+                    <thead class="table-dark">
                             <th scope="col">No</th>
                             <th scope="col">Tanggal</th>
                             <th scope="col">Waktu Keberangan</th>
@@ -32,14 +32,6 @@
                             <td><?= $jdwl['tanggal']?></td><br>
                             <td><?= $jdwl['waktu_keberangkatan']?></td><br>
                             <td>
-                            <form action="/hapusJadwal/<?= $jdwl['id_jadwal'] ?>" method="post">
-                                <input type="hidden" name="_method" value="DELETE" />
-                                <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
-                            </form>
-                            </td>
-                            <td>
-                                <div>
-                                    <a href="/editJadwal/<?= $jdwl['id_jadwal'] ?>">Edit</a>
                                 <div class="d-flex">
                                     <div class="box">
                                         <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editJadwal/<?= $jdwl['id_jadwal'] ?>"></a>

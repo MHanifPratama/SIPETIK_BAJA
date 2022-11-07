@@ -17,8 +17,8 @@
         <a href = "/viewTambahBus" class="btn btn-outline-primary"> Tambah Perjalanan </a>
 
         <div class="row p-3">
-            <table class="table table-dark" >
-                    <thead>
+            <table class="table" >
+                    <thead class="table-dark">
                             <th scope="col">No</th>
                             <th scope="col">Nama Bus</th>
                             <th scope="col">Tipe Bus</th>
@@ -42,14 +42,6 @@
                             <td><?= $Bus['tanggal']?></td>
                             <td><?= $Bus['waktu_keberangkatan']?></td>
                             <td>
-                            <form action="/hapusBus/<?= $Bus['id_bus'] ?>" method="post">
-                                <input type="hidden" name="_method" value="DELETE" />
-                                <button type="submit" class="btn btn-dark btn-sm ff-gantari">Hapus</button>
-                            </form>
-                            </td>
-                            <td>
-                                <div>
-                                    <a href="/editBus/<?= $Bus['id_bus'] ?>">Edit</a>
                                 <div class="d-flex">
                                     <div class="box">
                                         <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3" href="/editBus/<?= $Bus['id_bus'] ?>"></a>
