@@ -17,6 +17,7 @@
                     <th scope="col">Total Harga</th>
                     <th scope="col">Status Pembayaran</th>
                     <th scope="col">Kode Tiket</th>
+                    <th scope="col">upload Foto</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,7 +35,8 @@
                         <div class="d-flex">
                             <div class="box">
                                 <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3"
-                                    href="/prosesTiket/<?= $tiket['id_tiket'] ?>"></a>
+                                    href="/uploadFotoPembayaran/<?= $tiket['id_tiket'] ?>">
+                                Upload</a>
                             </div>
                         </div>
                     </td>

@@ -63,4 +63,40 @@ class PembayaranTiket extends BaseController
         $tiket->save($data);
         return redirect()->to('/PembayaranTiket');
     }
+    public function uploadFotoPembayaran($id){
+        $tiket = new TiketModel();
+        $dataTiket = $tiket->where('id_tiket',$id)->first();
+        $dataA=[
+            'tiket' => $id,
+            'dataTiket' => $dataTiket,
+        ];
+        return view('user/pembayaran/uploadGambarBuktiPembayaran',$dataA);
+    }
+    public function simpan_foto_pembayaran($id){
+        if(!$this->validate([
+            'foto_bukti_pembayaran' => 'uploaded[foto_bukti_pembayaran]','mime_in[foto_bukti_pembayaran,image/jpg,image/jpeg,image/gif,image/png]','max_size[foto_bukti_pembayaran,4096]',
+        ])){
+            return redirect()->to('/uploadFotoPembayaran/'.$id);
+        }
+        $tiket = new TiketModel();
+        $dataBerkasId = $tiket->find($id);
+        $dataBerkas = $this->request->getFile('foto_bukti_pembayaran');
+        if($dataBerkas->isValid() && !$dataBerkas->hasMoved()){
+            $berkasLama = $dataBerkasId['foto_bukti_pembayaran'];
+            if(file_exists(ROOTPATH . 'public/assets/img/foto_bukti_pembayaran/' . $berkasLama)){
+                unlink(ROOTPATH . 'public/assets/img/foto_bukti_pembayaran/' . $berkasLama);
+            }
+            $namaBerkas = $dataBerkas->getRandomName();
+            $dataBerkas->move(ROOTPATH . 'public/assets/img/foto_bukti_pembayaran/', $namaBerkas);
+        }
+        else{
+            $namaBerkas = $dataBerkasId['foto_bukti_pembayaran'];
+        }
+        $data = [
+            'foto_bukti_pembayaran' => $namaBerkas,
+        ];
+        $tiket->update($id,$data);
+        return redirect()->to('/PembayaranTiket');
+
+    }
 }

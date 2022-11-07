@@ -135,10 +135,10 @@ $routes->get('/tit', 'user\PesanTiket::tambahTiket');
 $routes->get('/prosesTiket/(:num)', 'user\PesanTiket::pesanTiket/$1');
 $routes->post('/menuPembayaran', 'user\PesanTiket::tambahTiketKeDb');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
-
 //Pembayaran
 $routes->get('/PembayaranTiket', 'user\PembayaranTiket::Pembayaran');
-
+$routes->get('/uploadFotoPembayaran/(:num)','user\PembayaranTiket::uploadFotoPembayaran/$1');
+$routes->post('/simpan_foto_pembayaran/(:num)', 'user\PembayaranTiket::simpan_foto_pembayaran/$1');
 
 
 
