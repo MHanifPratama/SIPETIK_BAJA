@@ -1,4 +1,4 @@
-<?= $this -> extend('template/header2')?>
+<?= $this -> extend('template/headerLogin')?>
 <?= $this-> section('content')?>
 
 <section id="hero1">
@@ -6,18 +6,13 @@
         <div class="judul">
             <h2>Jadwal Perjalanan Armada Bus BAJA</h2>
         </div>
-        <div>
-            <a href="/tit">
-                <button type="button" class="btn btn-primary">Pesan Tiket</button>
-            </a>
-        </div>
+
 
         <table class="table table-hover">
 
             <thead>
                 <tr class="table-primary">
                     <th scope="col">Bus</th>
-                    <th scope="col">Nama</th>
                     <th scope="col">Tipe</th>
                     <th scope="col">Asal</th>
                     <th scope="col">Tujuan</th>

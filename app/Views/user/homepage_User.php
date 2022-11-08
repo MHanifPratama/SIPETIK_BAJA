@@ -43,18 +43,10 @@
                 <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
               </div>
               <div class="input-box">
-
-                <span class="details">Destination</span>
-                <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
-
-                <?php foreach ($perjalanan as $prjl) : ?>
-                    <option value="<?= $prjl['id_perjalanan'] ?>"><?=  $prjl['kota_awal'],"  -  ",$prjl['kota_akhir']?></option>
-                <?php endforeach; ?>
-              </select>
-
-                <span class="details">Kota Awal</span>
+                <span class="details">Kota Asal</span>
                 <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_awal']?>">
               </div>
+
               <div class="input-box">
                 <span class="details">Kota Tujuan</span>
                 <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_akhir']?>">
@@ -87,12 +79,6 @@
               </div>
               <div class="input-box">
 
-                <span class="details">Nama Bus</span>
-
-                <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
-                <?php foreach ($bus as $bus) : ?>
-                    <option value="<?= $bus['id_bus'] ?>"><?=  $bus['nama_bus']?></option>
-                <?php endforeach; ?>
             </select>
 
 
@@ -102,18 +88,7 @@
               </div>
             </div>
 
-            <div class="input-box">
 
-            <span class="details">Tipe Bus</span>
-
-            <select class="form-select text-dark" type="text" name="id_tipe" id="id_tipe">
-              <?php foreach ($tipeBus as $tipe) : ?>
-                  <option value="<?= $tipe['id_tipe'] ?>"><?=  $tipe['tipe']?></option>
-              <?php endforeach; ?>
-          </select>
-
-
-            </div>
 
             <div class="button">
               <input type="submit" value="Pesan Tiket">
