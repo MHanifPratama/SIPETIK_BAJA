@@ -25,6 +25,8 @@
 
     <div class="row justify-content-center">
 
+    <div class="row">
+</div>
         <div class="col-md-5">
             <div class="alert alert-danger mt-3" role="alert">
                 <h3 class="text-center">PERINGATAN!</h3>
@@ -56,6 +58,26 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-5 mt-1 mr-2">
+                    <div class="card" style="width: 18rem;" >
+                        <!-- <img class="card-img-top" src="assets/Arsha/assets/img/team/BNI.png" alt="Card image cap"> -->
+                        <img class="card-img-top" src="<?= base_url('assets/Arsha/assets/img/team/BNI.png')?>" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">21224352 a.n SIPETIK BAJA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5 ml-3 mt-1">
+                    <div class="card" style="width: 18rem;" >
+                        <!-- <img class="card-img-top" src="assets/Arsha/assets/img/team/MANDIRI.png" alt="Card image cap"> -->
+                        <img class="card-img-top" src="<?= base_url('assets/Arsha/assets/img/team/MANDIRI.png')?>" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">12324523 a.n SIPETIK BAJA</p>
+                        </div>
+                    </div>
+                </div>
 
                     </div>
 
