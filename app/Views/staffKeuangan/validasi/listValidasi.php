@@ -1,14 +1,12 @@
 <?= $this -> extend('template/temDashboard')?>
 <?= $this-> section('contentStaff')?>
 
-
-
 <main id="main" class="main">
     <div class="pagetitle mb-5">
-      <h1>Armada Bus</h1>
+      <h1>Validasi Tiket</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+          <li class="breadcrumb-item"><a href="/dashboardStaff">Home</a></li>
           <li class="breadcrumb-item active">Armada Bus</li>
         </ol>
       </nav>
@@ -18,8 +16,8 @@
         <a href = "/viewTambahBus" class="btn btn-outline-primary"> Tambah Perjalanan </a>
 
         <div class="row p-3">
-        <table class="table table-hover">
-            <thead>
+        <table class="table">
+            <thead class="table table-dark">
                 <tr class="table-primary">
                     <th scope="col">tiket</th>
                     <th scope="col">Email</th>
