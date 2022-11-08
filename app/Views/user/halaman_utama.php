@@ -43,11 +43,15 @@
           </div>
           <div class="input-box">
             <span class="details">Destination</span>
+<<<<<<< Updated upstream
             <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
                 <?php foreach ($perjalanan as $prjl) : ?>
                     <option value="<?= $prjl['id_perjalanan'] ?>"><?=  $prjl['kota_awal'],"  -  ",$prjl['kota_akhir']?></option>
                 <?php endforeach; ?>
             </select>
+=======
+       
+>>>>>>> Stashed changes
 
           </div>
           <div class="input-box">

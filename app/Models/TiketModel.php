@@ -15,9 +15,13 @@ class TiketModel extends Model
         'email',
         'no_hp',
         'penumpang',
+<<<<<<< Updated upstream
         'id_perjalanan',
         'id_bus',
         'id_tipe','id_jadwal','total_harga' ];
+=======
+        'id_bus','total_harga','validasi_pembayaran','foto_bukti_pembayaran','kode_tiket',	'tanggal_pemesanan','tanggal_pelunasan'];
+>>>>>>> Stashed changes
 
     
     public function getAllDataFromAllTable(){

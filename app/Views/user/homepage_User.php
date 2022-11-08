@@ -42,6 +42,7 @@
                 <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
               </div>
               <div class="input-box">
+<<<<<<< Updated upstream
                 <span class="details">Destination</span>
                 <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
 
@@ -50,6 +51,25 @@
                 <?php endforeach; ?>
               </select>
     
+=======
+                <span class="details">Kota Awal</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_awal']?>">
+              </div>
+              <div class="input-box">
+                <span class="details">Kota Tujuan</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_akhir']?>">
+              </div>
+              <div class="input-box">
+                <span class="details">Harga</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="total_harga" name="total_harga" value ="<?= $bus['total_km'] * $bus['harga'] ?>">
+              </div>
+              <div class="input-box">
+                <span class="details">Nama Bus</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['nama_bus']?>">
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Id Bus" hidden  required id="harga" name="id_bus" value ="<?= $bus['id_bus']?>">
+>>>>>>> Stashed changes
               </div>
               <div class="input-box">
                 <span class="details">Email</span>
@@ -64,6 +84,7 @@
                 <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
               </div>
               <div class="input-box">
+<<<<<<< Updated upstream
                 <span class="details">Nama Bus</span>
                 <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
                 <?php foreach ($bus as $bus) : ?>
@@ -71,11 +92,17 @@
                 <?php endforeach; ?>
             </select>
 
+=======
+                <span class="details">Tanggal Keberangkatan</span>
+                <input type="text" placeholder="Tanggal" readonly  required id="" name="" value ="<?= $bus['tanggal']?>">
+>>>>>>> Stashed changes
               </div>
     
     
             </div>
+
             <div class="input-box">
+<<<<<<< Updated upstream
             <span class="details">Tipe Bus</span>
             <select class="form-select text-dark" type="text" name="id_tipe" id="id_tipe">
               <?php foreach ($tipeBus as $tipe) : ?>
@@ -84,7 +111,13 @@
           </select>
 
               
+=======
+                <input type="text" readonly id="pemesanan" hidden  required name="pemesanan" >
+              </div>
+   
+>>>>>>> Stashed changes
             </div>
+
             <div class="button">
               <input type="submit" value="Pesan Tiket">
             </div>

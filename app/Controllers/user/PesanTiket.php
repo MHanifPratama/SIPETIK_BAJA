@@ -57,6 +57,18 @@ class PesanTiket extends BaseController
         }
 
         $tiket = new TiketModel();
+<<<<<<< Updated upstream
+=======
+        
+        $code = $this->request->getPost('no_hp');
+        $harga = $this->request->getPost('total_harga');
+
+        $Kodetiket = "KSB".rand(100000,999999).$code;
+        $kodePembayaran = $Kodetiket;
+        echo $kodePembayaran;
+        $timezone=date_default_timezone_set('Asia/Jakarta');
+        $TanggalPesan = date("Y-m-d");
+>>>>>>> Stashed changes
         $data = [
             'nama' => $this->request->getPost('nama'),
             'id_perjalanan' => $this->request->getPost('id_perjalanan'),
@@ -64,9 +76,18 @@ class PesanTiket extends BaseController
             'no_hp' => $this->request->getPost('no_hp'),
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus'),
+<<<<<<< Updated upstream
             'id_tipe' => $this->request->getPost('id_tipe'),
             'id_jadwal' => $this->request->getPost('id_jadwal'),
             'total_harga' => $this->request->getPost('total_harga')
+=======
+            'tanggal_pemesanan' => $TanggalPesan,
+            'total_harga' => $this->request->getPost('total_harga') * $this->request->getPost('penumpang'),
+            'validasi_pembayaran' => 'Belum Lunas',
+            'kode_tiket'  => $kodePembayaran,
+            'foto_bukti_pembayaran' => 'ini Gambar',
+           
+>>>>>>> Stashed changes
         ];
 
         //Harga
