@@ -4,7 +4,7 @@
 
 <main id="main" class="main">
     <div class="pagetitle mb-5">
-      <h1>validasi Tiket</h1>
+      <h1>Validasi Tiket</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/dashboardStaff">Home</a></li>
@@ -25,7 +25,7 @@
                         <th scope="col">Total Harga</th>
                         <th scope="col">Status Pembayaran</th>
                         <th scope="col">Kode Tiket</th>
-                        <th scope="col">upload Foto</th>
+                        <th scope="col">Validasi Tiket</th>
 
                 </thead>
                 <tbody>
@@ -42,9 +42,8 @@
                         <td>
                             <div class="d-flex">
                                 <div class="box">
-                                    <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3"
-                                        href="/validasitiket/<?= $tiket['id_tiket'] ?>">
-                                    Validasi Tiket</a>
+                                    <a class="btn btn-success bi bi-check-square mr-3 ml-3"
+                                        href="/validasitiket/<?= $tiket['id_tiket'] ?>"></a>
                                 </div>
                             </div>
                         </td>
