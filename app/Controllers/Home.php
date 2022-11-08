@@ -23,6 +23,19 @@ class Home extends BaseController
         // return redirect()->to('/');
     }
 
+    public function loginIndex()
+    {
+        $bus = new BusModel();
+        $dataBus = $bus->getAllData();
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus
+        ];
+        // echo var_dump($data);
+         return view('pages/halaman_userLogin',$data);
+        // return redirect()->to('/');
+    }
+
     // public function pesanTiket()
     // {
     //     $bus = new BusModel();

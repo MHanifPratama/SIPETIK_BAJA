@@ -38,6 +38,7 @@ $routes->set404Override();
 
 // $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
+$routes->get('/welcome', 'Home::loginIndex');
 
 
 $routes->get('/list', 'Home::list');
