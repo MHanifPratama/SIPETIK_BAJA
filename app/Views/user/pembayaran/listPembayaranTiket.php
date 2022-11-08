@@ -35,7 +35,7 @@
                         <div class="d-flex">
                             <div class="box">
                                 <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3"
-                                    href="/prosesTiket/<?= $tiket['id_tiket'] ?>">
+                                    href="/uploadFotoPembayaran/<?= $tiket['id_tiket'] ?>">
                                 Upload</a>
                             </div>
                         </div>
