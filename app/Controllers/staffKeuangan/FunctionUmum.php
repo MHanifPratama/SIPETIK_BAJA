@@ -5,8 +5,7 @@ use App\Models\StaffKeuangan;
 
 class FunctionUmum extends BaseController{
     public function viewLogin(){
-        if (session('logged_in_staff
-        ') == true) {
+        if (session('logged_in_staff') == true) {
             return redirect()->to('/dashboardStaff');
         }
         return view('staffKeuangan\loginRegister\loginStaff');

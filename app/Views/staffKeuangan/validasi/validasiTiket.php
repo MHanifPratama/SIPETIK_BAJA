@@ -20,6 +20,7 @@
                         <input class="form-control" type="text" id="fname" name="fname" readonly
                             value="<?= $tiket['total_harga'] ?>"><br>
                     </div>
+
                     <div class="form-group col-md-6 mb-1">
                         <label for="status_pembayaran">Status Pembayaran</label>
                         <select id="status_pembayaran" class="form-control" name="status_pembayaran">
@@ -32,6 +33,7 @@
                         alt="Tydack ada Foto"><br>
                     
                     <button type="submit" class="btn btn-outline-primary">Submit</button>
+
             </form>
             </body>
 
