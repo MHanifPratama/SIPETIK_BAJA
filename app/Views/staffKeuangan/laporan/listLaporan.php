@@ -2,11 +2,11 @@
 <?= $this-> section('contentStaff')?>
 <main id="main" class="main">
     <div class="pagetitle mb-5">
-      <h1>validasi Tiket</h1>
+      <h1>Laporan</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-          <li class="breadcrumb-item active">Validasi Tiket</li>
+          <li class="breadcrumb-item active">Laporan</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -23,7 +23,6 @@
                     <th scope="col">Total Harga</th>
                     <th scope="col">Status Pembayaran</th>
                     <th scope="col">Kode Tiket</th>
-                    <th scope="col">upload Foto</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,15 +36,6 @@
                     <td><?= $tiket['total_harga'] ?></td>
                     <td><?= $tiket['validasi_pembayaran']?></td>
                     <td><?= $tiket['kode_tiket'] ?></td>
-                    <td>
-                        <div class="d-flex">
-                            <div class="box">
-                                <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3"
-                                    href="/validasitiket/<?= $tiket['id_tiket'] ?>">
-                                Validasi Tiket</a>
-                            </div>
-                        </div>
-                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -19,8 +19,8 @@
                     <div class="col-md-4 col-xl-3">
                         <div class="card bg-c-blue order-card">
                             <div class="card-block">
-                                <h6 class="m-b-2">Total Staff</h6>
-                                <h2 class="text-right"><i class="bi bi-person m-3"></i></i><span></span></h2>
+                                <h6 class="m-b-2">Total Tiket</h6>
+                                <h8 class="text-right"><i class="bi bi-cash-stack m-3"></i><?=$totalTiket?></i><span></span></h8>
                                 <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                         <div class="card bg-c-yellow order-card">
                             <div class="card-block">
                                 <h6 class="m-b-2">Pemasukan</h6>
-                                <h2 class="text-right"><i class="bi bi-cash-stack m-3"></i></i><span></span></h2>
+                                <h8 class="text-right"><i class="bi bi-cash-stack m-3"></i>Rp <?=$totalPendapatan?></i><span></span></h8>
                                 <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->
                             </div>
                         </div>
