@@ -98,7 +98,7 @@ class AdminSeeder extends Seeder
         $dataAkunAdmin = [
             [
             'username'  =>  'MHanifPratama',
-            'email'  => 'mhanifp27@gmail.com',
+            'email'  => 'admin@gmail.com',
             'password'  => password_hash(12345678,PASSWORD_DEFAULT),
         ]
     ];

@@ -43,7 +43,15 @@
           </div>
           <div class="input-box">
             <span class="details">Destination</span>
+
+            <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
+                <?php foreach ($perjalanan as $prjl) : ?>
+                    <option value="<?= $prjl['id_perjalanan'] ?>"><?=  $prjl['kota_awal'],"  -  ",$prjl['kota_akhir']?></option>
+                <?php endforeach; ?>
+            </select>
+
             <h1><?= $bus['id_bus']?> - <?= $bus['nama_bus']?></h1>
+
 
           </div>
           <div class="input-box">
