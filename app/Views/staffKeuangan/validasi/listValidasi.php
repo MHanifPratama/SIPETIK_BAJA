@@ -1,20 +1,22 @@
 <?= $this -> extend('template/temDashboard')?>
 <?= $this-> section('contentStaff')?>
 
+
+<main id="main" class="main">
+
 <main id="main" class="main">
     <div class="pagetitle mb-5">
-      <h1>Validasi Tiket</h1>
+      <h1>validasi Tiket</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/dashboardStaff">Home</a></li>
-          <li class="breadcrumb-item active">Armada Bus</li>
+          <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+          <li class="breadcrumb-item active">Validasi Tiket</li>
+
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-        <a href = "/viewTambahBus" class="btn btn-outline-primary"> Tambah Perjalanan </a>
-
         <div class="row p-3">
         <table class="table">
             <thead class="table table-dark">

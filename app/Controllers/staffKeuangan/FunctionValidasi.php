@@ -8,7 +8,7 @@ class FunctionValidasi extends BaseController{
         $model = new TiketModel();
         $data = [
             
-            'tiket' => $model->findAll(),
+            'tiket' => $model->where('validasi_pembayaran', 'Belum Lunas')->findAll(),
         ];
         return view('staffKeuangan\validasi\listValidasi', $data);
     }
@@ -25,7 +25,7 @@ class FunctionValidasi extends BaseController{
         $data = [
             'validasi_pembayaran' => $this->request->getVar('status_pembayaran'),
         ];
-        echo var_dump($data);
+        // echo var_dump($data);
         $model->update($id,$data);
         return redirect()->to('/viewValidasi');
     }
