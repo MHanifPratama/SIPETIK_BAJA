@@ -75,7 +75,7 @@ class Home extends BaseController
         ];
  
  
-         return view('user/homepage_User',$data);
+         return view('user/pesan_tiket',$data);
         // return redirect()->to('/');
     }
 
