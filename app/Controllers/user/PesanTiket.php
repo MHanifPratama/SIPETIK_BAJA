@@ -76,18 +76,27 @@ class PesanTiket extends BaseController
         $Kodetiket = "KSB".rand(100000,999999).$code;
         $kodePembayaran = $Kodetiket;
         echo $kodePembayaran;
+
+        $timezone=date_default_timezone_set('Asia/Jakarta');
+        $TanggalPesan = date("Y-m-d");
+
         $data = [
             'nama' => $this->request->getPost('nama'),
             'email' => $this->request->getPost('email'),
             'no_hp' => $this->request->getPost('no_hp'),
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus'),
+
+            'tanggal_pemesanan' => $TanggalPesan,
+
             'total_harga' => $this->request->getPost('total_harga') * $this->request->getPost('penumpang'),
             'validasi_pembayaran' => 'Belum Lunas',
             'kode_tiket'  => $kodePembayaran,
             'foto_bukti_pembayaran' => 'ini Gambar',
            
+
         ];
+        
         $tiket->save($data);
         $dataA=[
             'kode_pembayaran' => $Kodetiket,

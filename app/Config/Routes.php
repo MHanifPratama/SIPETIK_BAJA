@@ -38,6 +38,7 @@ $routes->set404Override();
 
 // $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
+$routes->get('/welcome', 'Home::loginIndex');
 
 
 $routes->get('/list', 'Home::list');
@@ -116,6 +117,7 @@ $routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard',['f
 $routes->get('/viewValidasi', 'staffKeuangan\FunctionValidasi::listValidasi',['filter' => 'authStaff']);
 $routes->get('/validasitiket/(:num)','staffKeuangan\FunctionValidasi::validasiTiket/$1',['filter' => 'authStaff']);
 $routes->post('/validasiPembayaranFix/(:num)','staffKeuangan\FunctionValidasi::validasiPembayaranFix/$1',['filter' => 'authStaff']);
+$routes->get('/viewLaporanKeuangan', 'staffKeuangan\FunctionLaporanKeuangan::listLaporanKeuangan',['filter' => 'authStaff']);
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');

@@ -1,5 +1,4 @@
-
-<?= $this -> extend('template/header')?>
+<?= $this -> extend('template/headerDefaultLogin')?>
 <?= $this-> section('content')?>
 
   <!-- ======= Login Register ======= -->
