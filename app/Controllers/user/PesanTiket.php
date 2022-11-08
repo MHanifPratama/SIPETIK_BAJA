@@ -21,15 +21,18 @@ class PesanTiket extends BaseController
         $bus = new BusModel();
         $perjalanan = new Perjalanan();
         $tipeBus = new TipeBus();
+        $jadwal = new Jadwal();
 
-        $dataBus = $bus->findAll();
+        $dataBus = $bus->getAllDataFromAllTable();
         $dataTipeBus = $tipeBus->findAll();
         $dataPerjalanan = $perjalanan->findAll();
+        $dataJadwal = $jadwal->findAll();
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus,
             'tipeBus' => $dataTipeBus,
-            'perjalanan' => $dataPerjalanan
+            'perjalanan' => $dataPerjalanan,
+            'jadwal' => $dataJadwal,
             
         ];
  
@@ -37,31 +40,63 @@ class PesanTiket extends BaseController
     }
 
 
-    public function pesanTiket(){
-
+    public function pesanTiket($id){
+        $bus = new BusModel();
+        $session = session();
+        $dataBus = $bus->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
+        ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
+        ->join('supir','supir.id_supir=bus.id_supir')
+        ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
+        ->find($id);
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus,
+            'session' => $session,
+        ];
+        return view('user/homepage_User',$data);
+    }
+    public function tambahTiketKeDb(){
+        $session = session();
         if(!$this->validate([
             'nama'=>'required',
             'email'=>'required',
             'no_hp'=>'required',
             'penumpang' => 'required',
-            'id_perjalanan'=>'required',
             'id_bus'=>'required',
-            'id_tipe'=>'required',
+            'total_harga'=>'required'
         ])){
             return redirect()->to('/tit');
         }
 
         $tiket = new TiketModel();
+        
+        $code = $this->request->getPost('no_hp');
+        $harga = $this->request->getPost('total_harga');
+
+        $Kodetiket = "KSB".rand(100000,999999).$code;
+        $kodePembayaran = $Kodetiket;
+        echo $kodePembayaran;
         $data = [
             'nama' => $this->request->getPost('nama'),
-            'id_perjalanan' => $this->request->getPost('id_perjalanan'),
             'email' => $this->request->getPost('email'),
             'no_hp' => $this->request->getPost('no_hp'),
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus'),
-            'id_tipe' => $this->request->getPost('id_tipe'),
+            'total_harga' => $this->request->getPost('total_harga') * $this->request->getPost('penumpang'),
+            'validasi_pembayaran' => 'Belum Lunas',
+            'kode_tiket'  => $kodePembayaran,
+            'foto_bukti_pembayaran' => 'ini Gambar',
+           
         ];
         $tiket->save($data);
+        $dataA=[
+            'kode_pembayaran' => $Kodetiket,
+            'total_harga' => $harga,
+        ];
+        // $session->setFlashdata('kode', $Kodetiket);
+        // $session->setFlashdata('harga', $harga);
         return redirect()->to('/PembayaranTiket');
+        // return view('user/pembayaran/pembayaran_tiket',$dataA);
     }
 }
+

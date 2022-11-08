@@ -36,17 +36,30 @@
         <div class="container">
         <div class="title1">Pesan Tiket</div>
         <div class="content">
-          <form action="/prosesTiket" method="post">
+          <form action="/menuPembayaran" method="post">
             <div class="user-details">
               <div class="input-box">
                 <span class="details">Full Name</span>
                 <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
               </div>
               <div class="input-box">
-                <span class="details">Destination</span>
-                <select class="form-select text-dark" type="text" name="id_perjalanan" id="id_perjalanan">
-                </select>
-    
+                <span class="details">Kota Awal</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_awal']?>">
+              </div>
+              <div class="input-box">
+                <span class="details">Kota Tujuan</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_akhir']?>">
+              </div>
+              <div class="input-box">
+                <span class="details">Harga</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="total_harga" name="total_harga" value ="<?= $bus['total_km'] * $bus['harga'] ?>">
+              </div>
+              <div class="input-box">
+                <span class="details">Harga</span>
+                <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['nama_bus']?>">
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Id Bus" hidden  required id="harga" name="id_bus" value ="<?= $bus['id_bus']?>">
               </div>
               <div class="input-box">
                 <span class="details">Email</span>
@@ -61,18 +74,11 @@
                 <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
               </div>
               <div class="input-box">
-                <span class="details">Agen Travel</span>
-                <select class="form-select text-dark" type="text" name="id_bus" id="id_bus">
-                </select>
+                <span class="details">Nama Bus</span>
               </div>
-    
-    
             </div>
             <div class="input-box">
             <span class="details">Tipe Bus</span>
-              <select class="form-select text-dark" type="text" name="id_tipe" id="id_tipe">
-              </select>
-              
             </div>
             <div class="button">
               <input type="submit" value="Pesan Tiket">
@@ -84,94 +90,6 @@
     </div>
   </div>
     </div>
-    <div class="fixedButton">
-        <button class="roundedFixedBtn" id="show_1" class="fa fa-phone"></button>
-        </div>
-        <div class="popup_1">
-            <div class="btn_1">&times;</div>
-            <main class="py-4">
-    
-                <div class="container_2">
-        
-                    <div class="row justify-content-center">
-                        <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Jadwal Keberangkatan
-                            </div>
-                            <div class="card-body">
-        
-                                <div style="margin-bottom: 20px;">
-        
-                                    <input type="text" id="filter0" placeholder="Filter By ID">
-                                    <input type="text" id="filter1" placeholder="Filter By Jadwal">
-                                    <input type="text" id="filter2" placeholder="Filter By Tipe">
-        
-                                </div>
-        
-                                <table id="filter" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Id Bus</th>
-                                            <th>Jadwal Keberangkatan</th>
-                                            <th>Tipe Bus</th>
-                                            <th>Harga</th>
-                                        </tr>
-                                    </thead>
-                        
-                                    <tbody>
-                                        <tr>
-                                            <td>02</td>
-                                            <td>12.00 WIB</td>
-                                            <td>VVIP</td>
-                                            <td>20000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>03</td>
-                                            <td>11.00 WIB</td>
-                                            <td>VVIP</td>
-                                            <td>20000</td>
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td>04</td>
-                                            <td>15.00 WIB</td>
-                                            <td>Ekonomi</td>
-                                            <td>20000</td>
-                                        </tr>
-                                        
-                                    </tbody>
-                                    
-                                </table>
-                                <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-                            </div>
-                        </div>    
-                        </div>
-                    </div>
-        
-        
-                </div>    
-        
-            </main>
-  </div>
   
   <script src="assets/Arsha/assets/js/TableFilter.min.js" defer></script>
   <script src="assets/Arsha/assets/js/popup.js"></script>

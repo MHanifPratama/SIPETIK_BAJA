@@ -19,10 +19,6 @@ class TiketBus extends Migration
 				'type'           => 'VARCHAR',
                 'constraint' => '50'
 			],
-			'id_perjalanan'      => [
-				'type'           => 'INT',
-                'constraint' => '50'
-			],
 			'email'      => [
 				'type'           => 'VARCHAR',
                 'constraint' => '50'
@@ -35,16 +31,26 @@ class TiketBus extends Migration
 				'type'           => 'INT',
                 'constraint' => '50'
 			],
-
             'id_bus'      => [
 				'type'           => 'INT',
                 'constraint' => '50'
 			],
-			
-            'id_tipe'      => [
+			'total_harga'      => [
 				'type'           => 'INT',
                 'constraint' => '50'
 			],
+			'validasi_pembayaran'      => [
+				'type'           => 'VARCHAR',
+                'constraint' => '15'
+			],
+			'foto_bukti_pembayaran'      => [
+				'type'           => 'VARCHAR',
+                'constraint' => '1000'
+			],'kode_tiket'      => [
+				'type'           => 'VARCHAR',
+                'constraint' => '255'
+			],
+			
 		]);
 		$this->forge->addKey('id_tiket', TRUE);
 		$this->forge->createTable('tiket_bus', TRUE);

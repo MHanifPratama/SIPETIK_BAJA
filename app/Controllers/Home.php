@@ -23,54 +23,28 @@ class Home extends BaseController
         // return redirect()->to('/');
     }
 
-    public function pesanTiket()
-    {
-        $bus = new BusModel();
-        $perjalanan = new Perjalanan();
-        $tipeBus = new TipeBus();
+    // public function pesanTiket()
+    // {
+    //     $bus = new BusModel();
+    //     $perjalanan = new Perjalanan();
+    //     $tipeBus = new TipeBus();
 
-        $dataBus = $bus->findAll();
-        $dataTipeBus = $tipeBus->findAll();
-        $dataPerjalanan = $perjalanan->findAll();
-        $data = [
-            'title' => 'Bus',
-            'bus' => $dataBus,
-            'tipeBus' => $dataTipeBus,
-            'perjalanan' => $dataPerjalanan
+    //     $dataBus = $bus->findAll();
+    //     $dataTipeBus = $tipeBus->findAll();
+    //     $dataPerjalanan = $perjalanan->findAll();
+    //     $data = [
+    //         'title' => 'Bus',
+    //         'bus' => $dataBus,
+    //         'tipeBus' => $dataTipeBus,
+    //         'perjalanan' => $dataPerjalanan
             
-        ];
+    //     ];
  
-         return view('user/halaman_utama',$data);
-        // return redirect()->to('/');
-    }
+    //      return view('user/halaman_utama',$data);
+    //     // return redirect()->to('/');
+    // }
 
-    public function processPesanTiket() {
-        if(!$this->validate([
-            'nama'=>'required',
-            'email'=>'required',
-            'no_hp'=>'required',
-            'penumpang' => 'required',
-            'id_perjalanan'=>'required',
-            'id_bus'=>'required',
-            'id_tipe'=>'required',
-        ])){
-            return redirect()->to('/tit');
-        }
-
-        $tiket = new TiketModel();
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-            'id_perjalanan' => $this->request->getPost('id_perjalanan'),
-            'email' => $this->request->getPost('email'),
-            'no_hp' => $this->request->getPost('no_hp'),
-            'penumpang' => $this->request->getPost('penumpang'),
-            'id_bus' => $this->request->getPost('id_bus'),
-            'id_tipe' => $this->request->getPost('id_tipe')
-        ];
-        $tiket->save($data);
-        return redirect()->to('/');
-
-    }
+    
 
 
     public function list()
@@ -79,11 +53,33 @@ class Home extends BaseController
          return view('user/table_user');
         // return redirect()->to('/');
     }
+
     public function ayang()
     {
+        $bus = new BusModel();
+        $perjalanan = new Perjalanan();
+        $tipeBus = new TipeBus();
+        $jadwal = new Jadwal();
+
+        $dataBus = $bus->getAllDataFromAllTable();
+        $dataTipeBus = $tipeBus->findAll();
+        $dataPerjalanan = $perjalanan->findAll();
+        $dataJadwal = $jadwal->findAll();
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus,
+            'tipeBus' => $dataTipeBus,
+            'perjalanan' => $dataPerjalanan,
+            'jadwal' => $dataJadwal,
+            
+        ];
  
-         return view('user/homepage_User');
+ 
+         return view('user/homepage_User',$data);
         // return redirect()->to('/');
     }
+
+
+
     
 }
