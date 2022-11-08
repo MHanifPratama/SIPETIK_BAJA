@@ -15,27 +15,25 @@
 
             <form action="/validasiPembayaranFix/<?= $tiket['id_tiket'] ?>" method="post" enctype="multipart/">
                 <div class="form-row">
-                    <div class="form-group col-md-6 mb-3">
+                    <div class="form-group col-md-6 mb-1">
                         <label for="fname">Total Harga:</label><br>
                         <input class="form-control" type="text" id="fname" name="fname" readonly
                             value="<?= $tiket['total_harga'] ?>"><br>
                     </div>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Status Pembayaran
-                        </button>
 
-                        <select id="status_pembayaran" name="status_pembayaran">
-                            <option value="Belum Lunas">Belum Lunas</option>
-                            <option value="Lunas">Lunas</option>
+                    <div class="form-group col-md-6 mb-1">
+                        <label for="status_pembayaran">Status Pembayaran</label>
+                        <select id="status_pembayaran" class="form-control" name="status_pembayaran">
+                            <option selected value="Belum Lunas">Belum Lunas</option>
+                            <option value="Lunas">Lunas</option></option>
                         </select>
                     </div>
-
-                    <img src="/assets/img/foto_bukti_pembayaran/<?= $tiket['foto_bukti_pembayaran'] ?>"
+                    
+                    <img class="buktiPembayaran mt-3 mb-3" src="/assets/img/foto_bukti_pembayaran/<?= $tiket['foto_bukti_pembayaran'] ?>"
                         alt="Tydack ada Foto"><br>
-                    <input type="submit" value="Submit">
-                </div>
+                    
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+
             </form>
             </body>
 
