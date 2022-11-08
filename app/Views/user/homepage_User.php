@@ -171,9 +171,9 @@
         <div class="row py-5">
             <div class="col-lg-7 pb-5 pb-lg-0 px-3 px-lg-5">
                 <h4 class="text-secondary mb-3">About Us</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Boarding</span> & <span class="text-secondary">Daycare</span></h1>
-                <h5 class="text-muted mb-3">Amet stet amet ut. Sit no vero vero no dolor. Sed erat ut sea. Just clita ut stet kasd at diam sit erat vero sit.</h5>
-                <p class="mb-4">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat sed diam duo</p>
+                <h1 class="display-4 mb-4"><span class="text-primary">Traveling</span> & <span class="text-secondary">Healing</span></h1>
+                <h5 class="text-muted mb-3">Sistem Pemesanan Bus Nomor 1 di Indonesia</h5>
+                <p class="mb-4">Deskripsi</p>
                 <ul class="list-inline">
                     <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Best In Industry</h5></li>
                     <li><h5><i class="fa fa-check-double text-secondary mr-3"></i>Emergency Services</h5></li>
@@ -206,32 +206,32 @@
                 <img class="img-fluid w-100" src="<?= base_url("assets/Arsha/assets/img/bus.jpg")?>" alt="">
             </div>
             <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
-                <h4 class="text-secondary mb-3">Why Choose Us?</h4>
-                <h1 class="display-4 mb-4"><span class="text-primary">Special Care</span> On Pets</h1>
-                <p class="mb-4">Dolor lorem lorem ipsum sit et ipsum. Sadip sea amet diam sed ut vero no sit. Et elitr stet sed sit sed kasd. Erat duo eos et erat sed diam duo</p>
+                <h4 class="text-secondary mb-3">Kenapa harus Kami ?</h4>
+                <h1 class="display-4 mb-4"><span class="text-primary">Keunggulan dari </span>SIPETIK</h1>
+                <p class="mb-4">tes</p>
                 <div class="row py-2">
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
                             <h1 class="flaticon-cat font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Best In Industry</h5>
+                            <h5 class="text-truncate m-0">24/7 Online</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center mb-4">
                             <h1 class="flaticon-doctor font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Emergency Services</h5>
+                            <h5 class="text-truncate m-0">Harga Terjangkau</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
                             <h1 class="flaticon-care font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Special Care</h5>
+                            <h5 class="text-truncate m-0">Pelayanan Cepat</h5>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="d-flex align-items-center">
                             <h1 class="flaticon-dog font-weight-normal text-secondary m-0 mr-3"></h1>
-                            <h5 class="text-truncate m-0">Customer Support</h5>
+                            <h5 class="text-truncate m-0">Pembayaran Simpel</h5>
                         </div>
                     </div>
                 </div>
@@ -254,22 +254,22 @@
                         <div class="card-header position-relative border-0 p-0 mb-4">
                             <img class="card-img-top" src="<?= base_url("assets/Arsha/assets/img/bus.jpg")?>" alt="">
                             <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-primary mb-3">Basic</h3>
+                                <h3 class="text-primary mb-3">Ekonomi</h3>
                                 <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">Rp</small>100000<small class="align-bottom" style="font-size: 16px; line-height: 40px;"></small>
                                 </h1>
                             </div>
                         </div>
                         <div class="card-body text-center p-0">
                             <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Veterinary Medicine</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>AC</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Makan</li>
+                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Toor Guide</li>
+                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i> </li>
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Signup Now</a>
+                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Pesan Tiket</a>
                         </div>
                     </div>
                 </div>
@@ -278,22 +278,22 @@
                         <div class="card-header position-relative border-0 p-0 mb-4">
                             <img class="card-img-top" src="<?= base_url("assets/Arsha/assets/img/bus.jpg")?>" alt="">
                             <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-secondary mb-3">Standard</h3>
+                                <h3 class="text-secondary mb-3">Bisnis</h3>
                                 <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">Rp</small>200000<small class="align-bottom" style="font-size: 16px; line-height: 40px;"></small>
                                 </h1>
                             </div>
                         </div>
                         <div class="card-body text-center p-0">
                             <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Veterinary Medicine</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>AC</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Makan</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Toor Guide</li>
+                                <li class="list-group-item p-2"><i class="fa fa-times text-danger mr-2"></i>Ekstra Snack</li>
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Signup Now</a>
+                            <a href="" class="btn btn-secondary btn-block p-3" style="border-radius: 0;">Pesan Tiket</a>
                         </div>
                     </div>
                 </div>
@@ -302,22 +302,22 @@
                         <div class="card-header position-relative border-0 p-0 mb-4">
                             <img class="card-img-top" src="<?= base_url("assets/Arsha/assets/img/bus.jpg")?>" alt="">
                             <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
-                                <h3 class="text-primary mb-3">Premium</h3>
+                                <h3 class="text-primary mb-3">VVIP</h3>
                                 <h1 class="display-4 text-white mb-0">
-                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Mo</small>
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">Rp</small>5000000<small class="align-bottom" style="font-size: 16px; line-height: 40px;"></small>
                                 </h1>
                             </div>
                         </div>
                         <div class="card-body text-center p-0">
                             <ul class="list-group list-group-flush mb-4">
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Feeding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Spa & Grooming</li>
-                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Veterinary Medicine</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>AC</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Makan</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Hotel</li>
+                                <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Kapal Pribadi</li>
                             </ul>
                         </div>
                         <div class="card-footer border-0 p-0">
-                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Signup Now</a>
+                            <a href="" class="btn btn-primary btn-block p-3" style="border-radius: 0;">Pesan Tiket</a>
                         </div>
                     </div>
                 </div>
@@ -330,16 +330,16 @@
      <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-4 col-md-12 mb-5">
-                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">Pet</span>Lover</h1>
-                <p class="m-0">Ipsum amet sed vero et lorem stet eos ut, labore sed sed stet sea est ipsum ut. Volup amet ea sanct ipsum, dolore vero lorem no duo eirmod. Eirmod amet ipsum no ipsum lorem clita ut. Ut sed sit lorem ea lorem sed, amet stet sit sea ea diam tempor kasd kasd. Diam nonumy etsit tempor ut sed diam sed et ea</p>
+                <h1 class="mb-3 display-5 text-capitalize text-white"><span class="text-primary">SI</span>PETIK</h1>
+                <p class="m-0">SIPETIK merupakan sistem pemesanan tiket bus nomor 2 di Indonesia dengan pemesanaan yang tidak ribet dan sangat fleksibel digunakan di seluruh kalangan masyarakat</p>
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="row">
                     <div class="col-md-4 mb-5">
-                        <h5 class="text-primary mb-4">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <h5 class="text-primary mb-4">Find Us!</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>Jalan Soekarno Hatta, Nomor 22</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+0811 2281 9835</p>
+                        <p><i class="fa fa-envelope mr-2"></i>sipetik@gmail.com</p>
                         <div class="d-flex justify-content-start mt-4">
                             <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -358,7 +358,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 mb-5">
-                        <h5 class="text-primary mb-4">Newsletter</h5>
+                        <h5 class="text-primary mb-4">Feedback</h5>
                         <form action="">
                             <div class="form-group">
                                 <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
@@ -379,8 +379,8 @@
         <div class="row">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white">
-                    &copy; <a class="text-white font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed by
-                    <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+                    &copy; <a class="text-white font-weight-bold" href="#">SIPETIK</a>. All Rights Reserved. Designed by
+                    <a class="text-white font-weight-bold" href="https://htmlcodex.com">Universitas Lampung</a>
                 </p>
             </div>
             <div class="col-md-6 text-center text-md-right">
