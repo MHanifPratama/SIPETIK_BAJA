@@ -111,9 +111,11 @@ $routes->post('/verifyLoginAdmin','admin\FunctionUmum::verifyLoginAdmin');
 
 $routes->post('/verifyLoginStaff','staffKeuangan\FunctionUmum::verifyLoginStaff');
 
-$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard',['filter' => 'authStaff']);
 $routes->get('/loginStaff', 'staffKeuangan\FunctionUmum::viewLogin');
-
+$routes->get('/dashboardStaff', 'staffKeuangan\FunctionDashboard::dashboard',['filter' => 'authStaff']);
+$routes->get('/viewValidasi', 'staffKeuangan\FunctionValidasi::listValidasi',['filter' => 'authStaff']);
+$routes->get('/validasitiket/(:num)','staffKeuangan\FunctionValidasi::validasiTiket/$1',['filter' => 'authStaff']);
+$routes->post('/validasiPembayaranFix/(:num)','staffKeuangan\FunctionValidasi::validasiPembayaranFix/$1',['filter' => 'authStaff']);
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');
@@ -135,10 +137,10 @@ $routes->get('/tit', 'user\PesanTiket::tambahTiket');
 $routes->get('/prosesTiket/(:num)', 'user\PesanTiket::pesanTiket/$1');
 $routes->post('/menuPembayaran', 'user\PesanTiket::tambahTiketKeDb');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
-
 //Pembayaran
 $routes->get('/PembayaranTiket', 'user\PembayaranTiket::Pembayaran');
-
+$routes->get('/uploadFotoPembayaran/(:num)','user\PembayaranTiket::uploadFotoPembayaran/$1');
+$routes->post('/simpan_foto_pembayaran/(:num)', 'user\PembayaranTiket::simpan_foto_pembayaran/$1');
 
 
 

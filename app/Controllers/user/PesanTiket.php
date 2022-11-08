@@ -69,22 +69,34 @@ class PesanTiket extends BaseController
         }
 
         $tiket = new TiketModel();
+        
+        $code = $this->request->getPost('no_hp');
+        $harga = $this->request->getPost('total_harga');
+
+        $Kodetiket = "KSB".rand(100000,999999).$code;
+        $kodePembayaran = $Kodetiket;
+        echo $kodePembayaran;
         $data = [
             'nama' => $this->request->getPost('nama'),
             'email' => $this->request->getPost('email'),
             'no_hp' => $this->request->getPost('no_hp'),
             'penumpang' => $this->request->getPost('penumpang'),
             'id_bus' => $this->request->getPost('id_bus'),
-            'total_harga' => $this->request->getPost('total_harga'),
+            'total_harga' => $this->request->getPost('total_harga') * $this->request->getPost('penumpang'),
             'validasi_pembayaran' => 'Belum Lunas',
+            'kode_tiket'  => $kodePembayaran,
+            'foto_bukti_pembayaran' => 'ini Gambar',
            
         ];
-        // $code = $this->request->getPost('no_hp');
-        // $Kodetiket = "KSB".$code;
-        // session()->setFlashdata('kode', $Kodetiket);
         $tiket->save($data);
-        // echo var_dump($data);
+        $dataA=[
+            'kode_pembayaran' => $Kodetiket,
+            'total_harga' => $harga,
+        ];
+        // $session->setFlashdata('kode', $Kodetiket);
+        // $session->setFlashdata('harga', $harga);
         return redirect()->to('/PembayaranTiket');
+        // return view('user/pembayaran/pembayaran_tiket',$dataA);
     }
 }
 

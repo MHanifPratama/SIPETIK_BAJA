@@ -46,7 +46,11 @@ class TiketBus extends Migration
 			'foto_bukti_pembayaran'      => [
 				'type'           => 'VARCHAR',
                 'constraint' => '1000'
+			],'kode_tiket'      => [
+				'type'           => 'VARCHAR',
+                'constraint' => '255'
 			],
+			
 		]);
 		$this->forge->addKey('id_tiket', TRUE);
 		$this->forge->createTable('tiket_bus', TRUE);
