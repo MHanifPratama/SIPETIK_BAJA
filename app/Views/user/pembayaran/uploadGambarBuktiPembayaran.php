@@ -37,9 +37,10 @@
                     <h5 class="text-info text-center">Silahkan Lakukan Pembayaran Sesuai Detail Berikut</h5>
 
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-5 ml-1">
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="assets/Arsha/assets/img/team/GOPAY.png" alt="gopay">
+                            <!-- src="assets/Arsha/assets/img/team/GOPAY.png" -->
+                                <img class="card-img-top" src="<?php echo base_url('assets/Arsha/assets/img/team/GOPAY.png')?>" alt="gopay">
                                 <div class="card-body">
                                     <p class="card-text">082202128373 a.n SIPETIK BAJA</p>
                                 </div>
@@ -48,27 +49,10 @@
 
                         <div class="col-md-5 ml-1">
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="assets/Arsha/assets/img/team/DANA.png" alt="Card image cap">
+                                <!-- <img class="card-img-top" src="assets/Arsha/assets/img/team/DANA.png" alt="Card image cap"> -->
+                                <img class="card-img-top" src="<?= base_url('assets/Arsha/assets/img/team/DANA.png')?>" alt="Card image cap">
                                 <div class="card-body">
                                     <p class="card-text">082202128373 a.n SIPETIK BAJA</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-5 mt-1">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="assets/Arsha/assets/img/team/BNI.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <p class="card-text">21224352 a.n SIPETIK BAJA</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-5 ml-1 mt-1">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="assets/Arsha/assets/img/team/MANDIRI.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <p class="card-text">12324523 a.n SIPETIK BAJA</p>
                                 </div>
                             </div>
                         </div>
