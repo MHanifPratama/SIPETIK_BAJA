@@ -25,14 +25,20 @@
             <tbody>
                 <?php ?>
                 <?php foreach ($tiket as $tiket) : ?>
+
                 <tr class="text-center">
+
+                <tr>
+
                     <td><?= $tiket['id_tiket']?></td>
                     <td><?= $tiket['email']?></td>
                     <td><?= $tiket['penumpang']?></td>
                     <td><?= $tiket['id_bus']?></td>
                     <td><?= $tiket['total_harga'] ?></td>
+
                     <td><?= $tiket['tanggal_pemesanan'] ?></td>
                     <td><?= $tiket['tanggal_pelunasan'] ?></td>
+
                     <td><?= $tiket['validasi_pembayaran']?></td>
                     <td><?= $tiket['kode_tiket'] ?></td>
                     <td>

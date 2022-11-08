@@ -17,8 +17,8 @@
         <a href = "/viewTambahBus" class="btn btn-outline-primary"> Tambah Perjalanan </a>
 
         <div class="row p-3">
-            <table class="table table-dark" >
-                    <thead>
+            <table class="table" >
+                    <thead class="table-dark">
                             <th scope="col">No</th>
                             <th scope="col">Nama Bus</th>
                             <th scope="col">Tipe Bus</th>

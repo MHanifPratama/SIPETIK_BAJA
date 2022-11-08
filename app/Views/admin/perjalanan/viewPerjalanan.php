@@ -17,8 +17,8 @@
         <a href = "/viewTambahPerjalanan" class="btn btn-outline-primary"> Tambah Perjalanan </a>
 
         <div class="row p-3">
-            <table class ="table table-dark">
-                    <thead>
+            <table class ="table">
+                    <thead class="table-dark">
                             <th scope="col">No</th>
                             <th scope="col">Kota Awal</th>
                             <th scope="col">Kota Akhir</th>

@@ -25,7 +25,10 @@
   <link href="/assetsAdmin/NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+
   <link href="/assetsAdmin/NiceAdmin/assets/css/style.css" rel="stylesheet">
+  
+
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.1
@@ -74,7 +77,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="/profileAdmin">
+              <a class="dropdown-item d-flex align-items-center" href="">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -107,19 +110,19 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed " href="#">
+        <a class="nav-link collapsed " href="dashboardStaff">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed " href="#">
+        <a class="nav-link collapsed " href="viewValidasi">
         <i class="bi bi-check-circle"></i>
           <span>Validasi</span>
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed " href="#">
+        <a class="nav-link collapsed " href="viewLaporanKeuangan">
             <i class="bi bi-book-fill"></i>
           <span>Laporan</span>
         </a>
