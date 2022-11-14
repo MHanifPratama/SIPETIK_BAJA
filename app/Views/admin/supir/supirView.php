@@ -23,7 +23,7 @@
                     <th scope="col">Nama</th>
                     <th scope="col">Aksi</th>
                 </thead>
-                <tbody>
+                <tbody class="table-light">
                     <?php ?>
                     <?php foreach ($supir as $mhs) : ?>
                     <tr>

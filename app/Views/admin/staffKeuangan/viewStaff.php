@@ -24,7 +24,7 @@
                     <th scope="col">No HP</th>
                     <th scope="col">Aksi</th>
                 </thead>
-                <tbody>
+                <tbody class="table-light">
                     <?php ?>
                     <?php foreach ($staff_keuangan as $StaffKeuangan) : ?>
                     <tr>

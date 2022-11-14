@@ -28,7 +28,7 @@
                         <th scope="col">Validasi Tiket</th>
 
                 </thead>
-                <tbody>
+                <tbody class="table-light">
                     <?php ?>
                     <?php foreach ($tiket as $tiket) : ?>
                     <tr>

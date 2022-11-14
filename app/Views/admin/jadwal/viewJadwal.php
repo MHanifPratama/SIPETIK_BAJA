@@ -24,7 +24,7 @@
                             <th scope="col">Waktu Keberangan</th>
                             <th scope="col">Aksi</th>
                     </thead>
-                    <tbody>
+                    <tbody class="table-light">
                         <?php ?>
                         <?php foreach ($jadwal as $jdwl) : ?>
                         <tr>

@@ -23,7 +23,7 @@
                             <th scope="col">Status Pembayaran</th>
                             <th scope="col">Kode Tiket</th>
                         </thead>
-                        <tbody>
+                        <tbody class="table-light">
                             <?php ?>
                             <?php foreach ($tiket as $tiket): ?>
                             <tr>
