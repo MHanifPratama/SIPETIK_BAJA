@@ -134,7 +134,7 @@
               </div>
               <div class="input-box">
                 <span class="details">Email</span>
-                <input type="text" placeholder="Masukkan Email" required id="email" name="email">
+                <input type="text" placeholder="Masukkan Email" readonly required id="email" name="email" value ="<?= user()->email?>">
               </div>
               <div class="input-box">
                 <span class="details">Phone Number</span>

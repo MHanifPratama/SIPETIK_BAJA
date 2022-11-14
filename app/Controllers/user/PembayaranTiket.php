@@ -14,11 +14,13 @@ class PembayaranTiket extends BaseController
     public function Pembayaran()
     {
         $tiket = new TiketModel();
+        $a = user()->email;
         $dataTiket = $tiket
         ->join('bus','bus.id_bus=tiket_bus.id_bus')->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
+        ->where('email',$a)
         ->get()->getResultArray();
         $dataA=[
             'tiket' => $dataTiket,

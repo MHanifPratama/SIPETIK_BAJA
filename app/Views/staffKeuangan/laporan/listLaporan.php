@@ -1,6 +1,5 @@
 <?= $this->extend('template/temDashboard') ?>
     <?= $this->section('contentStaff') ?>
-
         <main id="main" class="main">
             <div class="pagetitle mb-5">
                 <h1>Laporan</h1>
