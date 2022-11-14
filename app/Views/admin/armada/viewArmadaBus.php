@@ -29,7 +29,7 @@
                             <th scope="col">Waktu Keberangkatan</th>
                             <th scope="col">Aksi</th>
                     </thead>
-                    <tbody>
+                    <tbody class="table-light">
                         <?php ?>
                         <?php foreach ($bus as $Bus) : ?>
                         <tr>
