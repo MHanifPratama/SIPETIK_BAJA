@@ -19,7 +19,7 @@
 										<div class="form-group">
 											<label for="login"><?=lang('Auth.email')?></label>
 											<input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
-												name="login" placeholder="<?=lang('Auth.email')?>">
+												name="login"  placeholder="<?=lang('Auth.email')?>">
 											<div class="invalid-feedback">
 												<?= session('errors.login') ?>
 											</div>
@@ -28,7 +28,7 @@
 										<div class="form-group">
 											<label for="login"><?=lang('Auth.emailOrUsername')?></label>
 											<input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
-												name="login" placeholder="<?=lang('Auth.emailOrUsername')?>">
+												name="login">
 											<div class="invalid-feedback">
 												<?= session('errors.login') ?>
 											</div>
@@ -39,7 +39,7 @@
 								<div class="inputBx">
 										<div class="form-group">
 											<label for="password"><?=lang('Auth.password')?></label>
-											<input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
+											<input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>">
 											<div class="invalid-feedback">
 												<?= session('errors.password') ?>
 											</div>
@@ -61,10 +61,10 @@
 							</form>
 
 							<?php if ($config->allowRegistration) : ?>
-								<p><a href="<?= url_to('register') ?>"><?=lang('Auth.needAnAccount')?></a></p>
+								<p><a class="ngelink" href="<?= url_to('register') ?>"><?=lang('Auth.needAnAccount')?></a></p>
 							<?php endif; ?>
 							<?php if ($config->activeResetter): ?>
-								<p><a href="<?= url_to('forgot') ?>"><?=lang('Auth.forgotYourPassword')?></a></p>
+								<p><a class="ngelink" href="<?= url_to('forgot') ?>"><?=lang('Auth.forgotYourPassword')?></a></p>
 							<?php endif; ?>
 						</div>
 					</div>

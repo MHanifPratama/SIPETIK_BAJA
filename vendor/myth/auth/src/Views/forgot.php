@@ -1,6 +1,7 @@
 <?= $this->extend($config->viewLayout) ?>
 <?= $this->section('main') ?>
 
+
 <div class="container">
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
