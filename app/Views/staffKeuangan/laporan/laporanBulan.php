@@ -1,22 +1,43 @@
 <?= $this->extend('template/temDashboard') ?>
     <?= $this->section('contentStaff') ?>
-    <script>$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})</script>
-
+    
         <main id="main" class="main">
             <div class="pagetitle mb-5">
                 <h1>Laporan</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/dashboardStaff">Home</a></li>
-                        <li class="breadcrumb-item active">Laporan</li>
+                        <li class="breadcrumb-item active">Laporan <?=$tanggal?></li>
+                        
                     </ol>
-                <image.png/nav>
+                </nav>
             </div><!-- End Page Title -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Pilih Bulan
-</button>
+            <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-blue order-card">
+              <div class="card-block">
+                <h6 class="m-b-2">Total Tiket</h6>
+                <h8 class="text-right"><i class="bi bi-ticket-perforated m-3"></i>
+                  <?= $total_harga?></i><span></span>
+                </h8>
+                <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-yellow order-card">
+              <div class="card-block">
+                <h6 class="m-b-2">Pemasukan</h6>
+                <h8 class="text-right"><i class="bi bi-cash-stack m-3"></i>Rp <?= $total_tiket ?></i><span></span>
+                </h8>
+                <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
             <section class="section dashboard">
                 <div class="row p-3">
                     <table class="table">
@@ -29,7 +50,7 @@
                             <th scope="col">Status Pembayaran</th>
                             <th scope="col">Kode Tiket</th>
                         </thead>
-                        <tbody class="table-light">
+                        <tbody>
                             <?php ?>
                             <?php foreach ($tiket as $tiket): ?>
                             <tr>
@@ -62,30 +83,6 @@
             </section>
         </main>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-                <form method="POST" action="\getLaporanKeuangan">
-                            <div class="modal-body">
-                            <input type="month" id="tanggal" name="tanggal" placeholder="Tanggal" class="form-control"required>
-                            </div>
-                            <button id="kirim_tanggal_laporan"name="kirim_tanggal_laporan" type="submit" class="btn btn-primary btn-lg btn-block">Kirim</button>
-                    </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
         </html>
 
         <?= $this->endSection() ?>
