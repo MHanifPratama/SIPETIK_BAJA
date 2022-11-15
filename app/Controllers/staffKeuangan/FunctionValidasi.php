@@ -22,8 +22,11 @@ class FunctionValidasi extends BaseController{
     public function validasiPembayaranFix($id){
         $model = new TiketModel();
         $dataModel = $model->find($id);
+        $timezone=date_default_timezone_set('Asia/Jakarta');
+        $TanggalPesan = date("Y-m-d");
         $data = [
             'validasi_pembayaran' => $this->request->getVar('status_pembayaran'),
+            'tanggal_pelunasan' => $TanggalPesan
         ];
         // echo var_dump($data);
         $model->update($id,$data);

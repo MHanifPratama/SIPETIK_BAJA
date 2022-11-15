@@ -118,6 +118,7 @@ $routes->get('/viewValidasi', 'staffKeuangan\FunctionValidasi::listValidasi',['f
 $routes->get('/validasitiket/(:num)','staffKeuangan\FunctionValidasi::validasiTiket/$1',['filter' => 'authStaff']);
 $routes->post('/validasiPembayaranFix/(:num)','staffKeuangan\FunctionValidasi::validasiPembayaranFix/$1',['filter' => 'authStaff']);
 $routes->get('/viewLaporanKeuangan', 'staffKeuangan\FunctionLaporanKeuangan::listLaporanKeuangan',['filter' => 'authStaff']);
+$routes->post('/getLaporanKeuangan', 'staffKeuangan\FunctionLaporanKeuangan::getLaporanKeuangan',['filter' => 'authStaff']);
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');
