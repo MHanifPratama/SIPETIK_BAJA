@@ -22,7 +22,7 @@
                     <th scope="col">Harga</th>
                     <th scope="col">Aksi</th>
                 </thead>
-                <tbody>
+                <tbody class="table-light">
                     <?php ?>
                     <?php foreach ($tipe_bus as $tipe) : ?>
                     <tr>

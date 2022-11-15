@@ -25,7 +25,7 @@
                             <th scope="col">Jarak Tempuh</th>
                             <th scope="col">Aksi</th>
                     </thead>
-                    <tbody>
+                    <tbody class="table-light">
                         <?php ?>
                         <?php foreach ($perjalanan as $prjl) : ?>
                         <tr>
