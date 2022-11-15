@@ -7,7 +7,7 @@ use App\Models\BusModel;
 use App\Models\TiketModel;
 use App\Models\Jadwal;
 use App\Models\Perjalanan;
-use App\Models\Supir;
+use App\Models\Kursi;
 use App\Models\TipeBus;
 
 class PesanTiket extends BaseController
@@ -23,16 +23,19 @@ class PesanTiket extends BaseController
         $tipeBus = new TipeBus();
         $jadwal = new Jadwal();
 
+
         $dataBus = $bus->getAllDataFromAllTable();
         $dataTipeBus = $tipeBus->findAll();
         $dataPerjalanan = $perjalanan->findAll();
         $dataJadwal = $jadwal->findAll();
+
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus,
             'tipeBus' => $dataTipeBus,
             'perjalanan' => $dataPerjalanan,
             'jadwal' => $dataJadwal,
+
             
         ];
  
@@ -43,15 +46,18 @@ class PesanTiket extends BaseController
     public function pesanTiket($id){
         $bus = new BusModel();
         $session = session();
+        $kursi = new Kursi();
         $dataBus = $bus->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
         ->find($id);
+        $dataKursi = $kursi->findAll();
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus,
             'session' => $session,
+            'kursi' => $dataKursi
         ];
         return view('user/homepage_User',$data);
     }
@@ -65,7 +71,7 @@ class PesanTiket extends BaseController
             'id_bus'=>'required',
             'total_harga'=>'required'
         ])){
-            return redirect()->to('/tit');
+            return redirect()->back();
         }
 
         $tiket = new TiketModel();

@@ -107,7 +107,7 @@
             <div class="user-details">
               <div class="input-box">
                 <span class="details">Full Name</span>
-                <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama">
+                <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama" value="<?= user()->nama_pelanggan?>">
               </div>
               <div class="input-box">
                 <span class="details">Kota Asal</span>
@@ -138,16 +138,26 @@
               </div>
               <div class="input-box">
                 <span class="details">Phone Number</span>
-                <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp">
+                <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp" value="<?= user()->nomor_hp_pelanggan?>">
+              </div>
+
+              <div class="input-box">
+              <div>
+                  <img class="img-fluid " src=" <?= base_url("assets/Arsha/assets/img/kursi.png")?>" alt="">
+                  
+              </div>
+                <span class="details">Penumpang</span>
+                <input type="text" placeholder="Masukkan Jumlah Penumpang" readonly required name="penumpang" id="penumpang" value="1"> 
+
+                    <select class="custom-select custom-select-sm">
+                        <option selected>Pilih Nomor kursi</option>
+                        <?php foreach ($kursi as $kursi): ?>
+                            <option name="penumpang" id="penumpang" value="<?= $kursi['nomor_kursi']?>"><?= $kursi['nomor_kursi']?></option>
+
+                        <?php endforeach; ?>
+                    </select>
               </div>
               <div class="input-box">
-                <span class="details">Passenger</span>
-                <input type="text" placeholder="Masukkan Jumlah Penumpang" required name="penumpang" id="penumpang">
-              </div>
-              <div class="input-box">
-
-            </select>
-
 
                 <span class="details">Tanggal Keberangkatan</span>
                 <input type="text" placeholder="Tanggal" readonly  required id="" name="" value ="<?= $bus['tanggal']?>">
@@ -160,6 +170,7 @@
             <div class="button">
               <input type="submit" value="Pesan Tiket">
             </div>
+            
           </form>
           
         </div>
@@ -185,6 +196,7 @@
                 <div class="row px-3">
                     <div class="col-12 p-0">
                         <img class="img-fluid w-100" src="<?= base_url("assets/Arsha/assets/img/bus.jpg")?>" alt="">
+
                     </div>
                     <div class="col-6 p-0">
                         <img class="img-fluid w-100" src="<?= base_url("assets/Arsha/assets/img/bus.jpg")?>" alt="">

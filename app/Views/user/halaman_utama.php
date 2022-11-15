@@ -50,7 +50,6 @@
                 <?php endforeach; ?>
             </select>
 
-            <h1><?= $bus['id_bus']?> - <?= $bus['nama_bus']?></h1>
 
 
           </div>
