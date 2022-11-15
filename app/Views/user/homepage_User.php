@@ -149,7 +149,7 @@
                 <span class="details">Penumpang</span>
                 <input type="text" placeholder="Masukkan Jumlah Penumpang" readonly required name="penumpang" id="penumpang" value="1"> 
 
-                    <select class="custom-select custom-select-sm">
+                    <select name="nomor_kursi" id="nomor_kursi" class="custom-select custom-select-sm">
                         <option selected>Pilih Nomor kursi</option>
                         <?php foreach ($kursi as $kursi): ?>
                             <option name="penumpang" id="penumpang" value="<?= $kursi['nomor_kursi']?>"><?= $kursi['nomor_kursi']?></option>

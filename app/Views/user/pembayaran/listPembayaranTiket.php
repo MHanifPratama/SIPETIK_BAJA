@@ -19,6 +19,7 @@
                     <th scope="col">Tanggal Pemesanan Tiket</th>
                     <th scope="col">Tanggal Pelunasan Tiket</th>
                     <th scope="col">Status Pembayaran</th>
+                    <th scope="col">Nomor Kursi</th>
                     <th scope="col">Kode Tiket</th>
                     <th scope="col">upload Foto</th>
                 </tr>
@@ -41,6 +42,7 @@
                     <td><?= $tiket['tanggal_pelunasan'] ?></td>
 
                     <td><?= $tiket['validasi_pembayaran']?></td>
+                    <td><?= $tiket['nomor_kursi']?></td>
                     <td><?= $tiket['kode_tiket'] ?></td>
                     <td>
                         <div class="d-flex">

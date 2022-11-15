@@ -63,7 +63,11 @@ class TiketBus extends Migration
 			'foto_bukti_pembayaran'      => [
 				'type'           => 'VARCHAR',
                 'constraint' => '1000'
-			],'kode_tiket'      => [
+			],'nomor_kursi'      => [
+				'type'           => 'int',
+                'constraint' => '25'
+			],
+			'kode_tiket'      => [
 				'type'           => 'VARCHAR',
                 'constraint' => '255'
 			],

@@ -99,6 +99,7 @@ class PesanTiket extends BaseController
             'validasi_pembayaran' => 'Belum Lunas',
             'kode_tiket'  => $kodePembayaran,
             'foto_bukti_pembayaran' => 'ini Gambar',
+            'nomor_kursi' => $this->request->getPost('nomor_kursi')
            
 
         ];
