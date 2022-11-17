@@ -72,7 +72,7 @@ class FunctionUser extends BaseController
                
                 $params = ['id_akun' => $user -> id_akun];
                 $session -> set($params);
-                return redirect() -> to ('/tit');
+                return redirect() -> to ('/home_user');
 
             }
             else{
