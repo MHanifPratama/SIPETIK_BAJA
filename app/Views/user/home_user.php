@@ -1,192 +1,229 @@
-<?= $this -> extend('template/header_user')?>
-<?= $this-> section('content')?>
+<!DOCTYPE html>
+<html lang="en">
 
-  <!-- ======= Login Register ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt- pt-lg-0 order-5 order-lg-5" data-aos="fade-up" data-aos-delay="200">
-          <h1>Selamat Datang Petikers</h1>
-          <h2>Sistem Informasi Penjualan Tiket Bus Antar Daerah Provinsi Lampung</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <!-- Pesan Ticket -->
-            <a href="view_login" class="btn-get-started scrollto"> Pesan Tiket </a>
-          </div>
-        </div>
-        <!-- Picture (mau diganti siger) -->
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/Arsha/assets/img/provlampung.png" class="img-fluid animated" alt="">
-        </div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pemesanan Tiket</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="<?= base_url("assets/Arsha/assets/img/favicon.png")?>" rel="icon">
+  <link href="<?= base_url("assets/Arsha/assets/img/apple-touch-icon.png")?>" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="<?= base_url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i")?>" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="<?= base_url("assets/Arsha/assets/vendor/aos/aos.css")?>" rel="stylesheet">
+  <link href="<?= base_url("assets/Arsha/assets/vendor/bootstrap/css/bootstrap.min.css")?>" rel="stylesheet">
+  <link href="<?= base_url("assets/Arsha/assets/vendor/bootstrap-icons/bootstrap-icons.css")?>" rel="stylesheet">
+  <link href="<?= base_url("assets/Arsha/assets/vendor/boxicons/css/boxicons.min.css")?>" rel="stylesheet">
+  <link href="<?= base_url("assets/Arsha/assets/vendor/glightbox/css/glightbox.min.css")?>" rel="stylesheet">
+  <link href="<?= base_url("assets/Arsha/assets/vendor/swiper/swiper-bundle.min.css")?>" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="<?= base_url("assets/Arsha/assets/css/style_home_baru.css")?>" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Techie - v4.9.1
+  * Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html">SIPETIK</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Logout</a></li>
+      </nav><!-- .navbar -->
+
     </div>
-
-  </section><!-- End Hero -->
+  </header><!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
 
-        <div class="section-title">
-          <h2>About Us</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            </ul>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
-          </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Pemesanan Tiket</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Pemesanan Tiket</li>
+          </ol>
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section><!-- End Breadcrumbs -->
 
-	<!-- ======= Schedule Section ======= -->
-    <section id="schedule" class="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Schedule</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-          <div class="d-flex align-items-center">
-            <form action="/cariPerjalanan" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Asal</label>
-                  <!-- <input type="text" name="asal" class="form-control" id="asal" required> -->
-                  <select type="text" class="form-control" name="asal" id="asal" required>
-                    <?php foreach ($bus as $mhs) : ?>
-                      <option value="<?= $mhs['kota_awal'] ?>"><?= $mhs['kota_awal']?></option>
-                    <?php endforeach; ?>
-                </select>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Tujuan</label>
-                  <select type="text" class="form-control" name="tujuan" id="tujuan" required>
-                    <?php foreach ($bus as $mhs) : ?>
-                      <option value="<?= $mhs['kota_akhir'] ?>"><?= $mhs['kota_akhir']?></option>
-                    <?php endforeach; ?>
-                </select>
-                </div>
+
+    <div class="container-fluid" data-aos="fade-up"></div>
+    <div class="row justify-content-center">   
+      <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"></div>
+    
+    <form>
+      <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+      <ul class="form-style-1">
+          <li>
+            <label>Nama Lengkap<span class="required">*</span></label>
+            <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama" value="<?= user()->nama_pelanggan?>"/>
+          </li>
+          <li>
+              <label>Kota Asal<span class="required">*</span></label>
+              <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_awal']?>">
+              <label>Kota Tujuan<span class="required">*</span></label>
+              <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_akhir']?>">
+              <label>Harga<span class="required">*</span></label>
+              <input type="text" placeholder="Masukkan Email" readonly  required id="total_harga" name="total_harga" value ="<?= $bus['total_km'] * $bus['harga'] ?>">
+              <label>Nama Bus <span class="required">*</span></label>
+              <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['nama_bus']?>">
+              <div class="input-box">
+                <input type="text" placeholder="Id Bus" hidden  required id="harga" name="id_bus" value ="<?= $bus['id_bus']?>">
               </div>
-              <div class="form-group">
-                <label for="name">Tipe Bus</label>
-                <select type="text" class="form-control" name="tipeBus" id="tipeBus" required>
-                <?php foreach ($bus as $mhs) : ?>
-                  <option value="<?= $mhs['id_tipe'] ?>"><?= $mhs['tipe']?></option>
-                <?php endforeach; ?>
-                </select>
+              <label>Email <span class="required">*</span></label>
+              <input type="text" placeholder="Masukkan Email" readonly required id="email" name="email" value ="<?= user()->email?>">
+              <label>No. Telp <span class="required">*</span></label>
+              <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp" value="<?= user()->nomor_hp_pelanggan?>">
+              <div class="input-box">
+              <div>
+                  <img class="img-fluid " src=" <?= base_url("assets/Arsha/assets/img/kursi.png")?>" alt="">
               </div>
-              <div class="text-center"><button type="submit">Search Schedule</button></div>
+              <label>Penumpang<span class="required">*</span></label>
+              <input type="text" placeholder="Masukkan Jumlah Penumpang" readonly required name="penumpang" id="penumpang" value="1"> 
+
+<select name="nomor_kursi" id="nomor_kursi" class="custom-select custom-select-sm">
+    <option selected>Pilih Nomor kursi</option>
+    <?php foreach ($kursi as $kursi): ?>
+        <option name="penumpang" id="penumpang" value="<?= $kursi['nomor_kursi']?>"><?= $kursi['nomor_kursi']?></option>
+
+    <?php endforeach; ?>
+</select>
+              <label>Tanggal Keberangkatan<span class="required">*</span></label>
+              <input type="text" placeholder="Tanggal" readonly  required id="" name="" value ="<?= $bus['tanggal']?>">
+          </li>
+         
+          <li>
+          <input type="submit" value="Pesan Tiket">
+      </ul>
+      </div>
+      </form>
+      <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
+        <img src="<?= base_url("assets/Arsha/assets/img/provlampung.png")?>" class="img-fluid animated" alt="">
+      </div>
+      </div>
+    </div>
+   
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>SIPETIK</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
 
         </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-	 <!-- ======= Team Section ======= -->
-	 <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Irfan Saputra</h4>
-                <span>Leader and Fullstack Developer</span>
-                <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>M Hanif Pratama</h4>
-                <span>Backend</span>
-                <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Muhammad Mufid Sadzili</h4>
-                <span>Frontend</span>
-                <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/Arsha/assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Muhammad Ega Putra Anzani</h4>
-                <span>Frontend</span>
-                <div class="social">
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Team Section -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
-</html>
 
-<?= $this -> endSection() ?>
+    <div class="container">
+
+      <div class="copyright-wrap d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>SIPETIK</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/techie-free-skin-bootstrap-3/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="<?= base_url("assets/Arsha/assets/vendor/purecounter/purecounter_vanilla.js")?>"></script>
+  <script src="<?= base_url("assets/Arsha/assets/vendor/aos/aos.js")?>"></script>
+  <script src="<?= base_url("assets/Arsha/assets/vendor/bootstrap/js/bootstrap.bundle.min.js")?>"></script>
+  <script src="<?= base_url("assets/Arsha/assets/vendor/glightbox/js/glightbox.min.js")?>"></script>
+  <script src="<?= base_url("assets/Arsha/assets/vendor/isotope-layout/isotope.pkgd.min.js")?>"></script>
+  <script src="<?= base_url("assets/Arsha/assets/vendor/swiper/swiper-bundle.min.js")?>"></script>
+  <script src="<?= base_url("assets/Arsha/assets/vendor/php-email-form/validate.js")?>"></script>
+
+  <!-- Template Main JS File -->
+  <script src="<?= base_url("assets/Arsha/assets/js/main.js")?>"></script>
+
+</body>
+
+</html>

@@ -63,7 +63,7 @@ class Home extends BaseController
     public function list()
     {
  
-         return view('user/table_user');
+         return view('user/home_user');
         // return redirect()->to('/');
     }
 

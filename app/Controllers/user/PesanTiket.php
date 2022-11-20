@@ -59,7 +59,7 @@ class PesanTiket extends BaseController
             'session' => $session,
             'kursi' => $dataKursi
         ];
-        return view('user/homepage_User',$data);
+        return view('user/home_User',$data);
     }
     public function tambahTiketKeDb(){
         $session = session();

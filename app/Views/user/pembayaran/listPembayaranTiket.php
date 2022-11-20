@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<table class="table table-hover">
+<table class="styled-table">
             <thead>
                 <tr class="table-primary">
                     <th scope="col">tiket</th>

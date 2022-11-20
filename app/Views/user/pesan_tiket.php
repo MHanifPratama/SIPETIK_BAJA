@@ -82,13 +82,12 @@
             <div class="button">
               <input type="submit" value="Pesan Tiket">
             </div>
-          </form>
-          
+          </form>      
         </div>
       </div>
     </div>
   </div>
-    </div>
+</div>
   
   <script src="assets/Arsha/assets/js/TableFilter.min.js" defer></script>
   <script src="assets/Arsha/assets/js/popup.js"></script>
