@@ -1312,6 +1312,20 @@ h6 {
   border-color: var(--bs-table-border-color);
 }
 
+.table-light {
+  --bs-table-color: #000;
+  --bs-table-bg: #ffffffdb;
+  --bs-table-border-color: #ffffffde;
+  --bs-table-striped-bg: #ffffffe4;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #ffffffd6;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #ffffffdc;
+  --bs-table-hover-color: #000;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
+}
+
 .order-card {
     color: #fff;
 }

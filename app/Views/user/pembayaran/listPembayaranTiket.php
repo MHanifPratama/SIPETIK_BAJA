@@ -7,7 +7,46 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< Updated upstream
 <table class="table table-hover">
+=======
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="/">SIPETIK</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="/#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Pembayaran Tiket</h2>
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li>Pembayaran Tiket</li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- End Breadcrumbs -->
+
+<div class="container-table">
+<table class="styled-table">
+>>>>>>> Stashed changes
             <thead>
                 <tr class="table-primary">
                     <th scope="col">tiket</th>
