@@ -45,8 +45,12 @@
             <ul>
               <p>Fitur - fitur yang dimiliki SIPETIK BAJA</p>
               <li><i class="ri-check-double-line"></i> Memesan tiket lebih mudah dan cepat</li>
+              <li><i class="ri-check-double-line"></i> Memesan tiket dimana saja dan kapan saja</li>
               <li><i class="ri-check-double-line"></i> Tidak perlu khawatir tiket hilang, karena tiket tersimpan di akun milikmu</li>
               <li><i class="ri-check-double-line"></i> Anda bisa sesuaikan jadwal keberangkatan anda, karena anda bisa melihat rute serta jadwal keberangkatan</li>
+              <li><i class="ri-check-double-line"></i> Anda bisa booking Kursi sesuai keinginan anda</li>
+              <li><i class="ri-check-double-line"></i> Tidak memegang Uang Cash? anda bisa menggunakan e-wallet atau transfer Bank</li>
+              
             </ul>
           </div>
         </div>
@@ -56,7 +60,7 @@
 
 	<!-- ======= Schedule Section ======= -->
     <section id="schedule" class="contact">
-      <div class="container" data-aos="fade-up">
+      <div class="container mt-5" data-aos="fade-up">
         <div class="section-title">
           <h2>Schedule</h2>
           <p>Jadwal Armada Bus BAJA yang beroperasi bisa anda ketahui disini. Untuk Pemesanan Tiket bisa klik tombol pesan tiket yang ada di halaman Home</p>

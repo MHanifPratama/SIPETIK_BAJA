@@ -40,7 +40,9 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">SIPETIK</a></h1>
+
+      <h1 class="logo"><a href="/">SIPETIK</a></h1>
+
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -55,77 +57,100 @@
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
+        <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
           <h2>Pemesanan Tiket</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Pemesanan Tiket</li>
-          </ol>
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li>Pemesanan Tiket</li>
+            </ol>
         </div>
-
       </div>
     </section><!-- End Breadcrumbs -->
 
+    <section id="hero3" class="d-flex align-items-center">
+	    <div class="container">
+        <div class="row">
 
-    <div class="container-fluid" data-aos="fade-up"></div>
-    <div class="row justify-content-center">   
-      <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"></div>
-    
-    <form method="post" action="/menuPembayaran">
-      <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-      <ul class="form-style-1">
-          <li>
-            <label>Nama Lengkap<span class="required">*</span></label>
-            <input type="text" placeholder="Nama Lengkap" required  id="nama" name="nama" value="<?= user()->nama_pelanggan?>"/>
-          </li>
-          <li>
-              <label>Kota Asal<span class="required">*</span></label>
-              <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_awal']?>">
-              <label>Kota Tujuan<span class="required">*</span></label>
-              <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_akhir']?>">
-              <label>Harga<span class="required">*</span></label>
-              <input type="text" placeholder="Masukkan Email" readonly  required id="total_harga" name="total_harga" value ="<?= $bus['total_km'] * $bus['harga'] ?>">
-              <label>Nama Bus <span class="required">*</span></label>
-              <input type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['nama_bus']?>">
-              <div class="input-box">
-                <input type="text" placeholder="Id Bus" hidden  required id="harga" name="id_bus" value ="<?= $bus['id_bus']?>">
-              </div>
-              <label>Email <span class="required">*</span></label>
-              <input type="text" placeholder="Masukkan Email" readonly required id="email" name="email" value ="<?= user()->email?>">
-              <label>No. Telp <span class="required">*</span></label>
-              <input type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp" value="<?= user()->nomor_hp_pelanggan?>">
-              <div class="input-box">
-              <div>
+            <form method="post" action="/menuPembayaran">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label>Nama Lengkap<span class="required">*</span></label>
+                  <input class="form-control" type="text" placeholder="Nama Lengkap" required  id="nama" name="nama" value="<?= user()->nama_pelanggan?>"/>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-md-3 mb-3">   
+                    <label>Email <span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="Masukkan Email" readonly required id="email" name="email" value ="<?= user()->email?>">
+                  </div>
+                  <div class="form-group col-md-3 mb-3">     
+                    <label>No. Telp <span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="Masukkan Nomor HP" required name="no_hp" id="no_hp" value="<?= user()->nomor_hp_pelanggan?>">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-md-3 mb-3">
+                    <label>Kota Asal<span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_awal']?>">
+                  </div>   
+                  <div class="form-group col-md-3 mb-3">
+                    <label>Kota Tujuan<span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['kota_akhir']?>">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-3 mb-3">
+                    <label>Harga<span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="Masukkan Email" readonly  required id="total_harga" name="total_harga" value ="<?= $bus['total_km'] * $bus['harga'] ?>">
+                  </div> 
+                  <div class="form-group col-3 mb-3">     
+                    <label>Nama Bus <span class="required">*</span></label>
+                    <input class="form-control" type="text" placeholder="Masukkan Email" readonly  required id="" name="" value ="<?= $bus['nama_bus']?>">
+                  </div>
+                </div>
+                
+                <div class="input-box">
+                  <input type="text" placeholder="Id Bus" hidden  required id="harga" name="id_bus" value ="<?= $bus['id_bus']?>">
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
                   <img class="img-fluid " src=" <?= base_url("assets/Arsha/assets/img/kursi.png")?>" alt="">
-              </div>
-              <label>Penumpang<span class="required">*</span></label>
-              <input type="text" placeholder="Masukkan Jumlah Penumpang" readonly required name="penumpang" id="penumpang" value="1"> 
+                </div>
 
-<select name="nomor_kursi" id="nomor_kursi" class="custom-select custom-select-sm">
-    <option selected>Pilih Nomor kursi</option>
-    <?php foreach ($kueriCek as $kursi): ?>
-        <option name="penumpang" id="penumpang" value="<?= $kursi?>"><?= $kursi?></option>
-    <?php endforeach; ?>
-</select>
-              <label>Tanggal Keberangkatan<span class="required">*</span></label>
-              <input type="text" placeholder="Tanggal" readonly  required id="" name="" value ="<?= $bus['tanggal']?>">
-          </li>
-         
-          <li>
-          <input type="submit" value="Pesan Tiket">
-      </ul>
+                <div class="form-group col-md-6 mb-3"> 
+                  <label>Penumpang<span class="required">*</span></label>
+                  <input class="form-control" type="text" placeholder="Masukkan Jumlah Penumpang" readonly required name="penumpang" id="penumpang" value="1"> 
+                </div>
+                
+                <div class="row">
+                  <div class="form-group col-md-3 mb-3"> 
+                    <label>Nomor Kursi<span class="required">*</span></label>
+                      <select name="nomor_kursi" id="nomor_kursi" class="form-control">
+                      <option selected>Nomor kursi</option>
+                        <?php foreach ($kursi as $kursi): ?>
+                          <option name="penumpang" id="penumpang" value="<?= $kursi['nomor_kursi']?>"><?= $kursi['nomor_kursi']?></option>
+                        <?php endforeach; ?>
+                      </select>
+                  </div>
+                  <div class="form-group col-md-3 mb-3"> 
+                      <label>Tanggal Keberangkatan<span class="required">*</span></label>
+                      <input class="form-control" type="text" placeholder="Tanggal" readonly  required id="" name="" value ="<?= $bus['tanggal']?>">
+                  </div>
+
+                </div>
+                
+                <button type="submit" class="btn btn-outline-primary">Pesan Tiket</button>
+              </div>
+            </form>
+
+        </div>
       </div>
-    </form>
-      <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-        <img src="<?= base_url("assets/Arsha/assets/img/provlampung.png")?>" class="img-fluid animated" alt="">
-      </div>
-      </div>
-    </div>
-   
+    </section>  
 
   </main><!-- End #main -->
 
