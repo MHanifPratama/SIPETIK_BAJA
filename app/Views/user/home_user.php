@@ -120,7 +120,7 @@
           <input type="submit" value="Pesan Tiket">
       </ul>
       </div>
-      </form>
+    </form>
       <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
         <img src="<?= base_url("assets/Arsha/assets/img/provlampung.png")?>" class="img-fluid animated" alt="">
       </div>
