@@ -143,6 +143,7 @@ $routes->post('/menuPembayaran', 'user\PesanTiket::tambahTiketKeDb');
 //Pembayaran
 $routes->get('/PembayaranTiket', 'user\PembayaranTiket::Pembayaran');
 $routes->get('/uploadFotoPembayaran/(:num)','user\PembayaranTiket::uploadFotoPembayaran/$1');
+$routes->get('/cetakTiket/(:num)', 'user\PembayaranTiket::cetakTiket/$1');
 $routes->post('/simpan_foto_pembayaran/(:num)', 'user\PembayaranTiket::simpan_foto_pembayaran/$1');
 
 

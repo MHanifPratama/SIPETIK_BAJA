@@ -8,7 +8,13 @@ use App\Models\TiketModel;
 use App\Models\Jadwal;
 use App\Models\Perjalanan;
 use App\Models\TipeBus;
-
+use Endroid\QrCode\Color\Color;
+use Endroid\QrCode\Encoding\Encoding;
+use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelLow;
+use Endroid\QrCode\Logo\Logo;
+use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
+use Endroid\QrCode\Writer\PngWriter;
+use Endroid\QrCode\QrCode;
 class PembayaranTiket extends BaseController
 {
     public function Pembayaran()
@@ -66,5 +72,34 @@ class PembayaranTiket extends BaseController
         $tiket->update($id,$data);
         return redirect()->to('/PembayaranTiket')-> with('sukses', 'Berhasil Mengunggah Bukti Pembayaran');
 
+    }
+    public function cetakTiket($id){
+        $writer = new PngWriter();
+        $tiket = new TiketModel();
+        $dataTiket = $tiket
+        ->join('bus','bus.id_bus=tiket_bus.id_bus')->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
+        ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
+        ->join('supir','supir.id_supir=bus.id_supir')
+        ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
+        ->where('id_tiket',$id)
+        ->get()->getRowArray();
+        if($dataTiket['validasi_pembayaran']=="Belum Lunas"){
+            return redirect()->to('/PembayaranTiket')-> with('gagal', 'Anda Belum Melakukan Pembayaran');
+        }
+        $qrCode = QrCode::create($dataTiket['kode_tiket'])
+            ->setEncoding(new Encoding('UTF-8'))
+            ->setErrorCorrectionLevel(new ErrorCorrectionLevelLow())
+            ->setSize(300)
+            ->setMargin(10)
+            ->setRoundBlockSizeMode(new RoundBlockSizeModeMargin())
+            ->setForegroundColor(new Color(0, 0, 0))
+            ->setBackgroundColor(new Color(255, 255, 255));
+        $result = $writer->write($qrCode);
+        header('Content-Type: '.$result->getMimeType());
+        $result->saveToFile(ROOTPATH.'public/assets/img/qr/qr.png');
+        $dataA=[
+            'tiket' => $dataTiket,
+        ];
+        return view('user/pembayaran/cetakTiket',$dataA);
     }
 }

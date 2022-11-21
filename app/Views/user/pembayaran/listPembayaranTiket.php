@@ -130,7 +130,7 @@
                         <div class="d-flex">
                             <div class="box">
                                 <a class="btn btn-success bi bi-pencil-fill mr-3 ml-3"
-                                    href="/uploadFotoPembayaran/<?= $tiket['id_tiket'] ?>">
+                                    href="/cetakTiket/<?= $tiket['id_tiket'] ?>">
                                 Cetak Tiket</a>
                             </div>
                         </div>
