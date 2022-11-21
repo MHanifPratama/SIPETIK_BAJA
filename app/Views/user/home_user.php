@@ -75,7 +75,7 @@
     <div class="row justify-content-center">   
       <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"></div>
     
-    <form>
+    <form action="/menuPembayaran" method="post">
       <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
       <ul class="form-style-1">
           <li>
@@ -120,7 +120,7 @@
           <input type="submit" value="Pesan Tiket">
       </ul>
       </div>
-      </form>
+    </form>
       <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
         <img src="<?= base_url("assets/Arsha/assets/img/provlampung.png")?>" class="img-fluid animated" alt="">
       </div>
