@@ -41,7 +41,7 @@ class FunctionSupir extends BaseController{
         ];
 
         $datasupir->save($data);
-        return redirect()->to('/viewSupir');
+        return redirect()->to('/viewSupir')-> with('sukses', 'Berhasil Menambahkan Data');
     }
     public function hapus($id)
     {
@@ -78,7 +78,7 @@ class FunctionSupir extends BaseController{
         ];
 
         $mahasiswaModel->update($id, $data);
-        return redirect()->to('/viewSupir');
+        return redirect()->to('/viewSupir')-> with('update', 'Berhasil Update Data');
     }
 }
 

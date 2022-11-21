@@ -64,7 +64,7 @@ class PembayaranTiket extends BaseController
             'foto_bukti_pembayaran' => $namaBerkas,
         ];
         $tiket->update($id,$data);
-        return redirect()->to('/PembayaranTiket');
+        return redirect()->to('/PembayaranTiket')-> with('sukses', 'Berhasil Mengunggah Bukti Pembayaran');
 
     }
 }

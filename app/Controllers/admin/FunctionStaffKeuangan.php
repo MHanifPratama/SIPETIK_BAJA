@@ -31,7 +31,7 @@ class FunctionStaffKeuangan extends BaseController{
             'password'=>'required',
             'no_hp'=>'required'
         ])){
-            return redirect()->to('/viewTambahStaff');
+            return redirect()->to('/viewTambahStaff')-> with('sukses', 'Berhasil Menambahkan Data');
         }
         $dataStaff = new StaffKeuangan();
         $data = [
@@ -81,6 +81,6 @@ class FunctionStaffKeuangan extends BaseController{
         ];
 
         $staffModel->update($id_akun_staff_keuangan, $data);
-        return redirect()->to('/viewStaffKeuangan');
+        return redirect()->to('/viewStaffKeuangan')-> with('update', 'Berhasil Update Data');
     }
 }

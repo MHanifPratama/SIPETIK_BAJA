@@ -13,6 +13,26 @@
       </nav>
     </div><!-- End Page Title -->
 
+    <?php if(session()->getFlashdata('sukses')) : ?>
+  <div class = "alert alert-success alert-dismissible show fade">
+    <div class = "alert-body">
+
+    <b>Sukses</b>
+    <?=session() -> getFlashdata ('sukses')?>
+    </div>
+  </div>
+  <?php endif; ?>
+
+  <?php if(session()->getFlashdata('update')) : ?>
+  <div class = "alert alert-warning alert-dismissible show fade">
+    <div class = "alert-body">
+
+    <b>Sukses</b>
+    <?=session() -> getFlashdata ('update')?>
+    </div>
+  </div>
+  <?php endif; ?>
+
     <section class="section dashboard">
         <a href = "/viewTambahPerjalanan" class="btn btn-outline-primary"> Tambah Perjalanan </a>
 

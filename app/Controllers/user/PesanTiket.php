@@ -125,6 +125,7 @@ class PesanTiket extends BaseController
         ];
         // $session->setFlashdata('kode', $Kodetiket);
         // $session->setFlashdata('harga', $harga);
+        $session->setFlashdata('sukses', 'Berhasil Melakukan Pemesanan');
         return redirect()->to('/PembayaranTiket');
         // return view('user/pembayaran/pembayaran_tiket',$dataA);
     }
