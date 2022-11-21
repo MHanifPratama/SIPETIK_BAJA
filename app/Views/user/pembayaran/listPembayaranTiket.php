@@ -107,7 +107,9 @@
                     <td><?= $tiket['validasi_pembayaran']?></td>
                     <td><?= $tiket['nomor_kursi']?></td>
                     <td><?= $tiket['kode_tiket'] ?></td>
+                    
                     <td>
+                    <?php if($tiket['validasi_pembayaran'] == 'Belum Lunas'):?>
                         <div class="d-flex">
                             <div class="box">
                                 <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3"
@@ -115,6 +117,15 @@
                                 Upload</a>
                             </div>
                         </div>
+                    <?php else:?>
+                        <div class="d-flex">
+                            <div class="box">
+                                <a class="btn btn-success bi bi-pencil-fill mr-3 ml-3"
+                                    href="/uploadFotoPembayaran/<?= $tiket['id_tiket'] ?>">
+                                Cetak Tiket</a>
+                            </div>
+                        </div>
+                    <?php endif?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
