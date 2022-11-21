@@ -75,7 +75,7 @@
     <div class="row justify-content-center">   
       <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"></div>
     
-    <form>
+    <form method="post" action="/menuPembayaran">
       <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
       <ul class="form-style-1">
           <li>

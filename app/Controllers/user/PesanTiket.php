@@ -22,8 +22,6 @@ class PesanTiket extends BaseController
         $perjalanan = new Perjalanan();
         $tipeBus = new TipeBus();
         $jadwal = new Jadwal();
-
-
         $dataBus = $bus->getAllDataFromAllTable();
         $dataTipeBus = $tipeBus->findAll();
         $dataPerjalanan = $perjalanan->findAll();
