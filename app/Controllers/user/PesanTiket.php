@@ -79,10 +79,6 @@ class PesanTiket extends BaseController
             'kursi' => $dataKursi,
             'kueriCek'=>$result,
         ];
-        // echo print_r($result);
-        // foreach($result as $res){
-        //     echo $res;
-        // }
         return view('user/home_User',$data);
     }
     public function tambahTiketKeDb(){

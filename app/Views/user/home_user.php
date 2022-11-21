@@ -132,8 +132,8 @@
                     <label>Nomor Kursi<span class="required">*</span></label>
                       <select name="nomor_kursi" id="nomor_kursi" class="form-control">
                       <option selected>Nomor kursi</option>
-                        <?php foreach ($kursi as $kursi): ?>
-                          <option name="penumpang" id="penumpang" value="<?= $kursi['nomor_kursi']?>"><?= $kursi['nomor_kursi']?></option>
+                        <?php foreach ($kueriCek as $kursi): ?>
+                          <option name="penumpang" id="penumpang" value="<?= $kursi?>"><?= $kursi?></option>
                         <?php endforeach; ?>
                       </select>
                   </div>
