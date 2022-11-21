@@ -21,7 +21,7 @@
                 <div class="row p-3">
                     <table class="table">
                         <thead class="table-dark">
-                            <th scope="col">tiket</th>
+                            <th scope="col">Tiket</th>
                             <th scope="col">Email</th>
                             <th scope="col">Total Penumpang</th>
                             <th scope="col">Bus</th>
