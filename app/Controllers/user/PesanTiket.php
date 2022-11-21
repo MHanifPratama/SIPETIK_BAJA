@@ -10,6 +10,7 @@ use App\Models\Perjalanan;
 use App\Models\Kursi;
 use App\Models\TipeBus;
 
+
 class PesanTiket extends BaseController
 {
     public function index()
@@ -45,18 +46,33 @@ class PesanTiket extends BaseController
         $bus = new BusModel();
         $session = session();
         $kursi = new Kursi();
+        $tiket = new TiketModel();
         $dataBus = $bus->join('tipe_bus','tipe_bus.id_tipe=bus.id_tipe')
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
         ->find($id);
-        $dataKursi = $kursi->findAll();
+        // $dataKursi = $kursi->findAll();
+        // dd ($tmp);
+        // $dataKursi = 'SELECT * FROM tiket_bus WHERE id_bus = '.$id.'';
+        $dataKursi = 'SELECT kursi.nomor_kursi FROM tiket_bus RIGHT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.tanggal_pemesanan IS NULL UNION (SELECT tiket_bus.nomor_kursi FROM tiket_bus LEFT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.id_bus != ?) ORDER BY nomor_kursi ASC';
+        $dataKursi = $kursi->query($dataKursi,[$id])->getResultArray();
+        // $tableB = $tiket->join('kursi','kursi.nomor_kursi = tiket_bus.nomor_kursi','right outer')->where('tiket_bus.tanggal_pemesanan', NULL)->find();
+        // $tableA = $tiket->join('kursi','kursi.nomor_kursi = tiket_bus.nomor_kursi','left')->where('tiket_bus.id_bus',$id)->find();
+
+        // echo print_r($dataKursi);
+        
+        // $dataKursi = array_merge($tableA,$tableB) ;
+        // echo print_r ($tableB);
+        // $db->query('YOUR QUERY HERE');
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus,
             'session' => $session,
             'kursi' => $dataKursi
         ];
+        // echo print_r($dataKursi);
+        // echo print_r($data['kursi']);
         return view('user/home_User',$data);
     }
     public function tambahTiketKeDb(){

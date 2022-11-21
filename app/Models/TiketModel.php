@@ -43,4 +43,5 @@ class TiketModel extends Model
     public function getKodePembayaran() {
         return $this->db->table('tiket_bus');
     }
+    
 }
