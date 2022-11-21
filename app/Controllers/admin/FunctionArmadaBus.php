@@ -58,7 +58,7 @@ class FunctionArmadaBus extends BaseController{
             'id_perjalanan' => $this->request->getPost('id_perjalanan')
         ];
         $bus->insert($data);
-        return redirect()->to('/viewBus');
+        return redirect()->to('/viewBus')-> with('sukses', 'Berhasil Menambahkan Data');
     }
     public function hapus($id)
     {
@@ -109,7 +109,7 @@ class FunctionArmadaBus extends BaseController{
             'id_perjalanan' => $this->request->getPost('id_perjalanan')
         ];
         $bus->update($id, $data);
-        return redirect()->to('/viewBus');
+        return redirect()->to('/viewBus')-> with('update', 'Berhasil Update Data');
     }
 }
 

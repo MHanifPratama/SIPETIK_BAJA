@@ -41,7 +41,7 @@ class FunctionPerjalanan extends BaseController{
         ];
 
         $dataperjalanan->save($data);
-        return redirect()->to('/viewPerjalanan');
+        return redirect()->to('/viewPerjalanan')-> with('sukses', 'Berhasil Menambahkan Data');
     }
     public function hapus($id){
         $PerjalananModel = new Perjalanan();
@@ -79,7 +79,8 @@ class FunctionPerjalanan extends BaseController{
         ];
 
         $perjalananModel->update($id, $data);
-        return redirect()->to('/viewPerjalanan');
+        return redirect()->to('/viewPerjalanan')-> with('update', 'Berhasil Update Data');
+    
     }
 }
 

@@ -31,7 +31,7 @@ class FunctionTipeBus extends BaseController{
             'tipe'=>'required',
             'harga'=>'required',
         ])){
-            return redirect()->to('/viewTambahTipeBus');
+            return redirect()->to('/viewTambahTipeBus')-> with('sukses', 'Berhasil Menambahkan Data');
         }
         $datasupir = new tipeBus();
         $data = [
@@ -77,7 +77,7 @@ class FunctionTipeBus extends BaseController{
         ];
 
         $mahasiswaModel->update($id, $data);
-        return redirect()->to('/viewTipeBus');
+        return redirect()->to('/viewTipeBus')-> with('update', 'Berhasil Update Data');
     }
 }
 

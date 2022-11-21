@@ -71,6 +71,15 @@
 </section><!-- End Breadcrumbs -->
 
 <div class="container-table">
+<?php if(session()->getFlashdata('sukses')) : ?>
+  <div class = "alert alert-success alert-dismissible show fade">
+    <div class = "alert-body">
+
+    <b>Sukses</b> <br>
+    <?=session() -> getFlashdata ('sukses')?>
+    </div>
+  </div>
+  <?php endif; ?>
 <table class="styled-table">
             <thead>
                 <tr class="table-primary">
