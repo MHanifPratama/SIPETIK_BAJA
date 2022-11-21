@@ -26,7 +26,6 @@
 
   <!-- Template Main CSS File -->
   <link href="<?= base_url("assets/Arsha/assets/css/style_home_baru.css")?>" rel="stylesheet">
-  
 
   <!-- =======================================================
   * Template Name: Techie - v4.9.1
@@ -41,7 +40,9 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center justify-content-between">
+
       <h1 class="logo"><a href="/">SIPETIK</a></h1>
+
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -55,6 +56,7 @@
   </header><!-- End Header -->
 
   <main id="main">
+
         <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
       <div class="container">
@@ -148,8 +150,7 @@
 
         </div>
       </div>
-    </section>
-   
+    </section>  
 
   </main><!-- End #main -->
 

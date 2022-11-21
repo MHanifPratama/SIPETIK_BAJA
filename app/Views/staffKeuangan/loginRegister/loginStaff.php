@@ -1,6 +1,6 @@
 <?= $this->extend('template/loginStaff') ?>
 	<?= $this->section('LoginStaff') ?>
-		<div class="limiter">
+	<section class="d-flex align-items-center">
 			<div class="container-login100">
 				<div class="wrap-login100">
 					<form class="login100-form validate-form" action="/verifyLoginStaff" method="post">
@@ -31,9 +31,8 @@
 						</div>
 					</form>
 				</div>
-			</div>
-		</div>
+			</div>				
 
-
-		<div id="dropDownSelect1"></div>
-		<?= $this->endSection() ?>
+	</section>
+<div id="dropDownSelect1"></div>
+<?= $this->endSection() ?>

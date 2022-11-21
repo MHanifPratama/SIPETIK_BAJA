@@ -56,7 +56,7 @@
 								</div>
 
 								<div class="inputBx">
-									<input type="submit" value="Sign In" name="login"></button>
+									<input type="submit">
 								</div>
 							</form>
 

@@ -32,7 +32,7 @@ class FunctionJadwal extends BaseController{
             'waktu_keberangkatan' => $this->request->getPost('waktu_keberangkatan')
         ];
         $jadwal->insert($data);
-        return redirect()->to('/viewJadwal');
+        return redirect()->to('/viewJadwal')-> with('sukses', 'Berhasil Menambahkan Data');
     }
     public function hapus($id)
     {
@@ -63,7 +63,7 @@ class FunctionJadwal extends BaseController{
             'waktu_keberangkatan' => $this->request->getPost('waktu_keberangkatan')
         ];
         $jadwal->update($id, $data);
-        return redirect()->to('/viewJadwal');
+        return redirect()->to('/viewJadwal')-> with('update', 'Berhasil Update Data');
     }
 }
 

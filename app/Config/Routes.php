@@ -38,6 +38,7 @@ $routes->set404Override();
 
 // $routes->get('/', 'Home::index/$1');
 $routes->get('/', 'Home::index');
+$routes->get('/welcome', 'Home::loginIndex');
 
 
 $routes->get('/list', 'Home::list');
@@ -117,6 +118,7 @@ $routes->get('/viewValidasi', 'staffKeuangan\FunctionValidasi::listValidasi',['f
 $routes->get('/validasitiket/(:num)','staffKeuangan\FunctionValidasi::validasiTiket/$1',['filter' => 'authStaff']);
 $routes->post('/validasiPembayaranFix/(:num)','staffKeuangan\FunctionValidasi::validasiPembayaranFix/$1',['filter' => 'authStaff']);
 $routes->get('/viewLaporanKeuangan', 'staffKeuangan\FunctionLaporanKeuangan::listLaporanKeuangan',['filter' => 'authStaff']);
+$routes->post('/getLaporanKeuangan', 'staffKeuangan\FunctionLaporanKeuangan::getLaporanKeuangan',['filter' => 'authStaff']);
 
 $routes->post('/cariPerjalanan', 'user\FunctionUser::cariPerjalanan');
 $routes->get('/User', 'user\FunctionUser::index');
@@ -134,13 +136,14 @@ $routes->post('/Register_User', 'user\FunctionUser::Register_User');
 
 //Pessan Tiket
 // $routes->post('/pesan_tiket', 'user\PesanTiket::pesanTiket');
-$routes->get('/tit', 'user\PesanTiket::tambahTiket');
+
 $routes->get('/prosesTiket/(:num)', 'user\PesanTiket::pesanTiket/$1');
 $routes->post('/menuPembayaran', 'user\PesanTiket::tambahTiketKeDb');
 // $routes->match(['get', 'post'], '/prosesTiket', 'Home::processPesanTiket');
 //Pembayaran
 $routes->get('/PembayaranTiket', 'user\PembayaranTiket::Pembayaran');
 $routes->get('/uploadFotoPembayaran/(:num)','user\PembayaranTiket::uploadFotoPembayaran/$1');
+$routes->get('/cetakTiket/(:num)', 'user\PembayaranTiket::cetakTiket/$1');
 $routes->post('/simpan_foto_pembayaran/(:num)', 'user\PembayaranTiket::simpan_foto_pembayaran/$1');
 
 

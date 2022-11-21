@@ -20,7 +20,7 @@
             <div class="card bg-c-blue order-card">
               <div class="card-block">
                 <h6 class="m-b-2">Total Tiket</h6>
-                <h8 class="text-right"><i class="bi bi-cash-stack m-3"></i>
+                <h8 class="text-right"><i class="bi bi-ticket-perforated m-3"></i>
                   <?= $totalTiket ?></i><span></span>
                 </h8>
                 <!-- <p class="m-b-0">Completed Orders<span class="f-right"></span></p> -->

@@ -15,7 +15,9 @@ class TiketModel extends Model
         'email',
         'no_hp',
         'penumpang',
-        'id_bus','total_harga','validasi_pembayaran','foto_bukti_pembayaran','kode_tiket'];
+        'id_perjalanan',
+        'id_bus','total_harga','validasi_pembayaran','foto_bukti_pembayaran','kode_tiket',	'tanggal_pemesanan','tanggal_pelunasan','nomor_kursi'];
+
 
     
     public function getAllDataFromAllTable(){
@@ -41,4 +43,5 @@ class TiketModel extends Model
     public function getKodePembayaran() {
         return $this->db->table('tiket_bus');
     }
+    
 }

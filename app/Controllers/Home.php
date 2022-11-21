@@ -23,6 +23,19 @@ class Home extends BaseController
         // return redirect()->to('/');
     }
 
+    public function loginIndex()
+    {
+        $bus = new BusModel();
+        $dataBus = $bus->getAllData();
+        $data = [
+            'title' => 'Bus',
+            'bus' => $dataBus
+        ];
+        // echo var_dump($data);
+         return view('pages/halaman_userLogin',$data);
+        // return redirect()->to('/');
+    }
+
     // public function pesanTiket()
     // {
     //     $bus = new BusModel();
@@ -50,7 +63,7 @@ class Home extends BaseController
     public function list()
     {
  
-         return view('user/table_user');
+         return view('user/sebelum_home');
         // return redirect()->to('/');
     }
 
@@ -75,7 +88,7 @@ class Home extends BaseController
         ];
  
  
-         return view('user/homepage_User',$data);
+         return view('user/pesan_tiket',$data);
         // return redirect()->to('/');
     }
 

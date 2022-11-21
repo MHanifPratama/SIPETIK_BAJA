@@ -32,8 +32,9 @@
                     <img class="buktiPembayaran mt-3 mb-3" src="/assets/img/foto_bukti_pembayaran/<?= $tiket['foto_bukti_pembayaran'] ?>"
                         alt="Tydack ada Foto"><br>
                     
+                    <div class="form-group col-md-6 mb-1">   
                     <button type="submit" class="btn btn-outline-primary">Submit</button>
-
+                    </div>
             </form>
             </body>
 
