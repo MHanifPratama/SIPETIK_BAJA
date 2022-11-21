@@ -52,27 +52,37 @@ class PesanTiket extends BaseController
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
         ->find($id);
-        // $dataKursi = $kursi->findAll();
-        // dd ($tmp);
-        // $dataKursi = 'SELECT * FROM tiket_bus WHERE id_bus = '.$id.'';
+        $kursiAll = $kursi->findAll();
         $dataKursi = 'SELECT kursi.nomor_kursi FROM tiket_bus RIGHT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.tanggal_pemesanan IS NULL UNION (SELECT tiket_bus.nomor_kursi FROM tiket_bus LEFT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.id_bus != ?) ORDER BY nomor_kursi ASC';
+        $tableA = 'SELECT tiket_bus.nomor_kursi FROM tiket_bus LEFT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.id_bus != ?';
+        $tableB = 'SELECT tiket_bus.nomor_kursi FROM tiket_bus WHERE id_bus = ?';
         $dataKursi = $kursi->query($dataKursi,[$id])->getResultArray();
-        // $tableB = $tiket->join('kursi','kursi.nomor_kursi = tiket_bus.nomor_kursi','right outer')->where('tiket_bus.tanggal_pemesanan', NULL)->find();
-        // $tableA = $tiket->join('kursi','kursi.nomor_kursi = tiket_bus.nomor_kursi','left')->where('tiket_bus.id_bus',$id)->find();
+        $buatAjah = $kursi->query($tableA,[$id])->getResultArray();
+        $sukaSukaKamuh = $kursi->query($tableB,[$id])->getResultArray();
+        $ara=[];
+        $arr=[];
+        foreach($kursiAll as $kursi){
+            array_push($arr,$kursi['nomor_kursi']);
+            foreach($sukaSukaKamuh as $buat){
+                if($kursi['nomor_kursi'] == $buat['nomor_kursi']){
+                    array_push($ara,$kursi['nomor_kursi']);
+                }else{
 
-        // echo print_r($dataKursi);
-        
-        // $dataKursi = array_merge($tableA,$tableB) ;
-        // echo print_r ($tableB);
-        // $db->query('YOUR QUERY HERE');
+                }
+            }
+        }
+        $result = array_diff($arr,$ara);
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus,
             'session' => $session,
-            'kursi' => $dataKursi
+            'kursi' => $dataKursi,
+            'kueriCek'=>$result,
         ];
-        // echo print_r($dataKursi);
-        // echo print_r($data['kursi']);
+        // echo print_r($result);
+        // foreach($result as $res){
+        //     echo $res;
+        // }
         return view('user/home_User',$data);
     }
     public function tambahTiketKeDb(){
