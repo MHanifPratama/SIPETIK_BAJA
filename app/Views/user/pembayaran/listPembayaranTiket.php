@@ -50,6 +50,7 @@
         <ul>
 
           <li><a class="nav-link scrollto " href="/#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="/PembayaranTiket">Riwayat Tiket</a></li>
           <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
 
       </nav><!-- .navbar -->
@@ -76,8 +77,6 @@
 </section><!-- End Breadcrumbs -->
 
 <div class="container-table">
-
-<table class="styled-table">
 
 <?php if(session()->getFlashdata('sukses')) : ?>
   <div class = "alert alert-success alert-dismissible show fade">
@@ -131,17 +130,17 @@
                     <?php if($tiket['validasi_pembayaran'] == 'Belum Lunas'):?>
                         <div class="d-flex">
                             <div class="box">
-                                <a class="btn btn-warning bi bi-pencil-fill mr-3 ml-3"
+                                <a class="btn btn-warning bi bi-upload mr-3 ml-3"
                                     href="/uploadFotoPembayaran/<?= $tiket['id_tiket'] ?>">
-                                Upload</a>
+                                </a>
                             </div>
                         </div>
                     <?php else:?>
                         <div class="d-flex">
                             <div class="box">
-                                <a class="btn btn-success bi bi-pencil-fill mr-3 ml-3"
+                                <a class="btn btn-success bi bi-printer-fill mr-3 ml-3"
                                     href="/cetakTiket/<?= $tiket['id_tiket'] ?>">
-                                Cetak Tiket</a>
+                                </a>
                             </div>
                         </div>
                     <?php endif?>
