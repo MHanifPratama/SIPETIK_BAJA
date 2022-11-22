@@ -48,8 +48,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Logout</a></li>
+          <li><a class="nav-link scrollto " href="/">Home</a></li>
+          <li><a class="nav-link scrollto " href="/PembayaranTiket">Riwayat Tiket</a></li>
+          <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
       </nav><!-- .navbar -->
 
     </div>

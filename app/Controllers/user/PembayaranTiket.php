@@ -19,6 +19,7 @@ class PembayaranTiket extends BaseController
 {
     public function Pembayaran()
     {
+        $pager = \Config\Services::pager();
         $tiket = new TiketModel();
         $a = user()->email;
         $dataTiket = $tiket
@@ -29,7 +30,12 @@ class PembayaranTiket extends BaseController
         ->where('email',$a)
         ->get()->getResultArray();
         $dataA=[
-            'tiket' => $dataTiket,
+
+            // 'tiket' => $dataTiket,
+            'tiket' => $tiket->paginate(5,'grup1'),
+            'pager' => $tiket->pager,
+
+
         ];
         // $session->setFlashdata('kode', $Kodetiket);
         // $session->setFlashdata('harga', $harga);
