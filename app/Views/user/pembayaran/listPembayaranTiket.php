@@ -117,7 +117,7 @@
                     <td><?= $tiket['id_tiket']?></td>
                     <td><?= $tiket['email']?></td>
                     <td><?= $tiket['penumpang']?></td>
-                    <td><?= $tiket['nama_bus']?></td>
+                    <td><?= $tiket['id_bus']?></td>
                     <td><?= $tiket['total_harga'] ?></td>
 
                     <td><?= $tiket['tanggal_pemesanan'] ?></td>
@@ -150,8 +150,11 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <?= $pager->links('grup1','bootstrap') ?>
                 </div>
         </main><!-- End #main -->
+
+
  <!-- ======= Footer ======= -->
  <footer id="footer">
 
