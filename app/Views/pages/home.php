@@ -10,7 +10,7 @@
           <h2>Sistem Informasi Penjualan Tiket Bus Antar Daerah Provinsi Lampung</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <!-- Pesan Ticket -->
-            <a href="view_login" class="btn-get-started scrollto"> Pesan Tiket </a>
+            <a href="view_login" class="btn-get-started"> Pesan Tiket </a>
           </div>
         </div>
         <!-- Picture (mau diganti siger) -->
