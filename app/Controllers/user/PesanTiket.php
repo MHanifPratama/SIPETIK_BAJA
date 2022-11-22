@@ -54,10 +54,9 @@ class PesanTiket extends BaseController
         ->find($id);
         $kursiAll = $kursi->findAll();
         $dataKursi = 'SELECT kursi.nomor_kursi FROM tiket_bus RIGHT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.tanggal_pemesanan IS NULL UNION (SELECT tiket_bus.nomor_kursi FROM tiket_bus LEFT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.id_bus != ?) ORDER BY nomor_kursi ASC';
-        $tableA = 'SELECT tiket_bus.nomor_kursi FROM tiket_bus LEFT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.id_bus != ?';
+        // $tableA = 'SELECT tiket_bus.nomor_kursi FROM tiket_bus LEFT JOIN kursi ON tiket_bus.nomor_kursi = kursi.nomor_kursi WHERE tiket_bus.id_bus != ?';
         $tableB = 'SELECT tiket_bus.nomor_kursi FROM tiket_bus WHERE id_bus = ?';
         $dataKursi = $kursi->query($dataKursi,[$id])->getResultArray();
-        $buatAjah = $kursi->query($tableA,[$id])->getResultArray();
         $sukaSukaKamuh = $kursi->query($tableB,[$id])->getResultArray();
         $ara=[];
         $arr=[];
