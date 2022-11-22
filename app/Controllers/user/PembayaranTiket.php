@@ -30,6 +30,7 @@ class PembayaranTiket extends BaseController
         ->get()->getResultArray();
         $dataA=[
             'tiket' => $dataTiket,
+            'data' => $a
         ];
         // $session->setFlashdata('kode', $Kodetiket);
         // $session->setFlashdata('harga', $harga);

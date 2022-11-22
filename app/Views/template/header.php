@@ -53,8 +53,8 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Schedule</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <?php ?>
-          <li><a class="nav-link scrollto" href="login">Sign In</a></li>
+          <li><a class="nav-link scrollto" href="/PembayaranTiket">User</a></li>
+          <!-- <li><a class="nav-link scrollto" href="login"></a></li> -->
         </ul>
       </nav><!-- .navbar -->
     </div>

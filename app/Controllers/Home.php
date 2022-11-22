@@ -14,10 +14,15 @@ class Home extends BaseController
     {
         $bus = new BusModel();
         $dataBus = $bus->getAllData();
+        // $a = user()->email;
+
         $data = [
             'title' => 'Bus',
             'bus' => $dataBus
         ];
+        // $dataA = [
+        //     'AAA' => $a
+        // ];
         // echo var_dump($data);
          return view('pages/halaman_user',$data);
         // return redirect()->to('/');
