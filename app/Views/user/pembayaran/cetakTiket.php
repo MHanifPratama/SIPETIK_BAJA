@@ -22,37 +22,37 @@
     <div class="city">
       <small>Awal</small>
 
-      <strong>Lampung</strong>
+      <strong><?=$tiket['kota_awal']?></strong>
     </div>
     <div class="city">
       <small>Tujuan</small>
 
-      <strong>Pringsewu</strong>
+      <strong><?=$tiket['kota_akhir']?></strong>
     </div>
   </section>
   <section class="infos">
     <div class="places">
       <div class="box">
         <small>Nama</small>
-        <strong><em>W</em></strong>
+        <strong><em><?=$tiket['nama']?></em></strong>
       </div>
       <div class="box">
         <small>Kursi</small>
-        <strong><em>C3</em></strong>
+        <strong><em><?=$tiket['nomor_kursi']?></em></strong>
       </div>
       <div class="box">
         <small>Bus</small>
-        <strong>E</strong>
+        <strong><?=$tiket['nama_bus']?></strong>
       </div>
     </div>
     <div class="times">
       <div class="box">
         <small>Tanggal</small>
-        <strong>11:05</strong>
+        <strong><?=$tiket['tanggal']?></strong>
       </div>
       <div class="box">
         <small>Waktu</small>
-        <strong>11:35</strong>
+        <strong><?=$tiket['waktu_keberangkatan']?></strong>
       </div>
     </div>
   </section>
@@ -60,16 +60,16 @@
     <div class="box">
       <div class="passenger">
         <small>No. Telp</small>
-        <strong>082276238476</strong>
+        <strong><?=$tiket['no_hp']?></strong>
       </div>
       <div class="date">
         <small>Harga</small>
-        <strong>210.000</strong>
+        <strong>Rp <?=$tiket['total_harga']?></strong>
       </div>
     </div>
-    <svg class="qrcode">
-      <use xlink:href="#qrcode"></use>
-    </svg>
+    <div class="qrcode">
+    <img src="/assets/img/qr/qr.png" alt="Girl in a jacket" width="80" height="80">
+</div>
   </section>
 </div>
 

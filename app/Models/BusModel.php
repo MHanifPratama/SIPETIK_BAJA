@@ -26,9 +26,9 @@ class BusModel extends Model
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
-            ->GroupBy('kota_akhir')
-            // ->GroupBy('tipe')
-            // ->GroupBy('kota_awal')
+            ->groupBy('kota_akhir')
+            ->groupBy('tipe')
+            ->groupBy('kota_awal')
             ->get()->getResultArray();
     }
 

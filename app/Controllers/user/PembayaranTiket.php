@@ -27,7 +27,7 @@ class PembayaranTiket extends BaseController
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
-        ->where('email',$a);
+        ->where('email',$a)->OrderBy('validasi_pembayaran','DESC');
         // ->get()->getResultArray();
         $dataA=[
 
