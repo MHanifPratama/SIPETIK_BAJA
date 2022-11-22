@@ -8,7 +8,7 @@
         </div>
 
 
-        <table class="table table-hover">
+        <table class="table">
 
             <thead>
                 <tr class="table-primary">
@@ -24,7 +24,7 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody >
                 <?php ?>
                 <?php foreach ($bus as $bus) : ?>
                 <tr class="text-light">
