@@ -187,6 +187,5 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-</html>
 
 <?= $this -> endSection() ?>

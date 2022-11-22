@@ -30,9 +30,12 @@ class PembayaranTiket extends BaseController
         ->where('email',$a)
         ->get()->getResultArray();
         $dataA=[
+
             // 'tiket' => $dataTiket,
             'tiket' => $tiket->paginate(5,'grup1'),
             'pager' => $tiket->pager,
+
+
         ];
         // $session->setFlashdata('kode', $Kodetiket);
         // $session->setFlashdata('harga', $harga);
