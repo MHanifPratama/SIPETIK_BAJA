@@ -27,13 +27,13 @@ class PembayaranTiket extends BaseController
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
-        ->where('email',$a)
-        ->get()->getResultArray();
+        ->where('email',$a);
+        // ->get()->getResultArray();
         $dataA=[
 
             // 'tiket' => $dataTiket,
-            'tiket' => $tiket->paginate(5,'grup1'),
-            'pager' => $tiket->pager,
+            'tiket' => $dataTiket->paginate(5,'grup1'),
+            'pager' => $dataTiket->pager,
 
 
         ];

@@ -49,7 +49,7 @@
       <nav id="navbar" class="navbar">
         <ul>
 
-          
+        <li><a class="nav-link scrollto " href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/PembayaranTiket">Riwayat Tiket</a></li>
           <li><a class="nav-link scrollto" href="/#schedule">Beli Tiket</a></li>
           <li><a class="nav-link scrollto" href="/logout">Logout</a></li>
@@ -117,7 +117,7 @@
                     <td><?= $tiket['id_tiket']?></td>
                     <td><?= $tiket['email']?></td>
                     <td><?= $tiket['penumpang']?></td>
-                    <td><?= $tiket['id_bus']?></td>
+                    <td><?= $tiket['nama_bus']?></td>
                     <td><?= $tiket['total_harga'] ?></td>
 
                     <td><?= $tiket['tanggal_pemesanan'] ?></td>
