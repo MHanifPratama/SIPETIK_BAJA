@@ -1840,6 +1840,13 @@ Body
 --------------------*/
 
 
+body {
+  height: 100vh;
+  margin: 70px 50px;
+  color: #363c44;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
 
 /*--------------------
 Boarding Pass
