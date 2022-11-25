@@ -27,15 +27,13 @@ class PembayaranTiket extends BaseController
         ->join('perjalanan','perjalanan.id_perjalanan=bus.id_perjalanan')
         ->join('supir','supir.id_supir=bus.id_supir')
         ->join('jadwal','jadwal.id_jadwal=bus.id_jadwal')
-        ->where('email',$a)->OrderBy('validasi_pembayaran','DESC');
+        ->where('email',$a)->OrderBy('tanggal_pemesanan','DESC');
         // ->get()->getResultArray();
         $dataA=[
 
             // 'tiket' => $dataTiket,
-            'tiket' => $dataTiket->paginate(5,'grup1'),
+            'tiket' => $dataTiket->paginate(10,'grup1'),
             'pager' => $dataTiket->pager,
-
-
         ];
         // $session->setFlashdata('kode', $Kodetiket);
         // $session->setFlashdata('harga', $harga);

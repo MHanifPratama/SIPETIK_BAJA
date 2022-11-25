@@ -30,12 +30,12 @@ class FunctionUmum extends BaseController{
             }
             else{
                 session()->setFlashdata('msg', 'Wrong Password');
-                return redirect()->to('/loginAdmin');
+                return redirect()->to('/loginStaff');
             }
         }
         else{
             session()->setFlashdata('msg', 'Email not Found');
-            return redirect()->to('/loginAdmin');
+            return redirect()->to('/loginStaff');
         }
     }
 }

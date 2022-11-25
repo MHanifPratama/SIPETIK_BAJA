@@ -119,8 +119,6 @@ class PesanTiket extends BaseController
             'kode_tiket'  => $kodePembayaran,
             'foto_bukti_pembayaran' => 'ini Gambar',
             'nomor_kursi' => $this->request->getPost('nomor_kursi')
-           
-
         ];
         
         $tiket->save($data);
