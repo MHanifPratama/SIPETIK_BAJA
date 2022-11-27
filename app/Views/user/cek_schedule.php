@@ -16,9 +16,7 @@
                     <th scope="col">Tipe</th>
                     <th scope="col">Asal</th>
                     <th scope="col">Tujuan</th>
-
                     <th scope="col">Tanggal</th>
-
                     <th scope="col">Harga</th>
                     <th scope="col">Aksi</th>
                 </tr>

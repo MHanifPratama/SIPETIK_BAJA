@@ -13,7 +13,7 @@
       </nav>
     </div>
 
-  <form method="post" action="\updateBus\<?=$bus['id_bus'] ?>">
+  <form method="post" action="<?=base_url()?>\updateBus\<?=$bus['id_bus'] ?>">
     <div class="form-row">
       <div class="form-group col-md-6 mb-3">
           <label for="nama_bus">Nama Bus</label>

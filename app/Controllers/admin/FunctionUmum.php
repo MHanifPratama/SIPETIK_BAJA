@@ -7,13 +7,13 @@ class FunctionUmum extends BaseController{
 
 
     public function viewLogin(){
-        if (session('logged_in') == true) {
+        if (session('logged_in_admin') == true) {
             return redirect()->to('/dashboard');
         }
         return view('admin\loginRegister\loginAdmin');
     }
     public function viewRegister(){
-        if (session('logged_in') == true) {
+        if (session('logged_in_admin') == true) {
             return redirect()->to('/dashboard');
         }
         $data['validation'] = NULL;
@@ -56,7 +56,7 @@ class FunctionUmum extends BaseController{
                     'id'       => $data['id_akun_admin'],
                     'username'     => $data['username'],
                     'email'    => $data['email'],
-                    'logged_in'     => TRUE
+                    'logged_in_admin'     => TRUE
                 ];
                 session()->set($ses_data);
                 return redirect()->to('/dashboard',);

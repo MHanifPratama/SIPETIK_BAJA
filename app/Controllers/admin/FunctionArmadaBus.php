@@ -14,7 +14,6 @@ class FunctionArmadaBus extends BaseController{
             'title' => 'Bus',
             'bus' => $dataBus
         ];
-        
         return view('admin/armada/viewArmadaBus',$data);
     }
     public function tambahArmadaBus(){

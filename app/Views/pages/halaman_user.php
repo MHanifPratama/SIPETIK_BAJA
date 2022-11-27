@@ -66,7 +66,7 @@
           <p>Jadwal Armada Bus BAJA yang beroperasi bisa anda ketahui disini. Untuk Pemesanan Tiket bisa klik tombol pesan tiket yang ada di halaman Home</p>
         </div>
           <div class="d-flex align-items-center">
-            <form action="\cariPerjalanan" method="post" role="form" class="php-email-form">
+            <form action="<?=base_url()?>\cariPerjalanan" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Asal</label>

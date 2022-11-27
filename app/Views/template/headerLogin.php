@@ -49,8 +49,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="/">Home</a></li>
-          <li><a class="nav-link scrollto " href="/logout">Log out</a></li>
+          <li><a class="nav-link scrollto" href="<?=base_url()?>/">Home</a></li>
+          <li><a class="nav-link scrollto " href="<?=base_url()?>/logout">Log out</a></li>
         </ul>
       </nav><!-- .navbar -->
     </div>
